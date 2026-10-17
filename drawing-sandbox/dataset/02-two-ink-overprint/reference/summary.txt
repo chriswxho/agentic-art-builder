@@ -1,0 +1,9 @@
+PASS: 11 of 11 rules passed
+Stats: marks 2, inks used 2, widest mark 88, thickest stroke 0
+
+Canvas: 256×256, background white
+Marks: 2 total (2 ellipse)
+Ink use: cyan 1, magenta 1
+Top-level nodes (2), in paint order:
+    1. ellipse at (108, 128), radius 44, cyan fill
+    2. ellipse at (148, 128), radius 44, magenta fill

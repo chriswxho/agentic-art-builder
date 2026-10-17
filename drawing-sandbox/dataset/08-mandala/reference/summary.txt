@@ -1,0 +1,49 @@
+PASS: 11 of 11 rules passed
+Stats: marks 143, inks used 4, widest mark 66.2031, thickest stroke 4
+
+Canvas: 512×512, background white
+Motifs: petal, spoke, tick
+Marks: 143 total (95 ellipse, 36 path, 12 polygon)
+Ink use: black 49, cyan 37, magenta 32, yellow 25
+Top-level nodes (71), in paint order:
+    1. motif 'petal' at (256, 256), rotated 15°
+    2. motif 'petal' at (256, 256), rotated 45°
+    3. motif 'petal' at (256, 256), rotated 75°
+    4. motif 'petal' at (256, 256), rotated 105°
+    5. motif 'petal' at (256, 256), rotated 135°
+    6. motif 'petal' at (256, 256), rotated 165°
+    7. motif 'petal' at (256, 256), rotated 195°
+    8. motif 'petal' at (256, 256), rotated 225°
+    9. motif 'petal' at (256, 256), rotated 255°
+   10. motif 'petal' at (256, 256), rotated 285°
+   11. motif 'petal' at (256, 256), rotated 315°
+   12. motif 'petal' at (256, 256), rotated 345°
+   13. motif 'spoke' at (256, 256)
+   14. motif 'spoke' at (256, 256), rotated 30°
+   15. motif 'spoke' at (256, 256), rotated 60°
+   16. motif 'spoke' at (256, 256), rotated 90°
+   17. motif 'spoke' at (256, 256), rotated 120°
+   18. motif 'spoke' at (256, 256), rotated 150°
+   19. motif 'spoke' at (256, 256), rotated 180°
+   20. motif 'spoke' at (256, 256), rotated 210°
+   21. motif 'spoke' at (256, 256), rotated 240°
+   22. motif 'spoke' at (256, 256), rotated 270°
+   23. motif 'spoke' at (256, 256), rotated 300°
+   24. motif 'spoke' at (256, 256), rotated 330°
+   25. motif 'tick' at (256, 256)
+   26. motif 'tick' at (256, 256), rotated 10°
+   27. motif 'tick' at (256, 256), rotated 20°
+   28. motif 'tick' at (256, 256), rotated 30°
+   29. motif 'tick' at (256, 256), rotated 40°
+   30. motif 'tick' at (256, 256), rotated 50°
+   31. motif 'tick' at (256, 256), rotated 60°
+   32. motif 'tick' at (256, 256), rotated 70°
+   33. motif 'tick' at (256, 256), rotated 80°
+   34. motif 'tick' at (256, 256), rotated 90°
+   35. motif 'tick' at (256, 256), rotated 100°
+   36. motif 'tick' at (256, 256), rotated 110°
+   37. motif 'tick' at (256, 256), rotated 120°
+   38. motif 'tick' at (256, 256), rotated 130°
+   39. motif 'tick' at (256, 256), rotated 140°
+   40. motif 'tick' at (256, 256), rotated 150°
+  ... and 31 more

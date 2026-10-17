@@ -1,0 +1,1554 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 384,
+    "height": 384,
+    "background": "#ffffff"
+  },
+  "motifs": {},
+  "nodes": [
+    {
+      "type": "polygon",
+      "points": [
+        [
+          0.0,
+          300.0
+        ],
+        [
+          64.0,
+          300.0
+        ],
+        [
+          64.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          64.0,
+          300.0
+        ],
+        [
+          128.0,
+          300.0
+        ],
+        [
+          128.0,
+          342.0
+        ],
+        [
+          64.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          128.0,
+          300.0
+        ],
+        [
+          192.0,
+          300.0
+        ],
+        [
+          192.0,
+          342.0
+        ],
+        [
+          128.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          192.0,
+          300.0
+        ],
+        [
+          256.0,
+          300.0
+        ],
+        [
+          256.0,
+          342.0
+        ],
+        [
+          192.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          256.0,
+          300.0
+        ],
+        [
+          320.0,
+          300.0
+        ],
+        [
+          320.0,
+          342.0
+        ],
+        [
+          256.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          320.0,
+          300.0
+        ],
+        [
+          384.0,
+          300.0
+        ],
+        [
+          384.0,
+          342.0
+        ],
+        [
+          320.0,
+          342.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          0.0,
+          342.0
+        ],
+        [
+          64.0,
+          342.0
+        ],
+        [
+          64.0,
+          384.0
+        ],
+        [
+          0.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          64.0,
+          342.0
+        ],
+        [
+          128.0,
+          342.0
+        ],
+        [
+          128.0,
+          384.0
+        ],
+        [
+          64.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          128.0,
+          342.0
+        ],
+        [
+          192.0,
+          342.0
+        ],
+        [
+          192.0,
+          384.0
+        ],
+        [
+          128.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          192.0,
+          342.0
+        ],
+        [
+          256.0,
+          342.0
+        ],
+        [
+          256.0,
+          384.0
+        ],
+        [
+          192.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          256.0,
+          342.0
+        ],
+        [
+          320.0,
+          342.0
+        ],
+        [
+          320.0,
+          384.0
+        ],
+        [
+          256.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          320.0,
+          342.0
+        ],
+        [
+          384.0,
+          342.0
+        ],
+        [
+          384.0,
+          384.0
+        ],
+        [
+          320.0,
+          384.0
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          0.0,
+          300.0
+        ],
+        [
+          64.0,
+          300.0
+        ],
+        [
+          64.0,
+          342.0
+        ],
+        [
+          0.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          64.0,
+          300.0
+        ],
+        [
+          128.0,
+          300.0
+        ],
+        [
+          128.0,
+          342.0
+        ],
+        [
+          64.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          128.0,
+          300.0
+        ],
+        [
+          192.0,
+          300.0
+        ],
+        [
+          192.0,
+          342.0
+        ],
+        [
+          128.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          192.0,
+          300.0
+        ],
+        [
+          256.0,
+          300.0
+        ],
+        [
+          256.0,
+          342.0
+        ],
+        [
+          192.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          256.0,
+          300.0
+        ],
+        [
+          320.0,
+          300.0
+        ],
+        [
+          320.0,
+          342.0
+        ],
+        [
+          256.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          320.0,
+          300.0
+        ],
+        [
+          384.0,
+          300.0
+        ],
+        [
+          384.0,
+          342.0
+        ],
+        [
+          320.0,
+          342.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          0.0,
+          342.0
+        ],
+        [
+          64.0,
+          342.0
+        ],
+        [
+          64.0,
+          384.0
+        ],
+        [
+          0.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          64.0,
+          342.0
+        ],
+        [
+          128.0,
+          342.0
+        ],
+        [
+          128.0,
+          384.0
+        ],
+        [
+          64.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          128.0,
+          342.0
+        ],
+        [
+          192.0,
+          342.0
+        ],
+        [
+          192.0,
+          384.0
+        ],
+        [
+          128.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          192.0,
+          342.0
+        ],
+        [
+          256.0,
+          342.0
+        ],
+        [
+          256.0,
+          384.0
+        ],
+        [
+          192.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          256.0,
+          342.0
+        ],
+        [
+          320.0,
+          342.0
+        ],
+        [
+          320.0,
+          384.0
+        ],
+        [
+          256.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          320.0,
+          342.0
+        ],
+        [
+          384.0,
+          342.0
+        ],
+        [
+          384.0,
+          384.0
+        ],
+        [
+          320.0,
+          384.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 310,
+      "cy": 76,
+      "rx": 30,
+      "ry": 30,
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 310,
+      "cy": 76,
+      "rx": 30,
+      "ry": 30,
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 310,
+      "cy": 76,
+      "rx": 18,
+      "ry": 18,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          348.0,
+          76.0
+        ],
+        [
+          364.0,
+          76.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          342.91,
+          95.0
+        ],
+        [
+          356.77,
+          103.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          329.0,
+          108.91
+        ],
+        [
+          337.0,
+          122.77
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          310.0,
+          114.0
+        ],
+        [
+          310.0,
+          130.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          291.0,
+          108.91
+        ],
+        [
+          283.0,
+          122.77
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          277.09,
+          95.0
+        ],
+        [
+          263.23,
+          103.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          272.0,
+          76.0
+        ],
+        [
+          256.0,
+          76.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          277.09,
+          57.0
+        ],
+        [
+          263.23,
+          49.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          291.0,
+          43.09
+        ],
+        [
+          283.0,
+          29.23
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          310.0,
+          38.0
+        ],
+        [
+          310.0,
+          22.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          329.0,
+          43.09
+        ],
+        [
+          337.0,
+          29.23
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          342.91,
+          57.0
+        ],
+        [
+          356.77,
+          49.0
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#ffff00",
+      "width": 5,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          110.0,
+          200.0
+        ],
+        [
+          190.0,
+          200.0
+        ],
+        [
+          190.0,
+          255.0
+        ],
+        [
+          110.0,
+          255.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          190.0,
+          200.0
+        ],
+        [
+          270.0,
+          200.0
+        ],
+        [
+          270.0,
+          255.0
+        ],
+        [
+          190.0,
+          255.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          110.0,
+          255.0
+        ],
+        [
+          190.0,
+          255.0
+        ],
+        [
+          190.0,
+          310.0
+        ],
+        [
+          110.0,
+          310.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          190.0,
+          255.0
+        ],
+        [
+          270.0,
+          255.0
+        ],
+        [
+          270.0,
+          310.0
+        ],
+        [
+          190.0,
+          310.0
+        ]
+      ],
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          100,
+          204
+        ],
+        [
+          190,
+          130
+        ],
+        [
+          190,
+          204
+        ]
+      ],
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          190,
+          130
+        ],
+        [
+          280,
+          204
+        ],
+        [
+          190,
+          204
+        ]
+      ],
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          100,
+          204
+        ],
+        [
+          190,
+          130
+        ],
+        [
+          190,
+          204
+        ]
+      ],
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          190,
+          130
+        ],
+        [
+          280,
+          204
+        ],
+        [
+          190,
+          204
+        ]
+      ],
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          172,
+          248
+        ],
+        [
+          208,
+          248
+        ],
+        [
+          208,
+          310
+        ],
+        [
+          172,
+          310
+        ]
+      ],
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          172,
+          248
+        ],
+        [
+          208,
+          248
+        ],
+        [
+          208,
+          310
+        ],
+        [
+          172,
+          310
+        ]
+      ],
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          126,
+          222
+        ],
+        [
+          158,
+          222
+        ],
+        [
+          158,
+          254
+        ],
+        [
+          126,
+          254
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          142,
+          222
+        ],
+        [
+          142,
+          254
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#000000",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          126,
+          238
+        ],
+        [
+          158,
+          238
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#000000",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          226,
+          222
+        ],
+        [
+          258,
+          222
+        ],
+        [
+          258,
+          254
+        ],
+        [
+          226,
+          254
+        ]
+      ],
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          242,
+          222
+        ],
+        [
+          242,
+          254
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#000000",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          226,
+          238
+        ],
+        [
+          258,
+          238
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#000000",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          293.78,
+          367.1
+        ],
+        [
+          298.78,
+          355.1
+        ],
+        [
+          303.78,
+          367.1
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          181.55,
+          339.08
+        ],
+        [
+          186.55,
+          327.08
+        ],
+        [
+          191.55,
+          339.08
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          5.16,
+          359.14
+        ],
+        [
+          10.16,
+          347.14
+        ],
+        [
+          15.16,
+          359.14
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          176.17,
+          363.99
+        ],
+        [
+          181.17,
+          351.99
+        ],
+        [
+          186.17,
+          363.99
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          140.83,
+          364.51
+        ],
+        [
+          145.83,
+          352.51
+        ],
+        [
+          150.83,
+          364.51
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          104.26,
+          366.1
+        ],
+        [
+          109.26,
+          354.1
+        ],
+        [
+          114.26,
+          366.1
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          270.66,
+          346.7
+        ],
+        [
+          275.66,
+          334.7
+        ],
+        [
+          280.66,
+          346.7
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          200.94,
+          360.1
+        ],
+        [
+          205.94,
+          348.1
+        ],
+        [
+          210.94,
+          360.1
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          75.25,
+          353.68
+        ],
+        [
+          80.25,
+          341.68
+        ],
+        [
+          85.25,
+          353.68
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          298.07,
+          339.28
+        ],
+        [
+          303.07,
+          327.28
+        ],
+        [
+          308.07,
+          339.28
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          297.42,
+          360.28
+        ],
+        [
+          302.42,
+          348.28
+        ],
+        [
+          307.42,
+          360.28
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          312.32,
+          342.78
+        ],
+        [
+          317.32,
+          330.78
+        ],
+        [
+          322.32,
+          342.78
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          38.9,
+          366.01
+        ],
+        [
+          43.9,
+          354.01
+        ],
+        [
+          48.9,
+          366.01
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          297.94,
+          348.26
+        ],
+        [
+          302.94,
+          336.26
+        ],
+        [
+          307.94,
+          348.26
+        ]
+      ],
+      "smooth": false,
+      "closed": false,
+      "fill": "none",
+      "stroke": "#00ffff",
+      "width": 3,
+      "opacity": 0.5
+    }
+  ]
+}

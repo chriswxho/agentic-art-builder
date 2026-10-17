@@ -1,0 +1,21 @@
+{
+  "id": "06-sunny-house",
+  "level": 6,
+  "tier": "intermediate",
+  "title": "Sunny house",
+  "prompt": "Draw a simple house on green grass under a sun: walls, pitched roof, a door, two windows, and a sun with rays.",
+  "skills": [
+    "composing several objects",
+    "tiling large areas under the 96-unit span limit",
+    "spatial layout"
+  ],
+  "constraints": {
+    "max_shapes": 120
+  },
+  "success_criteria": [
+    "Recognizable house with roof, door and two windows",
+    "Grass along the bottom",
+    "Sun with rays in the sky",
+    "Objects do not awkwardly overlap"
+  ]
+}

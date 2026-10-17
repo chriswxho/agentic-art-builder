@@ -1,0 +1,49 @@
+PASS: 10 of 10 rules passed
+Stats: marks 280, inks used 4, widest mark 95.45, thickest stroke 5
+
+Canvas: 512×512, background white
+Motifs: boat
+Marks: 280 total (117 ellipse, 99 path, 64 polygon)
+Ink use: cyan 97, magenta 81, yellow 72, black 30
+Top-level nodes (268), in paint order:
+    1. ellipse at (-19.57, 15.34), radii 28×16.8, magenta fill
+    2. ellipse at (20.47, 14.45), radii 28×16.8, magenta fill
+    3. ellipse at (61.88, 16.92), radii 28×16.8, magenta fill
+    4. ellipse at (100.92, 14.27), radii 28×16.8, magenta fill
+    5. ellipse at (140.12, 14.94), radii 28×16.8, magenta fill
+    6. ellipse at (178.5, 17.44), radii 28×16.8, magenta fill
+    7. ellipse at (222.98, 13.8), radii 28×16.8, magenta fill
+    8. ellipse at (262.16, 16.04), radii 28×16.8, magenta fill
+    9. ellipse at (299.29, 14.76), radii 28×16.8, magenta fill
+   10. ellipse at (341.05, 15.45), radii 28×16.8, magenta fill
+   11. ellipse at (381.12, 16.27), radii 28×16.8, magenta fill
+   12. ellipse at (417.8, 16.7), radii 28×16.8, magenta fill
+   13. ellipse at (462.89, 17.5), radii 28×16.8, magenta fill
+   14. ellipse at (500.68, 13.8), radii 28×16.8, magenta fill
+   15. ellipse at (-2.98, 45.41), radii 28×16.8, magenta fill
+   16. ellipse at (42.65, 46.09), radii 28×16.8, magenta fill
+   17. ellipse at (79.2, 48.47), radii 28×16.8, magenta fill
+   18. ellipse at (118.89, 47.07), radii 28×16.8, magenta fill
+   19. ellipse at (159.62, 45.13), radii 28×16.8, magenta fill
+   20. ellipse at (200.51, 48.25), radii 28×16.8, magenta fill
+   21. ellipse at (237.94, 45.77), radii 28×16.8, magenta fill
+   22. ellipse at (279.48, 45.02), radii 28×16.8, magenta fill
+   23. ellipse at (319.98, 48.15), radii 28×16.8, magenta fill
+   24. ellipse at (360.95, 47.01), radii 28×16.8, magenta fill
+   25. ellipse at (402.13, 45.47), radii 28×16.8, magenta fill
+   26. ellipse at (440.4, 46.37), radii 28×16.8, magenta fill
+   27. ellipse at (480.61, 45.33), radii 28×16.8, magenta fill
+   28. ellipse at (521.65, 45.26), radii 28×16.8, magenta fill
+   29. ellipse at (-22, 79.35), radii 28×16.8, magenta fill
+   30. ellipse at (22.69, 77.86), radii 28×16.8, magenta fill
+   31. ellipse at (59.48, 77.11), radii 28×16.8, magenta fill
+   32. ellipse at (98.65, 78.59), radii 28×16.8, magenta fill
+   33. ellipse at (138.07, 76.6), radii 28×16.8, magenta fill
+   34. ellipse at (179.73, 76.78), radii 28×16.8, magenta fill
+   35. ellipse at (220.89, 79.41), radii 28×16.8, magenta fill
+   36. ellipse at (261.67, 78.05), radii 28×16.8, magenta fill
+   37. ellipse at (299.09, 77.86), radii 28×16.8, magenta fill
+   38. ellipse at (337.03, 78.98), radii 28×16.8, magenta fill
+   39. ellipse at (378.99, 77.4), radii 28×16.8, magenta fill
+   40. ellipse at (417.48, 77.92), radii 28×16.8, magenta fill
+  ... and 228 more

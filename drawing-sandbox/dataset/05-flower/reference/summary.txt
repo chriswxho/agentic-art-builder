@@ -1,0 +1,26 @@
+PASS: 11 of 11 rules passed
+Stats: marks 26, inks used 4, widest mark 58, thickest stroke 6
+
+Canvas: 256×256, background white
+Motifs: petal
+Marks: 26 total (18 ellipse, 4 path, 4 polygon)
+Ink use: yellow 13, magenta 8, cyan 4, black 1
+Top-level nodes (18), in paint order:
+    1. path with 2 points from (128, 140), cyan stroke 6
+    2. path with 2 points from (125, 192), cyan stroke 6
+    3. path with 2 points from (128, 140), yellow stroke 6
+    4. path with 2 points from (125, 192), yellow stroke 6
+    5. polygon with 4 points from (126, 200), cyan fill
+    6. polygon with 4 points from (126, 200), yellow fill
+    7. polygon with 4 points from (128, 218), cyan fill
+    8. polygon with 4 points from (128, 218), yellow fill
+    9. motif 'petal' at (128, 110)
+   10. motif 'petal' at (128, 110), rotated 45°
+   11. motif 'petal' at (128, 110), rotated 90°
+   12. motif 'petal' at (128, 110), rotated 135°
+   13. motif 'petal' at (128, 110), rotated 180°
+   14. motif 'petal' at (128, 110), rotated 225°
+   15. motif 'petal' at (128, 110), rotated 270°
+   16. motif 'petal' at (128, 110), rotated 315°
+   17. ellipse at (128, 110), radius 14, yellow fill
+   18. ellipse at (128, 110), radius 9, black fill

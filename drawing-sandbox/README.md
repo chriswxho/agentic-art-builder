@@ -127,6 +127,19 @@ Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, S
 
 After every step the run also gets a readable `report.md`: prompts, plan as bullets, and for each step its image, pass/fail summary, model output, and an outline of what was drawn. See [the sample report](recordings/cmyk-overprint-demo/report.md). Regenerate it with `python -m drawing_sandbox report recordings/<run_id>`.
 
+## Graded task dataset
+
+[`dataset/`](dataset/README.md) holds 10 drawing tasks, easiest first:
+
+| Level | Task | Tier |
+| --- | --- | --- |
+| 1–3 | Single dot, two-ink overprint, three-ink Venn | beginner |
+| 4–6 | Tonal ramp, flower, sunny house | intermediate |
+| 7–8 | Fruit tree, twelve-fold mandala | advanced |
+| 9–10 | Mountain lake at dusk, harbor at sunset | expert |
+
+Each task folder has `task.json` (prompt, skills, extra constraints, success criteria) and `reference/` (a passing scene with its SVG, PNG, checks and readable summary). `tasks.jsonl` lists the cards one per line for batch runs, and `GET /api/dataset` serves them without reference answers. Pass a task's `constraints` to `render_drawing(scene, constraints)` to enforce its extra limits. Tasks are defined in [`drawing_sandbox/dataset.py`](drawing_sandbox/dataset.py); regenerate the folder with `python -m drawing_sandbox dataset --out dataset`.
+
 ## Terminal use
 
 ```bash
@@ -135,6 +148,7 @@ python -m drawing_sandbox render examples/cmyk-overprint/scene.json --out output
 python -m drawing_sandbox check examples/cmyk-overprint/scene.json          # readable summary
 python -m drawing_sandbox check examples/cmyk-overprint/scene.json --json   # raw checks
 python -m drawing_sandbox report recordings/cmyk-overprint-demo
+python -m drawing_sandbox dataset --out dataset
 python -m unittest discover -s tests -v
 ```
 

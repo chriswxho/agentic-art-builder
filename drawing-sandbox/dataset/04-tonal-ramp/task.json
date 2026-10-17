@@ -1,0 +1,19 @@
+{
+  "id": "04-tonal-ramp",
+  "level": 4,
+  "tier": "intermediate",
+  "title": "Tonal ramp",
+  "prompt": "Make a row of five equal squares that go from light grey to near-black, using only black at 50% opacity.",
+  "skills": [
+    "building value by stacking identical marks",
+    "even spacing"
+  ],
+  "constraints": {
+    "max_shapes": 20
+  },
+  "success_criteria": [
+    "Five squares of equal size in a row",
+    "Each square is darker than the one before",
+    "Only black ink is used"
+  ]
+}

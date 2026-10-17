@@ -1,0 +1,18 @@
+{
+  "id": "01-single-dot",
+  "level": 1,
+  "tier": "beginner",
+  "title": "Single dot",
+  "prompt": "Draw one cyan circle in the center of the canvas.",
+  "skills": [
+    "place one primitive",
+    "use the required opacity"
+  ],
+  "constraints": {
+    "max_shapes": 1
+  },
+  "success_criteria": [
+    "Exactly one cyan circle",
+    "It sits roughly in the middle of the canvas"
+  ]
+}

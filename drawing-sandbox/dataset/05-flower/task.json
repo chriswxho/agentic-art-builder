@@ -1,0 +1,21 @@
+{
+  "id": "05-flower",
+  "level": 5,
+  "tier": "intermediate",
+  "title": "Flower",
+  "prompt": "Draw a single flower with eight petals, a dark center, a green stem and two leaves.",
+  "skills": [
+    "defining and reusing a motif",
+    "rotation",
+    "mixing green from cyan and yellow"
+  ],
+  "constraints": {
+    "max_shapes": 40
+  },
+  "success_criteria": [
+    "Eight evenly rotated petals",
+    "A distinct center",
+    "A stem below the bloom",
+    "Two leaves on the stem, reading as green"
+  ]
+}

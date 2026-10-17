@@ -70,6 +70,9 @@ class Handler(BaseHTTPRequestHandler):
         if path=="/api/examples":
             from .examples import examples
             return self.reply(200,{"examples":examples()})
+        if path=="/api/dataset":
+            from .dataset import task_card, tasks
+            return self.reply(200,{"tasks":[task_card(task) for task in tasks()]})
         if path=="/api/instruction-set":
             return self.reply(200,{"instruction_set":current_instruction_set()})
         return self.reply(404,{"error":"Not found"})

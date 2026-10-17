@@ -1,0 +1,21 @@
+{
+  "id": "07-fruit-tree",
+  "level": 7,
+  "tier": "advanced",
+  "title": "Fruit tree",
+  "prompt": "Draw a fruit tree: a trunk with branches, a full leafy canopy built from many small clusters, red fruit in the canopy and two fallen fruit on the ground.",
+  "skills": [
+    "organic texture from many small marks",
+    "random but controlled placement",
+    "light and shadow"
+  ],
+  "constraints": {
+    "max_shapes": 220
+  },
+  "success_criteria": [
+    "Trunk and visible branches",
+    "Canopy reads as a mass of leaves, not one blob",
+    "Shadowed side of the canopy is darker",
+    "Red fruit inside the canopy and on the ground"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "03-three-ink-venn",
+  "level": 3,
+  "tier": "beginner",
+  "title": "Three-ink Venn",
+  "prompt": "Make a three-circle Venn diagram in cyan, magenta and yellow so that green, red, blue and a dark center all appear.",
+  "skills": [
+    "three-way overprint",
+    "symmetric placement"
+  ],
+  "constraints": {
+    "max_shapes": 3
+  },
+  "success_criteria": [
+    "Three circles, one per CMY ink",
+    "Pairwise overlaps show green, red and blue",
+    "A darker region where all three meet",
+    "Roughly triangular, balanced arrangement"
+  ]
+}

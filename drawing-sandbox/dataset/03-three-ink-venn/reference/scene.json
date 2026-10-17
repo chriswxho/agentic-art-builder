@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256,
+    "background": "#ffffff"
+  },
+  "motifs": {},
+  "nodes": [
+    {
+      "type": "ellipse",
+      "cx": 128.0,
+      "cy": 106.0,
+      "rx": 44,
+      "ry": 44,
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 150.52,
+      "cy": 145.0,
+      "rx": 44,
+      "ry": 44,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 105.48,
+      "cy": 145.0,
+      "rx": 44,
+      "ry": 44,
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    }
+  ]
+}

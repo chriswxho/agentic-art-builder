@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256,
+    "background": "#ffffff"
+  },
+  "motifs": {},
+  "nodes": [
+    {
+      "type": "ellipse",
+      "cx": 128,
+      "cy": 128,
+      "rx": 40,
+      "ry": 40,
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    }
+  ]
+}

@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "background": "#ffffff"
+  },
+  "motifs": {
+    "spoke": {
+      "params": {},
+      "body": [
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -60,
+          "rx": 10,
+          "ry": 26,
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -60,
+          "rx": 6,
+          "ry": 16,
+          "fill": "#ff00ff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -112,
+          "rx": 14,
+          "ry": 14,
+          "fill": "#ffff00",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -112,
+          "rx": 6,
+          "ry": 6,
+          "fill": "#000000",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              0,
+              -140
+            ],
+            [
+              12,
+              -164
+            ],
+            [
+              0,
+              -186
+            ],
+            [
+              -12,
+              -164
+            ]
+          ],
+          "fill": "#ff00ff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -205,
+          "rx": 6,
+          "ry": 6,
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        }
+      ]
+    },
+    "petal": {
+      "params": {},
+      "body": [
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -150,
+          "rx": 16,
+          "ry": 34,
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -150,
+          "rx": 10,
+          "ry": 24,
+          "fill": "#ffff00",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        }
+      ]
+    },
+    "tick": {
+      "params": {},
+      "body": [
+        {
+          "type": "path",
+          "points": [
+            [
+              0,
+              -226
+            ],
+            [
+              0,
+              -240
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 4,
+          "opacity": 0.5
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 15
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 45
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 75
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 105
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 135
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 165
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 195
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 225
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 255
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 285
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 315
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 345
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 30
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 90
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 150
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 210
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 270
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "use",
+      "motif": "spoke",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 330
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 10
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 20
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 30
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 40
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 50
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 70
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 80
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 90
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 100
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 110
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 130
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 140
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 150
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 160
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 170
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 190
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 200
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 210
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 220
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 230
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 250
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 260
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 270
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 280
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 290
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 310
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 320
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 330
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 340
+      }
+    },
+    {
+      "type": "use",
+      "motif": "tick",
+      "args": {},
+      "transform": {
+        "x": 256,
+        "y": 256,
+        "scale": 1,
+        "rotate": 350
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 286.0,
+      "cy": 256.0,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 277.21,
+      "cy": 277.21,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 256.0,
+      "cy": 286.0,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 234.79,
+      "cy": 277.21,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 226.0,
+      "cy": 256.0,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 234.79,
+      "cy": 234.79,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 256.0,
+      "cy": 226.0,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 277.21,
+      "cy": 234.79,
+      "rx": 14,
+      "ry": 14,
+      "fill": "#ff00ff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 256,
+      "cy": 256,
+      "rx": 22,
+      "ry": 22,
+      "fill": "#ffff00",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 256,
+      "cy": 256,
+      "rx": 12,
+      "ry": 12,
+      "fill": "#00ffff",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 256,
+      "cy": 256,
+      "rx": 5,
+      "ry": 5,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 0,
+      "opacity": 0.5
+    }
+  ]
+}

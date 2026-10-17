@@ -1,0 +1,18 @@
+{
+  "id": "02-two-ink-overprint",
+  "level": 2,
+  "tier": "beginner",
+  "title": "Two-ink overprint",
+  "prompt": "Overlap a cyan circle and a magenta circle so that a blue-violet lens appears where they cross.",
+  "skills": [
+    "layering",
+    "subtractive mixing of two inks"
+  ],
+  "constraints": {
+    "max_shapes": 2
+  },
+  "success_criteria": [
+    "Two circles, one cyan and one magenta",
+    "A visible darker overlap region between them"
+  ]
+}

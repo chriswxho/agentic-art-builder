@@ -1,0 +1,48 @@
+PASS: 11 of 11 rules passed
+Stats: marks 69, inks used 4, widest mark 90, thickest stroke 5
+
+Canvas: 384×384, background white
+Marks: 69 total (3 ellipse, 30 path, 36 polygon)
+Ink use: yellow 30, cyan 28, magenta 6, black 5
+Top-level nodes (69), in paint order:
+    1. polygon with 4 points from (0, 300), cyan fill
+    2. polygon with 4 points from (64, 300), cyan fill
+    3. polygon with 4 points from (128, 300), cyan fill
+    4. polygon with 4 points from (192, 300), cyan fill
+    5. polygon with 4 points from (256, 300), cyan fill
+    6. polygon with 4 points from (320, 300), cyan fill
+    7. polygon with 4 points from (0, 342), cyan fill
+    8. polygon with 4 points from (64, 342), cyan fill
+    9. polygon with 4 points from (128, 342), cyan fill
+   10. polygon with 4 points from (192, 342), cyan fill
+   11. polygon with 4 points from (256, 342), cyan fill
+   12. polygon with 4 points from (320, 342), cyan fill
+   13. polygon with 4 points from (0, 300), yellow fill
+   14. polygon with 4 points from (64, 300), yellow fill
+   15. polygon with 4 points from (128, 300), yellow fill
+   16. polygon with 4 points from (192, 300), yellow fill
+   17. polygon with 4 points from (256, 300), yellow fill
+   18. polygon with 4 points from (320, 300), yellow fill
+   19. polygon with 4 points from (0, 342), yellow fill
+   20. polygon with 4 points from (64, 342), yellow fill
+   21. polygon with 4 points from (128, 342), yellow fill
+   22. polygon with 4 points from (192, 342), yellow fill
+   23. polygon with 4 points from (256, 342), yellow fill
+   24. polygon with 4 points from (320, 342), yellow fill
+   25. ellipse at (310, 76), radius 30, yellow fill
+   26. ellipse at (310, 76), radius 30, yellow fill
+   27. ellipse at (310, 76), radius 18, magenta fill
+   28. path with 2 points from (348, 76), yellow stroke 5
+   29. path with 2 points from (342.91, 95), yellow stroke 5
+   30. path with 2 points from (329, 108.91), yellow stroke 5
+   31. path with 2 points from (310, 114), yellow stroke 5
+   32. path with 2 points from (291, 108.91), yellow stroke 5
+   33. path with 2 points from (277.09, 95), yellow stroke 5
+   34. path with 2 points from (272, 76), yellow stroke 5
+   35. path with 2 points from (277.09, 57), yellow stroke 5
+   36. path with 2 points from (291, 43.09), yellow stroke 5
+   37. path with 2 points from (310, 38), yellow stroke 5
+   38. path with 2 points from (329, 43.09), yellow stroke 5
+   39. path with 2 points from (342.91, 57), yellow stroke 5
+   40. polygon with 4 points from (110, 200), yellow fill
+  ... and 29 more

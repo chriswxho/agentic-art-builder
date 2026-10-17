@@ -1,0 +1,24 @@
+{
+  "id": "10-harbor-sunset",
+  "level": 10,
+  "tier": "expert",
+  "title": "Harbor at sunset",
+  "prompt": "Paint a harbor at sunset: warm sky, setting sun with a reflection on the water, a dark headland, three sailboats at different distances with wakes, a wooden pier with a lit lamp, and gulls overhead.",
+  "skills": [
+    "many interacting objects",
+    "scale for distance",
+    "reflections",
+    "narrative composition",
+    "budgeting marks across the whole image"
+  ],
+  "constraints": {},
+  "success_criteria": [
+    "Sun with a vertical reflection on the water",
+    "Three sailboats of different sizes suggesting depth",
+    "Each boat has hull, mast and sails",
+    "Pier with posts and a lit lamp",
+    "Gulls in the sky",
+    "Sea shows wave texture",
+    "Composition is balanced, not cluttered"
+  ]
+}

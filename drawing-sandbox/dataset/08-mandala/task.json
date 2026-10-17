@@ -1,0 +1,21 @@
+{
+  "id": "08-mandala",
+  "level": 8,
+  "tier": "advanced",
+  "title": "Twelve-fold mandala",
+  "prompt": "Design a mandala with exact twelve-fold rotational symmetry: an inner ring, a ring of petals, a ring of spokes with ornaments, and a fine outer ring of ticks.",
+  "skills": [
+    "exact rotational symmetry",
+    "multiple motifs",
+    "nested rings"
+  ],
+  "constraints": {
+    "max_shapes": 200
+  },
+  "success_criteria": [
+    "Twelve-fold symmetry holds for every ring",
+    "At least four distinct concentric rings",
+    "Centerd on the canvas",
+    "Uses all four inks deliberately"
+  ]
+}

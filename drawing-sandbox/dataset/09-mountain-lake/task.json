@@ -1,0 +1,21 @@
+{
+  "id": "09-mountain-lake",
+  "level": 9,
+  "tier": "expert",
+  "title": "Mountain lake at dusk",
+  "prompt": "Paint a mountain lake at dusk: a sky graded from blue at the top to warm at the horizon, a low sun, two mountain ranges for depth, a lake that reflects the sunset, and pine trees in the foreground.",
+  "skills": [
+    "color gradients from small marks",
+    "atmospheric depth",
+    "reflections",
+    "working near the 512-mark budget"
+  ],
+  "constraints": {},
+  "success_criteria": [
+    "Sky gradient from cool to warm without visible gaps",
+    "Far range lighter than near range",
+    "Lake reflects sunset colors",
+    "Foreground pines frame the scene",
+    "Clear horizon line"
+  ]
+}

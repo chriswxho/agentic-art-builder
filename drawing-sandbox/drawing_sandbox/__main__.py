@@ -36,6 +36,8 @@ def main(argv=None):
     checker=sub.add_parser("check",help="Check a drawing without rendering it")
     checker.add_argument("scene")
     checker.add_argument("--json",action="store_true",help="Print raw JSON instead of a readable summary")
+    datasets=sub.add_parser("dataset",help="Export the graded drawing-task dataset")
+    datasets.add_argument("--out",default="dataset")
     reporter=sub.add_parser("report",help="Write a readable report.md for a recorded run")
     reporter.add_argument("run_dir")
     args=parser.parse_args(argv)
@@ -62,6 +64,10 @@ def main(argv=None):
             checks=check_scene(scene,composition_constraints())
             print(json.dumps(asdict(checks),indent=2) if args.json else summarize_render(scene,asdict(checks)))
             return 0 if checks.valid else 1
+        elif args.command=="dataset":
+            from .dataset import export_dataset
+            for entry in export_dataset(args.out):
+                print(f"{entry['level']:>2}. {entry['title']} ({entry['tier']}, {entry['reference_marks']} marks)")
         elif args.command=="report":
             from .report import write_run_report
             print(str(write_run_report(args.run_dir).resolve()))

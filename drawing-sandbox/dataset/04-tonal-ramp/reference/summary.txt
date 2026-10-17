@@ -1,0 +1,22 @@
+PASS: 11 of 11 rules passed
+Stats: marks 15, inks used 1, widest mark 60, thickest stroke 0
+
+Canvas: 384×192, background white
+Marks: 15 total (15 polygon)
+Ink use: black 15
+Top-level nodes (15), in paint order:
+    1. polygon with 4 points from (22, 66), black fill
+    2. polygon with 4 points from (92, 66), black fill
+    3. polygon with 4 points from (92, 66), black fill
+    4. polygon with 4 points from (162, 66), black fill
+    5. polygon with 4 points from (162, 66), black fill
+    6. polygon with 4 points from (162, 66), black fill
+    7. polygon with 4 points from (232, 66), black fill
+    8. polygon with 4 points from (232, 66), black fill
+    9. polygon with 4 points from (232, 66), black fill
+   10. polygon with 4 points from (232, 66), black fill
+   11. polygon with 4 points from (302, 66), black fill
+   12. polygon with 4 points from (302, 66), black fill
+   13. polygon with 4 points from (302, 66), black fill
+   14. polygon with 4 points from (302, 66), black fill
+   15. polygon with 4 points from (302, 66), black fill
