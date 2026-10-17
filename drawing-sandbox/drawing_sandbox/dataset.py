@@ -355,7 +355,7 @@ _TASKS = [
                            "Centerd on the canvas", "Uses all four inks deliberately"]),
     dict(id="09-mountain-lake", level=9, tier="expert", title="Mountain lake at dusk", build=_mountain_lake,
          prompt="Paint a mountain lake at dusk: a sky graded from blue at the top to warm at the horizon, a low sun, two mountain ranges for depth, a lake that reflects the sunset, and pine trees in the foreground.",
-         skills=["color gradients from small marks", "atmospheric depth", "reflections", "working near the 512-mark budget"],
+         skills=["color gradients from small marks", "atmospheric depth", "reflections", "budgeting hundreds of small marks"],
          constraints={},
          success_criteria=["Sky gradient from cool to warm without visible gaps",
                            "Far range lighter than near range", "Lake reflects sunset colors",
@@ -434,7 +434,7 @@ def export_dataset(folder) -> list[dict]:
         "",
         f"{len(index)} drawing tasks, easiest first. Every task must follow the CMYK rules "
         "(white canvas, cyan/magenta/yellow/black only, 50% opacity, marks at most 96 units "
-        "across, at most 512 marks), plus any extra constraints listed for it.",
+        "across, at most 2,048 marks), plus any extra constraints listed for it.",
         "",
         "Give an agent `task.json` (or a line of `tasks.jsonl`). Score its drawing with the "
         "renderer's checks for the hard rules and the success criteria for the rest. "

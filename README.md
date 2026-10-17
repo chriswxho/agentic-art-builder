@@ -12,9 +12,9 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
 2. **The renderer checks it.** Every drawing must follow the CMYK rules in [policy.py](drawing-sandbox/drawing_sandbox/policy.py):
    - white canvas; paint only in cyan, magenta, yellow or black
    - every mark at 50% opacity, so overlaps mix into new colors
-   - each mark at most 96 units across, strokes at most 12 wide, at most 512 marks in total
+   - each mark at most 96 units across, strokes at most 12 wide, at most 2,048 marks in total
 3. **If it passes, it's rendered** to SVG and PNG. If it fails, the agent gets a list of what broke.
-4. **An agent looks at the PNG and revises.** The built-in agent loop chains Nemotron calls (`nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` on Crusoe Managed Inference, token from `CRUSOE_API_TOKEN` or the gitignored `.env`). Each call returns one typed edit (`split_layers`, `combine_layers`, `add_objects` or `remove_objects`) against a shared `PictureContext`, which the orchestrator validates, renders, records and hands to the next agent. See [scripts/nemotron_iteration.py](drawing-sandbox/scripts/nemotron_iteration.py).
+4. **An agent looks at the PNG and revises.** The built-in agent loop chains Nemotron calls (`nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` on Crusoe Managed Inference, token from `CRUSOE_API_TOKEN` or the gitignored `.env`). A Nemotron Super-VL planner (`nvidia/NVIDIA-Nemotron-3.5-Super-VL`) can first emit a `PicturePlan` that assigns each detail agent a layer, canvas region, allowed shapes/colors and shape-count range, and the same model scores the final before/after result. Each generator call returns one typed edit (`split_layers`, `combine_layers`, `add_objects` or `remove_objects`) against a shared `PictureContext`, which the orchestrator validates, renders, records and hands to the next agent. See [scripts/nemotron_iteration.py](drawing-sandbox/scripts/nemotron_iteration.py).
 5. **Each step is recorded** under `drawing-sandbox/recordings/<run_id>/`: the scene, SVG, PNG, checks, the prompts used, the plan, and (optionally) the model's raw text output for that step.
 6. **There's a graded task dataset** for testing agents: 10 drawing tasks from "one cyan dot" (level 1) to "harbor at sunset" (level 10), each with a prompt, skills, extra limits, success criteria, and a passing reference drawing. See [drawing-sandbox/dataset/](drawing-sandbox/dataset/README.md).
 7. **Runs can be watched and scored.** `/watch?run=<run_id>` replays a run frame by frame in the browser, and `python -m drawing_sandbox.evals` scores recorded runs (step count, image similarity to a target, preferences). The eval metrics are provisional; see [EVALS.md](drawing-sandbox/EVALS.md).
@@ -64,6 +64,7 @@ Run the tests with `python -m unittest discover -s tests -v`. More detail is in 
 
 ## Changelog
 
+- **Merged shape-limit raise and planned Nemotron runs**: scenes may now expand to 2,048 shapes (was 512); a Super-VL planner and evaluator wrap the generator agents. Dataset docs updated to match.
 - **Repo rules moved**: the README-every-commit rule now lives in `CONTRIBUTING.md`; `AGENTS.md` only holds picture-agent rules.
 - **Reference landscapes in three levels**: easy `landscape-paintings/`, medium `medphotos/`, hard `hardphotos/` (photos with credits), all resized to 1536×1024. Root README now also covers the Nemotron agent loop, watch view and evals merged from `main`.
 - **Nemotron agent loop, watch view, evals** (merged from `main`): chained Crusoe Nemotron picture agents with typed edits, `/watch` playback, provisional eval framework.

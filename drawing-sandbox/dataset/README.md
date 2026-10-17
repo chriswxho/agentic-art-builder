@@ -1,6 +1,6 @@
 # Drawing task dataset
 
-10 drawing tasks, easiest first. Every task must follow the CMYK rules (white canvas, cyan/magenta/yellow/black only, 50% opacity, marks at most 96 units across, at most 512 marks), plus any extra constraints listed for it.
+10 drawing tasks, easiest first. Every task must follow the CMYK rules (white canvas, cyan/magenta/yellow/black only, 50% opacity, marks at most 96 units across, at most 2,048 marks), plus any extra constraints listed for it.
 
 Give an agent `task.json` (or a line of `tasks.jsonl`). Score its drawing with the renderer's checks for the hard rules and the success criteria for the rest. `reference/` holds one passing solution for comparison, not the only right answer.
 
@@ -114,7 +114,7 @@ Success criteria:
 
 > Paint a mountain lake at dusk: a sky graded from blue at the top to warm at the horizon, a low sun, two mountain ranges for depth, a lake that reflects the sunset, and pine trees in the foreground.
 
-Skills: color gradients from small marks, atmospheric depth, reflections, working near the 512-mark budget
+Skills: color gradients from small marks, atmospheric depth, reflections, budgeting hundreds of small marks
 
 Success criteria:
 - Sky gradient from cool to warm without visible gaps
