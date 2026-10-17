@@ -48,7 +48,8 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
   - [landscape-paintings/](landscape-paintings/) **easy**: 10 flat, simple landscape pictures as PNG and SVG. The SVGs are still at the original 1740×1080.
   - [medphotos/](medphotos/) **medium**: 9 famous landscape paintings (Starry Night, The Great Wave, The Hay Wain, …)
   - [hardphotos/](hardphotos/) **hard**: 10 photographs of famous real places (Grand Canyon, Mount Fuji, Yosemite, Matterhorn, …), with author, license and source in [sources.json](hardphotos/sources.json)
-- [AGENTS.md](AGENTS.md): rules for any agent that draws or edits code here
+- [AGENTS.md](AGENTS.md): rules for agents that draw pictures here
+- [CONTRIBUTING.md](CONTRIBUTING.md): rules for changing the repo (including keeping this README current)
 
 ## Quick start
 
@@ -63,6 +64,7 @@ Run the tests with `python -m unittest discover -s tests -v`. More detail is in 
 
 ## Changelog
 
+- **Repo rules moved**: the README-every-commit rule now lives in `CONTRIBUTING.md`; `AGENTS.md` only holds picture-agent rules.
 - **Reference landscapes in three levels**: easy `landscape-paintings/`, medium `medphotos/`, hard `hardphotos/` (photos with credits), all resized to 1536×1024. Root README now also covers the Nemotron agent loop, watch view and evals merged from `main`.
 - **Nemotron agent loop, watch view, evals** (merged from `main`): chained Crusoe Nemotron picture agents with typed edits, `/watch` playback, provisional eval framework.
 - **Graded drawing dataset**: 10 tasks from beginner to expert with prompts, success criteria and reference solutions; `dataset` CLI command and `GET /api/dataset`.

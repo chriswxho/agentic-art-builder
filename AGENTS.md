@@ -20,7 +20,3 @@ The machine-readable policy lives in `drawing-sandbox/drawing_sandbox/policy.py`
 - Preserve stable layer and object IDs from the context. New object and layer IDs must be unique and descriptive.
 - Use the current rendered PNG and reference assets listed in the context when critiquing a revision.
 - Record the exact text prompts, model identifier, response identifier, token usage, raw response, and accepted proposal for every inference. Never record the API key or image data URLs.
-
-# Repository rules
-
-- Keep the root `README.md` describing how the app works as of the current commit. Any commit that changes behavior, interfaces, or data must update the "How it works right now" section and add a line to its changelog in the same commit.
