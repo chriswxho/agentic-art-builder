@@ -11,3 +11,7 @@ These rules apply to any agent or subagent creating pictures in `drawing-sandbox
 - Record each meaningful progress state with a stable run ID, the complete prompt set, the composition/layer plan, and a step label. Mark the accepted output as final so its PNG, SVG, and scene JSON are preserved alongside the progress frames.
 
 The machine-readable policy lives in `drawing-sandbox/drawing_sandbox/policy.py`. The recording API is `POST /api/record`.
+
+# Repository rules
+
+- Keep the root `README.md` describing how the app works as of the current commit. Any commit that changes behavior, interfaces, or data must update the "How it works right now" section and add a line to its changelog in the same commit.
