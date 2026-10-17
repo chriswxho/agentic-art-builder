@@ -128,18 +128,21 @@ class RendererTests(unittest.TestCase):
             self.assertFalse(validate(source).valid)
 
     def test_shape_count_limits(self):
+        self.assertEqual(MAX_EXPANDED_SHAPES, 2048)
         source = scene([ellipse() for _ in range(MAX_EXPANDED_SHAPES)])
         self.assertTrue(validate(source).valid)
         source["nodes"].append(ellipse())
         self.assertFalse(validate(source).valid)
-        expanded = scene([{"type": "use", "motif": "pair"} for _ in range(257)],
+        expanded = scene([{"type": "use", "motif": "pair"}
+                          for _ in range(MAX_EXPANDED_SHAPES // 2 + 1)],
                          {"pair": {"body": [ellipse(), ellipse()]}})
         self.assertIn("shape count", validate(expanded).violations[0])
 
     def test_raw_and_expanded_node_limits(self):
         empty_group = {"type": "group", "children": []}
         self.assertFalse(validate(scene([deepcopy(empty_group) for _ in range(MAX_NODES + 1)])).valid)
-        source = scene([{"type": "use", "motif": "empty_pair"} for _ in range(1024)],
+        source = scene([{"type": "use", "motif": "empty_pair"}
+                        for _ in range(MAX_NODES // 3 + 1)],
                        {"empty_pair": {"body": [deepcopy(empty_group), deepcopy(empty_group)]}})
         result = validate(source)
         self.assertFalse(result.valid)

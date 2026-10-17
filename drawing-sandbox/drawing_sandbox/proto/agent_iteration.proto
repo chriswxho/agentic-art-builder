@@ -6,7 +6,7 @@ import "google/protobuf/struct.proto";
 
 // JSON encoding of this message is the model-independent picture-agent handoff.
 message PictureContext {
-  string protocol_version = 1;  // "drawing-sandbox.iteration.v2"
+  string protocol_version = 1;  // "drawing-sandbox.iteration.v3"
   string run_id = 2;
   uint64 revision = 3;
   string state_sha256 = 4;
@@ -25,8 +25,9 @@ message PictureContext {
 
 message InferenceRuntime {
   string provider = 1; // "crusoe_managed_inference"
-  string model = 2;    // Nemotron 3 Nano Omni model identifier.
-  string endpoint = 3; // OpenAI-compatible Chat Completions endpoint.
+  string generator_model = 2; // Nemotron 3 Nano Omni model identifier.
+  string evaluator_model = 3; // Nemotron 3.5 Super VL model identifier.
+  string endpoint = 4;        // OpenAI-compatible Chat Completions endpoint.
 }
 
 message Layer {
@@ -119,4 +120,53 @@ message AddObjects {
 
 message RemoveObjects {
   repeated string object_ids = 1;
+}
+
+// A planner emits this before regional add_objects specialists run in order.
+message PicturePlan {
+  string protocol_version = 1; // "drawing-sandbox.plan.v1"
+  string planner_id = 2;
+  string plan_id = 3;
+  uint64 base_revision = 4;
+  string base_state_sha256 = 5;
+  string critique = 6;
+  string strategy = 7;
+  repeated ShapeAssignment assignments = 8;
+}
+
+message ShapeAssignment {
+  string assignment_id = 1;
+  string part_label = 2;
+  string brief = 3;
+  CanvasRegion region = 4;
+  string layer_id = 5;
+  repeated string shape_types = 6; // path, polygon, and/or ellipse.
+  repeated string colors = 7;      // Assigned subset of CMYK paint.
+  uint32 minimum_shapes = 8;
+  uint32 shape_budget = 9;
+}
+
+message CanvasRegion {
+  double x = 1;
+  double y = 2;
+  double width = 3;
+  double height = 4;
+}
+
+message PictureEvaluation {
+  string protocol_version = 1; // "drawing-sandbox.evaluation.v1"
+  string evaluator_id = 2;
+  string evaluation_id = 3;
+  string run_id = 4;
+  uint64 base_revision = 5;
+  uint64 final_revision = 6;
+  double reference_match_before = 7; // 0-100.
+  double reference_match_after = 8;  // 0-100.
+  double composition_before = 9;     // 0-100.
+  double composition_after = 10;     // 0-100.
+  bool improved = 11;
+  string summary = 12;
+  repeated string strengths = 13;
+  repeated string issues = 14;
+  repeated string next_actions = 15;
 }

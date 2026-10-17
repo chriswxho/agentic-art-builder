@@ -1,0 +1,478 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v3",
+  "agent_id": "nemotron-sky-deepen-r001",
+  "mutation_id": "tahoe-supervl-nano-planned-2-sky-deepen-r001",
+  "base_revision": 0,
+  "critique": "visual diagnosis of the current render",
+  "rationale": "adding layered cyan and magenta hatching strokes across the upper sky deepens the blue overprint and improves separation between sky and ridge",
+  "add_objects": {
+    "layer_id": "layered-sky",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "plan-sky-deepen-r001-01",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              30
+            ],
+            [
+              140,
+              30
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=30",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-02",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              45
+            ],
+            [
+              140,
+              45
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=45",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-03",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              60
+            ],
+            [
+              140,
+              60
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=60",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-04",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              75
+            ],
+            [
+              140,
+              75
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=75",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-05",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              90
+            ],
+            [
+              140,
+              90
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=90",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-06",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              105
+            ],
+            [
+              140,
+              105
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=105",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-07",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              120
+            ],
+            [
+              140,
+              120
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=120",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-08",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              135
+            ],
+            [
+              140,
+              135
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan hatching line at y=135",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-09",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              20
+            ],
+            [
+              180,
+              20
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=20",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-10",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              35
+            ],
+            [
+              180,
+              35
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=35",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-11",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              50
+            ],
+            [
+              180,
+              50
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=50",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-12",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              65
+            ],
+            [
+              180,
+              65
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=65",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-13",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              80
+            ],
+            [
+              180,
+              80
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=80",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-14",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              95
+            ],
+            [
+              180,
+              95
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=95",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-15",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              110
+            ],
+            [
+              180,
+              110
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=110",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-sky-deepen-r001-16",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              125
+            ],
+            [
+              180,
+              125
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta hatching line at y=125",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      }
+    ]
+  }
+}

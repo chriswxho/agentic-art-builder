@@ -1,0 +1,246 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v3",
+  "agent_id": "nemotron-water-enrich-b01-r004",
+  "mutation_id": "tahoe-supervl-nano-planned-2-water-enrich-b01-r004",
+  "base_revision": 3,
+  "critique": "visual diagnosis of the current render",
+  "rationale": "adding short cyan, yellow, and black path strokes across the water surface introduces movement and depth, enhancing the sense of water currents while staying within the allowed palette and constraints.",
+  "add_objects": {
+    "layer_id": "turquoise-water-currents",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "plan-water-enrich-b01-r004-01",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              350
+            ],
+            [
+              150,
+              350
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path indicating water current direction",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-02",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              200,
+              360
+            ],
+            [
+              250,
+              360
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path indicating water current direction",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-03",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              300,
+              370
+            ],
+            [
+              350,
+              370
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path indicating water current direction",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-04",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              400,
+              380
+            ],
+            [
+              450,
+              380
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path indicating water current direction",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-05",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              120,
+              340
+            ],
+            [
+              170,
+              340
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ffff00",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "yellow highlight stroke suggesting water movement",
+        "tags": [
+          "type:path",
+          "stroke:#ffff00",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-06",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              220,
+              350
+            ],
+            [
+              270,
+              350
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ffff00",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "yellow highlight stroke suggesting water movement",
+        "tags": [
+          "type:path",
+          "stroke:#ffff00",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-07",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              130,
+              330
+            ],
+            [
+              180,
+              330
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "black contour line indicating water depth variation",
+        "tags": [
+          "type:path",
+          "stroke:#000000",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-water-enrich-b01-r004-08",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              230,
+              340
+            ],
+            [
+              280,
+              340
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "black contour line indicating water depth variation",
+        "tags": [
+          "type:path",
+          "stroke:#000000",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      }
+    ]
+  }
+}

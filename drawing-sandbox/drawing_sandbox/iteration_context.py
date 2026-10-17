@@ -14,10 +14,12 @@ from .recording import record_composition_step
 from .server import render_drawing
 
 
-PROTOCOL_VERSION = "drawing-sandbox.iteration.v2"
+PROTOCOL_VERSION = "drawing-sandbox.iteration.v3"
 ALLOWED_SKILLS = ("split_layers", "combine_layers", "add_objects", "remove_objects")
 INFERENCE_PROVIDER = "crusoe_managed_inference"
-INFERENCE_MODEL = "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B"
+GENERATOR_MODEL = "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B"
+EVALUATOR_MODEL = "nvidia/NVIDIA-Nemotron-3.5-Super-VL"
+INFERENCE_MODEL = GENERATOR_MODEL
 INFERENCE_ENDPOINT = "https://api.inference.crusoecloud.com/v1/chat/completions"
 _ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}\Z")
 
@@ -139,7 +141,8 @@ def create_context(
         "state_sha256": "",
         "agent_runtime": {
             "provider": INFERENCE_PROVIDER,
-            "model": INFERENCE_MODEL,
+            "generator_model": GENERATOR_MODEL,
+            "evaluator_model": EVALUATOR_MODEL,
             "endpoint": INFERENCE_ENDPOINT,
         },
         "prompt_set": deepcopy(prompt_set),
@@ -174,10 +177,11 @@ def validate_context(context: Any, *, render: bool = True) -> dict | None:
         raise PictureContextError("unsupported protocol_version")
     if context["agent_runtime"] != {
         "provider": INFERENCE_PROVIDER,
-        "model": INFERENCE_MODEL,
+        "generator_model": GENERATOR_MODEL,
+        "evaluator_model": EVALUATOR_MODEL,
         "endpoint": INFERENCE_ENDPOINT,
     }:
-        raise PictureContextError("agent_runtime must use Crusoe Nemotron Omni Nano")
+        raise PictureContextError("agent_runtime must use the configured Crusoe evaluator/generator split")
     _identifier(context["run_id"], "run_id")
     if isinstance(context["revision"], bool) or not isinstance(context["revision"], int) or context["revision"] < 0:
         raise PictureContextError("revision must be a non-negative integer")
@@ -438,7 +442,9 @@ def initialize_recorded_context(context: dict, *, root: str | Path = "recordings
         run_id=context["run_id"], prompt_set=context["prompt_set"],
         composition=context["composition"], step_label="Initial picture-agent handoff",
         provenance={"protocol_version": PROTOCOL_VERSION, "context_revision": 0,
-                    "provider": INFERENCE_PROVIDER, "model": INFERENCE_MODEL,
+                    "provider": INFERENCE_PROVIDER,
+                    "generator_model": GENERATOR_MODEL,
+                    "evaluator_model": EVALUATOR_MODEL,
                     "context": "handoffs/context-000.json"},
         root=root,
     )
@@ -462,7 +468,7 @@ def apply_and_record(
     provenance = {
         "protocol_version": PROTOCOL_VERSION,
         "provider": INFERENCE_PROVIDER,
-        "model": INFERENCE_MODEL,
+        "model": GENERATOR_MODEL,
         "context_revision": revision,
         "agent_id": proposal["agent_id"],
         "mutation_id": proposal["mutation_id"],
@@ -494,7 +500,8 @@ def read_context(path: str | Path) -> dict:
 
 
 __all__ = [
-    "ALLOWED_SKILLS", "INFERENCE_ENDPOINT", "INFERENCE_MODEL", "INFERENCE_PROVIDER",
+    "ALLOWED_SKILLS", "EVALUATOR_MODEL", "GENERATOR_MODEL", "INFERENCE_ENDPOINT",
+    "INFERENCE_MODEL", "INFERENCE_PROVIDER",
     "PictureContextError", "PROTOCOL_VERSION", "apply_and_record",
     "apply_proposal", "create_context", "initialize_recorded_context",
     "materialize_scene", "proposal_skill", "read_context", "state_sha256",

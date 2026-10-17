@@ -1,0 +1,294 @@
+{
+  "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+  "max_generator_batch_shapes": 8,
+  "assignments": [
+    {
+      "assignment_id": "sky-deepen-b01",
+      "part_label": "wide blue sky \u00b7 batch 1/2",
+      "brief": "Add layered cyan and magenta hatching strokes across the upper sky to deepen the blue overprint and improve sky-to-ridge separation",
+      "region": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 960.0,
+        "height": 240.0
+      },
+      "layer_id": "layered-sky",
+      "shape_types": [
+        "path",
+        "ellipse"
+      ],
+      "colors": [
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "sky-deepen"
+    },
+    {
+      "assignment_id": "sky-deepen-b02",
+      "part_label": "wide blue sky \u00b7 batch 2/2",
+      "brief": "Add layered cyan and magenta hatching strokes across the upper sky to deepen the blue overprint and improve sky-to-ridge separation",
+      "region": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 960.0,
+        "height": 240.0
+      },
+      "layer_id": "layered-sky",
+      "shape_types": [
+        "path",
+        "ellipse"
+      ],
+      "colors": [
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "sky-deepen"
+    },
+    {
+      "assignment_id": "ridge-sharpen-b01",
+      "part_label": "snowy mountain ridge \u00b7 batch 1/2",
+      "brief": "Add black, cyan, and magenta path strokes along the ridgeline to sharpen peaks and suggest snow texture against the sky",
+      "region": {
+        "x": 0.0,
+        "y": 240.0,
+        "width": 960.0,
+        "height": 70.0
+      },
+      "layer_id": "snowy-mountain-ridge",
+      "shape_types": [
+        "path",
+        "polygon"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "ridge-sharpen"
+    },
+    {
+      "assignment_id": "ridge-sharpen-b02",
+      "part_label": "snowy mountain ridge \u00b7 batch 2/2",
+      "brief": "Add black, cyan, and magenta path strokes along the ridgeline to sharpen peaks and suggest snow texture against the sky",
+      "region": {
+        "x": 0.0,
+        "y": 240.0,
+        "width": 960.0,
+        "height": 70.0
+      },
+      "layer_id": "snowy-mountain-ridge",
+      "shape_types": [
+        "path",
+        "polygon"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "ridge-sharpen"
+    },
+    {
+      "assignment_id": "water-enrich-b01",
+      "part_label": "turquoise water currents \u00b7 batch 1/2",
+      "brief": "Add cyan current paths, yellow highlight strokes, and black contour lines across the water surface to suggest movement and depth",
+      "region": {
+        "x": 0.0,
+        "y": 310.0,
+        "width": 960.0,
+        "height": 190.0
+      },
+      "layer_id": "turquoise-water-currents",
+      "shape_types": [
+        "path",
+        "ellipse"
+      ],
+      "colors": [
+        "#00ffff",
+        "#ffff00",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "water-enrich"
+    },
+    {
+      "assignment_id": "water-enrich-b02",
+      "part_label": "turquoise water currents \u00b7 batch 2/2",
+      "brief": "Add cyan current paths, yellow highlight strokes, and black contour lines across the water surface to suggest movement and depth",
+      "region": {
+        "x": 0.0,
+        "y": 310.0,
+        "width": 960.0,
+        "height": 190.0
+      },
+      "layer_id": "turquoise-water-currents",
+      "shape_types": [
+        "path",
+        "ellipse"
+      ],
+      "colors": [
+        "#00ffff",
+        "#ffff00",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "water-enrich"
+    },
+    {
+      "assignment_id": "granite-cluster-b01",
+      "part_label": "central and right-shore granite \u00b7 batch 1/2",
+      "brief": "Add overlapping black, cyan, yellow, and magenta ellipses and path strokes to define the large granite boulders rising from the water on the right side",
+      "region": {
+        "x": 400.0,
+        "y": 280.0,
+        "width": 560.0,
+        "height": 100.0
+      },
+      "layer_id": "shore-and-granite-clusters",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ffff00",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 7,
+      "shape_budget": 7,
+      "parent_assignment_id": "granite-cluster"
+    },
+    {
+      "assignment_id": "granite-cluster-b02",
+      "part_label": "central and right-shore granite \u00b7 batch 2/2",
+      "brief": "Add overlapping black, cyan, yellow, and magenta ellipses and path strokes to define the large granite boulders rising from the water on the right side",
+      "region": {
+        "x": 400.0,
+        "y": 280.0,
+        "width": 560.0,
+        "height": 100.0
+      },
+      "layer_id": "shore-and-granite-clusters",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ffff00",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 7,
+      "shape_budget": 7,
+      "parent_assignment_id": "granite-cluster"
+    },
+    {
+      "assignment_id": "pine-forms-b01",
+      "part_label": "right-shore pines \u00b7 batch 1/2",
+      "brief": "Add black trunk paths and cyan/yellow polygon foliage layers to build fuller pine tree shapes on the right shoreline",
+      "region": {
+        "x": 800.0,
+        "y": 220.0,
+        "width": 160.0,
+        "height": 100.0
+      },
+      "layer_id": "shoreline-pines",
+      "shape_types": [
+        "polygon",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ffff00"
+      ],
+      "minimum_shapes": 6,
+      "shape_budget": 6,
+      "parent_assignment_id": "pine-forms"
+    },
+    {
+      "assignment_id": "pine-forms-b02",
+      "part_label": "right-shore pines \u00b7 batch 2/2",
+      "brief": "Add black trunk paths and cyan/yellow polygon foliage layers to build fuller pine tree shapes on the right shoreline",
+      "region": {
+        "x": 800.0,
+        "y": 220.0,
+        "width": 160.0,
+        "height": 100.0
+      },
+      "layer_id": "shoreline-pines",
+      "shape_types": [
+        "polygon",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ffff00"
+      ],
+      "minimum_shapes": 6,
+      "shape_budget": 6,
+      "parent_assignment_id": "pine-forms"
+    },
+    {
+      "assignment_id": "foreground-boulder-b01",
+      "part_label": "foreground granite and accents \u00b7 batch 1/2",
+      "brief": "Add black, cyan, and magenta ellipses and path strokes in the lower foreground to model the large boulder and final accent details",
+      "region": {
+        "x": 0.0,
+        "y": 380.0,
+        "width": 960.0,
+        "height": 160.0
+      },
+      "layer_id": "foreground-granite-and-final-accents",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "foreground-boulder"
+    },
+    {
+      "assignment_id": "foreground-boulder-b02",
+      "part_label": "foreground granite and accents \u00b7 batch 2/2",
+      "brief": "Add black, cyan, and magenta ellipses and path strokes in the lower foreground to model the large boulder and final accent details",
+      "region": {
+        "x": 0.0,
+        "y": 380.0,
+        "width": 960.0,
+        "height": 160.0
+      },
+      "layer_id": "foreground-granite-and-final-accents",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff",
+        "#ff00ff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 8,
+      "parent_assignment_id": "foreground-boulder"
+    }
+  ]
+}
