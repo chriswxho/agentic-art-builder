@@ -1,0 +1,1351 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "background": "#FFFFFF"
+  },
+  "motifs": {},
+  "nodes": [
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          94
+        ],
+        [
+          72,
+          82
+        ],
+        [
+          96,
+          106
+        ],
+        [
+          124,
+          94
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          94
+        ],
+        [
+          152,
+          82
+        ],
+        [
+          176,
+          106
+        ],
+        [
+          204,
+          94
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          94
+        ],
+        [
+          232,
+          82
+        ],
+        [
+          256,
+          106
+        ],
+        [
+          284,
+          94
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          94
+        ],
+        [
+          312,
+          82
+        ],
+        [
+          336,
+          106
+        ],
+        [
+          364,
+          94
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          94
+        ],
+        [
+          392,
+          82
+        ],
+        [
+          416,
+          106
+        ],
+        [
+          444,
+          94
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          94
+        ],
+        [
+          472,
+          82
+        ],
+        [
+          496,
+          106
+        ],
+        [
+          524,
+          94
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          142
+        ],
+        [
+          72,
+          130
+        ],
+        [
+          96,
+          154
+        ],
+        [
+          124,
+          142
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          142
+        ],
+        [
+          152,
+          130
+        ],
+        [
+          176,
+          154
+        ],
+        [
+          204,
+          142
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          142
+        ],
+        [
+          232,
+          130
+        ],
+        [
+          256,
+          154
+        ],
+        [
+          284,
+          142
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          142
+        ],
+        [
+          312,
+          130
+        ],
+        [
+          336,
+          154
+        ],
+        [
+          364,
+          142
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          142
+        ],
+        [
+          392,
+          130
+        ],
+        [
+          416,
+          154
+        ],
+        [
+          444,
+          142
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          142
+        ],
+        [
+          472,
+          130
+        ],
+        [
+          496,
+          154
+        ],
+        [
+          524,
+          142
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          190
+        ],
+        [
+          72,
+          178
+        ],
+        [
+          96,
+          202
+        ],
+        [
+          124,
+          190
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          190
+        ],
+        [
+          152,
+          178
+        ],
+        [
+          176,
+          202
+        ],
+        [
+          204,
+          190
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          190
+        ],
+        [
+          232,
+          178
+        ],
+        [
+          256,
+          202
+        ],
+        [
+          284,
+          190
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          190
+        ],
+        [
+          312,
+          178
+        ],
+        [
+          336,
+          202
+        ],
+        [
+          364,
+          190
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          190
+        ],
+        [
+          392,
+          178
+        ],
+        [
+          416,
+          202
+        ],
+        [
+          444,
+          190
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          190
+        ],
+        [
+          472,
+          178
+        ],
+        [
+          496,
+          202
+        ],
+        [
+          524,
+          190
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          238
+        ],
+        [
+          72,
+          226
+        ],
+        [
+          96,
+          250
+        ],
+        [
+          124,
+          238
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          238
+        ],
+        [
+          152,
+          226
+        ],
+        [
+          176,
+          250
+        ],
+        [
+          204,
+          238
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          238
+        ],
+        [
+          232,
+          226
+        ],
+        [
+          256,
+          250
+        ],
+        [
+          284,
+          238
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          238
+        ],
+        [
+          312,
+          226
+        ],
+        [
+          336,
+          250
+        ],
+        [
+          364,
+          238
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          238
+        ],
+        [
+          392,
+          226
+        ],
+        [
+          416,
+          250
+        ],
+        [
+          444,
+          238
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          238
+        ],
+        [
+          472,
+          226
+        ],
+        [
+          496,
+          250
+        ],
+        [
+          524,
+          238
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          286
+        ],
+        [
+          72,
+          274
+        ],
+        [
+          96,
+          298
+        ],
+        [
+          124,
+          286
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          286
+        ],
+        [
+          152,
+          274
+        ],
+        [
+          176,
+          298
+        ],
+        [
+          204,
+          286
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          286
+        ],
+        [
+          232,
+          274
+        ],
+        [
+          256,
+          298
+        ],
+        [
+          284,
+          286
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          286
+        ],
+        [
+          312,
+          274
+        ],
+        [
+          336,
+          298
+        ],
+        [
+          364,
+          286
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          286
+        ],
+        [
+          392,
+          274
+        ],
+        [
+          416,
+          298
+        ],
+        [
+          444,
+          286
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          286
+        ],
+        [
+          472,
+          274
+        ],
+        [
+          496,
+          298
+        ],
+        [
+          524,
+          286
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          334
+        ],
+        [
+          72,
+          322
+        ],
+        [
+          96,
+          346
+        ],
+        [
+          124,
+          334
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          334
+        ],
+        [
+          152,
+          322
+        ],
+        [
+          176,
+          346
+        ],
+        [
+          204,
+          334
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          334
+        ],
+        [
+          232,
+          322
+        ],
+        [
+          256,
+          346
+        ],
+        [
+          284,
+          334
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          334
+        ],
+        [
+          312,
+          322
+        ],
+        [
+          336,
+          346
+        ],
+        [
+          364,
+          334
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          334
+        ],
+        [
+          392,
+          322
+        ],
+        [
+          416,
+          346
+        ],
+        [
+          444,
+          334
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          334
+        ],
+        [
+          472,
+          322
+        ],
+        [
+          496,
+          346
+        ],
+        [
+          524,
+          334
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          382
+        ],
+        [
+          72,
+          370
+        ],
+        [
+          96,
+          394
+        ],
+        [
+          124,
+          382
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          382
+        ],
+        [
+          152,
+          370
+        ],
+        [
+          176,
+          394
+        ],
+        [
+          204,
+          382
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          382
+        ],
+        [
+          232,
+          370
+        ],
+        [
+          256,
+          394
+        ],
+        [
+          284,
+          382
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          382
+        ],
+        [
+          312,
+          370
+        ],
+        [
+          336,
+          394
+        ],
+        [
+          364,
+          382
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          382
+        ],
+        [
+          392,
+          370
+        ],
+        [
+          416,
+          394
+        ],
+        [
+          444,
+          382
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          382
+        ],
+        [
+          472,
+          370
+        ],
+        [
+          496,
+          394
+        ],
+        [
+          524,
+          382
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          54,
+          430
+        ],
+        [
+          72,
+          418
+        ],
+        [
+          96,
+          442
+        ],
+        [
+          124,
+          430
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          134,
+          430
+        ],
+        [
+          152,
+          418
+        ],
+        [
+          176,
+          442
+        ],
+        [
+          204,
+          430
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          214,
+          430
+        ],
+        [
+          232,
+          418
+        ],
+        [
+          256,
+          442
+        ],
+        [
+          284,
+          430
+        ]
+      ],
+      "stroke": "#FF00FF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          294,
+          430
+        ],
+        [
+          312,
+          418
+        ],
+        [
+          336,
+          442
+        ],
+        [
+          364,
+          430
+        ]
+      ],
+      "stroke": "#FFFF00",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          374,
+          430
+        ],
+        [
+          392,
+          418
+        ],
+        [
+          416,
+          442
+        ],
+        [
+          444,
+          430
+        ]
+      ],
+      "stroke": "#000000",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          454,
+          430
+        ],
+        [
+          472,
+          418
+        ],
+        [
+          496,
+          442
+        ],
+        [
+          524,
+          430
+        ]
+      ],
+      "stroke": "#00FFFF",
+      "width": 7,
+      "fill": "none",
+      "smooth": true,
+      "closed": false,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 94,
+      "cy": 70,
+      "rx": 20,
+      "ry": 20,
+      "fill": "#FFFF00",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 414,
+      "cy": 70,
+      "rx": 20,
+      "ry": 20,
+      "fill": "#FF00FF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 94,
+      "cy": 454,
+      "rx": 20,
+      "ry": 20,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 414,
+      "cy": 454,
+      "rx": 20,
+      "ry": 20,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    }
+  ]
+}

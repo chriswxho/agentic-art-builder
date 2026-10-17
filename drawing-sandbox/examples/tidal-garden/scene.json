@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "background": "#F5EFDF"
+  },
+  "motifs": {
+    "flower_plant": {
+      "params": {
+        "petal_width": 12,
+        "stem_width": 3.3
+      },
+      "body": [
+        {
+          "type": "path",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              -6,
+              -48
+            ],
+            [
+              5,
+              -93
+            ],
+            [
+              0,
+              -150
+            ]
+          ],
+          "stroke": "#397B76",
+          "width": "$stem_width",
+          "fill": "none",
+          "smooth": true,
+          "closed": false
+        },
+        {
+          "type": "group",
+          "transform": {
+            "x": -5,
+            "y": -43,
+            "scale": 1,
+            "rotate": -57
+          },
+          "children": [
+            {
+              "type": "ellipse",
+              "cx": 0,
+              "cy": -13,
+              "rx": 8,
+              "ry": 21,
+              "fill": "#397B76",
+              "stroke": "none",
+              "width": 1,
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "transform": {
+            "x": 0,
+            "y": -74,
+            "scale": 1,
+            "rotate": 53
+          },
+          "children": [
+            {
+              "type": "ellipse",
+              "cx": 0,
+              "cy": -13,
+              "rx": 8,
+              "ry": 21,
+              "fill": "#397B76",
+              "stroke": "none",
+              "width": 1,
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "transform": {
+            "x": 4,
+            "y": -106,
+            "scale": 1,
+            "rotate": -45
+          },
+          "children": [
+            {
+              "type": "ellipse",
+              "cx": 0,
+              "cy": -13,
+              "rx": 8,
+              "ry": 20,
+              "fill": "#397B76",
+              "stroke": "none",
+              "width": 1,
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "transform": {
+            "x": 0,
+            "y": -159,
+            "scale": 1,
+            "rotate": 0
+          },
+          "children": [
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 0
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 60
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 120
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 180
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 240
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotate": 300
+              },
+              "children": [
+                {
+                  "type": "ellipse",
+                  "cx": 0,
+                  "cy": -23,
+                  "rx": "$petal_width",
+                  "ry": 25,
+                  "fill": "#CF7359",
+                  "stroke": "none",
+                  "width": 1,
+                  "opacity": 1
+                }
+              ]
+            },
+            {
+              "type": "ellipse",
+              "cx": 0,
+              "cy": 0,
+              "rx": 12,
+              "ry": 12,
+              "fill": "#D8AF5C",
+              "stroke": "none",
+              "width": 1,
+              "opacity": 1
+            },
+            {
+              "type": "ellipse",
+              "cx": -3,
+              "cy": -3,
+              "rx": 3,
+              "ry": 3,
+              "fill": "#F5EFDF",
+              "stroke": "none",
+              "width": 1,
+              "opacity": 0.7
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "type": "ellipse",
+      "cx": 366,
+      "cy": 112,
+      "rx": 57,
+      "ry": 57,
+      "fill": "#E9BC81",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.63
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          30,
+          432
+        ],
+        [
+          98,
+          415
+        ],
+        [
+          172,
+          428
+        ],
+        [
+          253,
+          410
+        ],
+        [
+          336,
+          418
+        ],
+        [
+          412,
+          402
+        ],
+        [
+          482,
+          426
+        ]
+      ],
+      "stroke": "#A5BEB0",
+      "width": 1.2,
+      "fill": "none",
+      "smooth": true,
+      "closed": false
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          45,
+          450
+        ],
+        [
+          131,
+          437
+        ],
+        [
+          215,
+          449
+        ],
+        [
+          308,
+          433
+        ],
+        [
+          407,
+          447
+        ],
+        [
+          472,
+          438
+        ]
+      ],
+      "stroke": "#BDCCB8",
+      "width": 1.2,
+      "fill": "none",
+      "smooth": true,
+      "closed": false
+    },
+    {
+      "type": "use",
+      "motif": "flower_plant",
+      "args": {
+        "petal_width": 12,
+        "stem_width": 3.3
+      },
+      "transform": {
+        "x": 122,
+        "y": 399,
+        "scale": 1.03,
+        "rotate": -12
+      }
+    },
+    {
+      "type": "use",
+      "motif": "flower_plant",
+      "args": {
+        "petal_width": 12,
+        "stem_width": 3.3
+      },
+      "transform": {
+        "x": 274,
+        "y": 377,
+        "scale": 1.34,
+        "rotate": 8
+      }
+    },
+    {
+      "type": "use",
+      "motif": "flower_plant",
+      "args": {
+        "petal_width": 12,
+        "stem_width": 3.3
+      },
+      "transform": {
+        "x": 391,
+        "y": 418,
+        "scale": 0.81,
+        "rotate": 17
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 58,
+      "cy": 163,
+      "rx": 2,
+      "ry": 2,
+      "fill": "#D8AF5C",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "ellipse",
+      "cx": 425,
+      "cy": 207,
+      "rx": 3,
+      "ry": 3,
+      "fill": "#D8AF5C",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "ellipse",
+      "cx": 325,
+      "cy": 332,
+      "rx": 2.5,
+      "ry": 2.5,
+      "fill": "#D8AF5C",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "ellipse",
+      "cx": 180,
+      "cy": 81,
+      "rx": 2,
+      "ry": 2,
+      "fill": "#D8AF5C",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "ellipse",
+      "cx": 76,
+      "cy": 315,
+      "rx": 2,
+      "ry": 2,
+      "fill": "#D8AF5C",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 1
+    }
+  ]
+}

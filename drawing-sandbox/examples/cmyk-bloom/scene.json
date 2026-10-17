@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "background": "#FFFFFF"
+  },
+  "motifs": {
+    "petal": {
+      "params": {},
+      "body": [
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -24,
+          "rx": 13,
+          "ry": 28,
+          "fill": "#FF00FF",
+          "stroke": "none",
+          "width": 1,
+          "opacity": 0.5
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": -19,
+          "rx": 9,
+          "ry": 23,
+          "fill": "#FFFF00",
+          "stroke": "none",
+          "width": 1,
+          "opacity": 0.5
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 142,
+        "y": 172,
+        "scale": 0.85,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 142,
+      "cy": 172,
+      "rx": 12.75,
+      "ry": 12.75,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 146.25,
+      "cy": 167.75,
+      "rx": 6.8,
+      "ry": 6.8,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 260,
+        "y": 262,
+        "scale": 1,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 260,
+      "cy": 262,
+      "rx": 15,
+      "ry": 15,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 265,
+      "cy": 257,
+      "rx": 8,
+      "ry": 8,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 376,
+        "y": 165,
+        "scale": 0.78,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 376,
+      "cy": 165,
+      "rx": 11.700000000000001,
+      "ry": 11.700000000000001,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 379.9,
+      "cy": 161.1,
+      "rx": 6.24,
+      "ry": 6.24,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 370,
+        "y": 370,
+        "scale": 0.68,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 370,
+      "cy": 370,
+      "rx": 10.200000000000001,
+      "ry": 10.200000000000001,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 373.4,
+      "cy": 366.6,
+      "rx": 5.44,
+      "ry": 5.44,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 60
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 120
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 180
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 240
+      }
+    },
+    {
+      "type": "use",
+      "motif": "petal",
+      "args": {},
+      "transform": {
+        "x": 151,
+        "y": 369,
+        "scale": 0.72,
+        "rotate": 300
+      }
+    },
+    {
+      "type": "ellipse",
+      "cx": 151,
+      "cy": 369,
+      "rx": 10.799999999999999,
+      "ry": 10.799999999999999,
+      "fill": "#00FFFF",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    },
+    {
+      "type": "ellipse",
+      "cx": 154.6,
+      "cy": 365.4,
+      "rx": 5.76,
+      "ry": 5.76,
+      "fill": "#000000",
+      "stroke": "none",
+      "width": 1,
+      "opacity": 0.5
+    }
+  ]
+}

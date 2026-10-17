@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "background": "#F5EFDF"
+  },
+  "motifs": {
+    "ringed_planet": {
+      "params": {
+        "body_radius": 36,
+        "ring_width": 2.7
+      },
+      "body": [
+        {
+          "type": "group",
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "scale": 1,
+            "rotate": -27
+          },
+          "children": [
+            {
+              "type": "ellipse",
+              "cx": 0,
+              "cy": 0,
+              "rx": 72,
+              "ry": 20,
+              "fill": "none",
+              "stroke": "#397B76",
+              "width": "$ring_width",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "type": "ellipse",
+          "cx": 0,
+          "cy": 0,
+          "rx": "$body_radius",
+          "ry": "$body_radius",
+          "fill": "#CF7359",
+          "stroke": "none",
+          "width": 1,
+          "opacity": 1
+        },
+        {
+          "type": "path",
+          "points": [
+            [
+              -27,
+              -22
+            ],
+            [
+              -12,
+              -13
+            ],
+            [
+              9,
+              -11
+            ],
+            [
+              30,
+              -2
+            ]
+          ],
+          "stroke": "#E9A17B",
+          "width": 3.1,
+          "fill": "none",
+          "smooth": true,
+          "closed": false
+        },
+        {
+          "type": "path",
+          "points": [
+            [
+              -33,
+              -7
+            ],
+            [
+              -13,
+              2
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              30,
+              13
+            ]
+          ],
+          "stroke": "#E9A17B",
+          "width": 2.2,
+          "fill": "none",
+          "smooth": true,
+          "closed": false
+        },
+        {
+          "type": "path",
+          "points": [
+            [
+              -25,
+              13
+            ],
+            [
+              -8,
+              20
+            ],
+            [
+              11,
+              22
+            ],
+            [
+              22,
+              24
+            ]
+          ],
+          "stroke": "#E9A17B",
+          "width": 1.5,
+          "fill": "none",
+          "smooth": true,
+          "closed": false
+        },
+        {
+          "type": "path",
+          "points": [
+            [
+              -64,
+              22
+            ],
+            [
+              -35,
+              28
+            ],
+            [
+              0,
+              21
+            ],
+            [
+              38,
+              5
+            ],
+            [
+              64,
+              -20
+            ]
+          ],
+          "stroke": "#397B76",
+          "width": "$ring_width",
+          "fill": "none",
+          "smooth": true,
+          "closed": false
+        },
+        {
+          "type": "ellipse",
+          "cx": 59,
+          "cy": -36,
+          "rx": 5,
+          "ry": 5,
+          "fill": "#D8AF5C",
+          "stroke": "none",
+          "width": 1,
+          "opacity": 1
+        }
+      ]
+    },
+    "sparkle": {
+      "params": {
+        "line_width": 1.5
+      },
+      "body": [
+        {
+          "type": "path",
+          "points": [
+            [
+              -4,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "stroke": "#D8AF5C",
+          "width": "$line_width",
+          "fill": "none",
+          "smooth": false,
+          "closed": false
+        },
+        {
+          "type": "path",
+          "points": [
+            [
+              0,
+              -4
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "stroke": "#D8AF5C",
+          "width": "$line_width",
+          "fill": "none",
+          "smooth": false,
+          "closed": false
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "type": "ellipse",
+      "cx": 256,
+      "cy": 256,
+      "rx": 175,
+      "ry": 175,
+      "fill": "none",
+      "stroke": "#E1D7C0",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "ellipse",
+      "cx": 256,
+      "cy": 256,
+      "rx": 126,
+      "ry": 126,
+      "fill": "none",
+      "stroke": "#E1D7C0",
+      "width": 1,
+      "opacity": 1
+    },
+    {
+      "type": "use",
+      "motif": "ringed_planet",
+      "args": {
+        "body_radius": 36,
+        "ring_width": 2.7
+      },
+      "transform": {
+        "x": 178,
+        "y": 164,
+        "scale": 1.03,
+        "rotate": -7
+      }
+    },
+    {
+      "type": "use",
+      "motif": "ringed_planet",
+      "args": {
+        "body_radius": 36,
+        "ring_width": 2.7
+      },
+      "transform": {
+        "x": 346,
+        "y": 278,
+        "scale": 0.87,
+        "rotate": 23
+      }
+    },
+    {
+      "type": "use",
+      "motif": "ringed_planet",
+      "args": {
+        "body_radius": 36,
+        "ring_width": 2.7
+      },
+      "transform": {
+        "x": 164,
+        "y": 376,
+        "scale": 0.65,
+        "rotate": -25
+      }
+    },
+    {
+      "type": "use",
+      "motif": "sparkle",
+      "args": {
+        "line_width": 1.5
+      },
+      "transform": {
+        "x": 310,
+        "y": 100,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "sparkle",
+      "args": {
+        "line_width": 1.5
+      },
+      "transform": {
+        "x": 410,
+        "y": 169,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "sparkle",
+      "args": {
+        "line_width": 1.5
+      },
+      "transform": {
+        "x": 84,
+        "y": 269,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "sparkle",
+      "args": {
+        "line_width": 1.5
+      },
+      "transform": {
+        "x": 279,
+        "y": 425,
+        "scale": 1,
+        "rotate": 0
+      }
+    },
+    {
+      "type": "use",
+      "motif": "sparkle",
+      "args": {
+        "line_width": 1.5
+      },
+      "transform": {
+        "x": 407,
+        "y": 398,
+        "scale": 1,
+        "rotate": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "format_version": 1,
+  "run_id": "cmyk-overprint-demo",
+  "created_at": "2026-10-17T18:41:40.448145+00:00",
+  "instruction_set": {
+    "version": 1,
+    "canvas": {
+      "background": "#ffffff",
+      "size_range": [
+        64,
+        1024
+      ]
+    },
+    "marks": {
+      "primitive_types": [
+        "path",
+        "polygon",
+        "ellipse"
+      ],
+      "assembly_types": [
+        "group",
+        "use"
+      ],
+      "inks": {
+        "cyan": "#00ffff",
+        "magenta": "#ff00ff",
+        "yellow": "#ffff00",
+        "black": "#000000"
+      },
+      "opacity": 0.5,
+      "max_transformed_stroke_width": 12,
+      "max_transformed_span": 96
+    },
+    "composition": {
+      "paint_order": "nodes are composited in array order",
+      "blend_model": "source-over",
+      "max_expanded_shapes": 512
+    },
+    "recording": {
+      "required_metadata": [
+        "run_id",
+        "prompt_set",
+        "composition"
+      ],
+      "saved_progress": [
+        "scene_json",
+        "svg",
+        "png",
+        "checks"
+      ],
+      "saved_final": [
+        "scene_json",
+        "svg",
+        "png"
+      ]
+    }
+  },
+  "prompt_set": [
+    "Create a composition using only small cyan, magenta, yellow, and black marks at 50% opacity.",
+    "Explore subtractive color mixing through repeated circular overprints; finish with black registration marks."
+  ],
+  "composition": {
+    "title": "CMYK overprint",
+    "layers": [
+      {
+        "range": [
+          0,
+          9
+        ],
+        "intent": "first overprint row"
+      },
+      {
+        "range": [
+          9,
+          36
+        ],
+        "intent": "complete color field"
+      },
+      {
+        "range": [
+          36,
+          44
+        ],
+        "intent": "black registration marks"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "index": 0,
+      "label": "First overprint row",
+      "recorded_at": "2026-10-17T18:41:40.448679+00:00",
+      "scene": "steps/000-scene.json",
+      "svg": "steps/000-drawing.svg",
+      "png": "steps/000-drawing.png",
+      "checks": "steps/000-checks.json",
+      "metrics": {
+        "raw_nodes": 9,
+        "expanded_nodes": 9,
+        "expanded_shapes": 9,
+        "primitive_count": 9,
+        "motif_count": 0,
+        "path_points": 0,
+        "canvas_width": 512,
+        "canvas_height": 512,
+        "shape_palette_color_count": 3,
+        "max_transformed_stroke_width": 0.0,
+        "max_shape_span": 62.0
+      },
+      "final": false
+    },
+    {
+      "index": 1,
+      "label": "Complete color field",
+      "recorded_at": "2026-10-17T18:41:40.520578+00:00",
+      "scene": "steps/001-scene.json",
+      "svg": "steps/001-drawing.svg",
+      "png": "steps/001-drawing.png",
+      "checks": "steps/001-checks.json",
+      "metrics": {
+        "raw_nodes": 36,
+        "expanded_nodes": 36,
+        "expanded_shapes": 36,
+        "primitive_count": 36,
+        "motif_count": 0,
+        "path_points": 0,
+        "canvas_width": 512,
+        "canvas_height": 512,
+        "shape_palette_color_count": 3,
+        "max_transformed_stroke_width": 0.0,
+        "max_shape_span": 62.0
+      },
+      "final": false
+    },
+    {
+      "index": 2,
+      "label": "Registration marks and accepted final",
+      "recorded_at": "2026-10-17T18:41:40.593363+00:00",
+      "scene": "steps/002-scene.json",
+      "svg": "steps/002-drawing.svg",
+      "png": "steps/002-drawing.png",
+      "checks": "steps/002-checks.json",
+      "metrics": {
+        "raw_nodes": 44,
+        "expanded_nodes": 44,
+        "expanded_shapes": 44,
+        "primitive_count": 44,
+        "motif_count": 0,
+        "path_points": 16,
+        "canvas_width": 512,
+        "canvas_height": 512,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 7.0,
+        "max_shape_span": 62.0
+      },
+      "final": true
+    }
+  ],
+  "final_step": 2,
+  "updated_at": "2026-10-17T18:41:40.593363+00:00"
+}

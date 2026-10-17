@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "hard_checks": {
+    "scene_structure": true,
+    "finite_geometry": true,
+    "bounded_expansion": true,
+    "motif_references": true,
+    "canvas_size": true
+  },
+  "metrics": {
+    "raw_nodes": 57,
+    "expanded_nodes": 124,
+    "expanded_shapes": 105,
+    "primitive_count": 105,
+    "motif_count": 2,
+    "path_points": 643,
+    "canvas_width": 960,
+    "canvas_height": 540
+  },
+  "violations": []
+}

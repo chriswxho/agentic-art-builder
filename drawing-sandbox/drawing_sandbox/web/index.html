@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f3ed">
+<title>Drawing Sandbox</title>
+<style>
+:root{--paper:#f6f3ed;--white:#fffdf9;--ink:#332c39;--muted:#827b80;--line:#e4ded6;--orange:#c66c40;--plum:#66516e;--glass:#477c70;--soft:#ede8e1;--danger:#a83d37;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button:disabled{cursor:default;opacity:.42}button,input,select,textarea{outline-offset:4px}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--orange)}[hidden]{display:none!important}
+button{border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:8px;padding:10px 13px;transition:background .15s,border-color .15s}button:hover:not(:disabled){border-color:#b9afa6;background:#f4efe7}button.primary{background:var(--ink);border-color:var(--ink);color:white}button.primary:hover:not(:disabled){background:var(--plum)}button.quiet{border:0;background:transparent;padding:6px 3px;color:var(--muted)}
+.shell{max-width:1370px;margin:auto;padding:0 42px}header{height:99px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:24px}.brand{display:flex;align-items:center;gap:13px}.brand svg{width:35px;height:35px;color:var(--orange)}h1{font-family:Georgia,"Times New Roman",serif;font-size:28px;letter-spacing:-.8px;font-weight:400;margin:0}.eyebrow{text-transform:uppercase;letter-spacing:1.65px;font-size:10px;font-weight:600;color:var(--muted)}.header-note{font-size:12px;color:var(--muted)}
+.intro{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:30px 0 24px}.intro h2{font-family:Georgia,"Times New Roman",serif;font-size:34px;font-weight:400;letter-spacing:-1px;margin:0 0 8px}.intro p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}.step-note{color:var(--muted);font-size:11px;letter-spacing:.3px;white-space:nowrap;padding-bottom:5px}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:25px;align-items:start}.studio{min-width:0}.art-panel{border:1px solid var(--line);border-radius:13px;background:#eeebe5;overflow:hidden}.art-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 19px;border-bottom:1px solid var(--line);background:var(--white)}.art-title{font-size:12px;font-weight:600}.canvas-size{color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}.artboard{padding:26px;min-height:440px;display:grid;place-items:center;position:relative}.artboard img{display:block;width:100%;max-width:680px;max-height:680px;object-fit:contain;box-shadow:0 12px 25px #332c3908;border:1px solid #332c3908}.empty{min-height:450px;display:flex;flex-direction:column;justify-content:center;text-align:center;color:var(--muted);font-size:13px;line-height:1.7;padding:30px}.empty-mark{font-family:Georgia,serif;color:#c3b7ad;font-size:68px;margin-bottom:12px}.artboard.busy img{opacity:.6}
+.drawing-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 2px}.status{font-size:12px;color:var(--glass);display:flex;gap:8px;align-items:center;line-height:1.6}.status::before{content:"";height:6px;width:6px;border-radius:50%;background:currentColor;flex-shrink:0}.status.pending{color:var(--muted)}.status.invalid{color:var(--danger)}.exports{display:flex;gap:6px}.exports button{font-size:11px;padding:7px 10px}.error{border:1px solid #e8c1ba;border-radius:8px;background:#fff4ee;color:var(--danger);font-size:12px;line-height:1.65;padding:12px 15px;white-space:pre-wrap;margin:0 0 16px}.agent-note{font-size:11px;color:var(--muted);line-height:1.8;margin:0;padding:4px 2px}.agent-note code{font-size:10px;color:var(--plum);background:var(--soft);padding:3px 5px;border-radius:4px}
+.controls{background:var(--white);border:1px solid var(--line);border-radius:13px;overflow:hidden}.section{padding:20px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.section-title h3{margin:0;font-size:12px;font-weight:600}.section-number{font-size:10px;color:#aaa099;font-variant-numeric:tabular-nums}.field-label{display:block;color:var(--muted);font-size:11px;margin:0 0 7px}select{width:100%;min-width:0;border:1px solid var(--line);border-radius:7px;background:var(--white);color:var(--ink);padding:10px 11px;font-size:12px}.add-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.add-buttons button{padding:10px 2px;font-size:11px;display:flex;align-items:center;justify-content:center;gap:6px}.shape-icon{color:var(--orange);font-size:15px;line-height:12px}.color-row{display:flex;align-items:center;gap:8px;margin-top:13px}.color-row span{margin-right:auto;font-size:10px;color:var(--muted)}.swatch{width:19px;height:19px;border-radius:50%;padding:0;border:3px solid var(--white);outline:1px solid transparent}.swatch[aria-pressed="true"]{outline-color:var(--muted)}.swatch:hover:not(:disabled){background:var(--swatch);border-color:var(--white)}
+.transform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:15px}.transform-grid label{color:var(--muted);font-size:10px}.transform-grid input{width:100%;border:1px solid var(--line);background:var(--white);border-radius:7px;padding:9px 10px;margin-top:6px;color:var(--ink);font-size:12px;font-variant-numeric:tabular-nums}.object-actions{display:flex;justify-content:space-between;align-items:center;margin-top:10px}.object-actions button{font-size:10px}.hint{font-size:10px;line-height:1.65;color:var(--muted);margin:9px 0 0}.json-label{font-size:10px;color:var(--muted)}textarea{display:block;width:100%;height:218px;resize:vertical;min-height:120px;max-height:600px;border:1px solid var(--line);border-radius:7px;background:#f7f5f1;color:#605064;padding:12px;tab-size:2;font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre;overflow:auto}.render-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:11px}.render-row .primary{font-size:11px;padding:10px 15px}.render-row .quiet{font-size:11px}.dirty-note{color:var(--orange)}footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:33px;padding:19px 0 25px;font-size:10px;color:var(--muted);letter-spacing:.25px}
+@media(min-width:1250px){.artboard{min-height:650px}.artboard img{max-height:650px}}
+@media(max-width:1000px){.shell{padding:0 24px}.workspace{grid-template-columns:minmax(0,1fr) 310px;gap:17px}.artboard{padding:18px;min-height:370px}.empty{min-height:370px}.section{padding:17px}.step-note{display:none}.drawing-footer{align-items:start;flex-direction:column}}
+@media(max-width:720px){.shell{padding:0 18px}header{height:78px}.header-note{display:none}h1{font-size:25px}.brand svg{width:30px;height:30px}.intro{padding:25px 0 19px}.intro h2{font-size:29px}.intro p{font-size:12px;max-width:300px}.workspace{grid-template-columns:1fr;gap:19px}.artboard{padding:16px;min-height:280px}.empty{min-height:280px}.drawing-footer{flex-direction:row;align-items:center;gap:10px}.status{font-size:11px}.exports{gap:3px}.exports button{font-size:10px;padding:7px 8px}.controls{display:grid;grid-template-columns:1fr}.section{padding:20px}.agent-note{font-size:10px}textarea{height:220px}footer{margin-top:25px;line-height:1.7;align-items:start}footer span:last-child{max-width:140px;text-align:right}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div class="brand"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 33V19M20 22C3 24 5 5 16 10C20 12 20 19 20 22ZM20 22C36 25 36 6 26 10C22 12 20 18 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 34H27" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h1>Drawing Sandbox</h1></div><div class="header-note">Small marks. Layered color.</div></header>
+<div class="intro"><div><h2>Build with overprints.</h2><p>Compose with small cyan, magenta, yellow, and black marks at 50% opacity.</p></div><div class="step-note">White canvas. Four inks. Your composition.</div></div>
+<main class="workspace">
+<section class="studio" aria-label="Drawing preview">
+<div class="art-panel"><div class="art-toolbar"><span class="art-title" id="drawing-title">Your drawing</span><span class="canvas-size" id="canvas-size">Canvas</span></div><div class="artboard" id="artboard" aria-busy="true"><img id="drawing" alt="Current drawing rendered from the scene JSON" hidden><div class="empty" id="empty"><span class="empty-mark" aria-hidden="true">✳</span><span id="empty-text">Opening the canvas…</span></div></div></div>
+<div class="drawing-footer"><div class="status pending" id="status" role="status" aria-live="polite">Loading examples</div><div class="exports" aria-label="Download drawing"><button id="save-svg" disabled>SVG ↓</button><button id="save-png" disabled>PNG ↓</button><button id="save-json" disabled>JSON ↓</button></div></div>
+<div class="error" id="error" role="alert" hidden></div>
+<p class="agent-note">Agents render through <code>/api/render</code> and preserve progress through <code>/api/record</code>.</p>
+</section>
+<aside class="controls" aria-label="Drawing controls">
+<section class="section"><div class="section-title"><h3>Compose</h3><span class="section-number">01</span></div><label class="field-label" for="examples">Start from an example</label><select id="examples" disabled><option>Loading examples…</option></select><div class="add-buttons"><button data-add="circle" disabled><span class="shape-icon" aria-hidden="true">○</span>Add circle</button><button data-add="stroke" disabled><span class="shape-icon" aria-hidden="true">∿</span>Add stroke</button><button data-add="triangle" disabled><span class="shape-icon" aria-hidden="true">△</span>Add triangle</button></div><div class="color-row"><span>New mark ink</span><button class="swatch" style="--swatch:#00ffff;background:#00ffff" data-color="#00ffff" aria-label="Cyan" aria-pressed="true"></button><button class="swatch" style="--swatch:#ff00ff;background:#ff00ff" data-color="#ff00ff" aria-label="Magenta" aria-pressed="false"></button><button class="swatch" style="--swatch:#ffff00;background:#ffff00" data-color="#ffff00" aria-label="Yellow" aria-pressed="false"></button><button class="swatch" style="--swatch:#000000;background:#000000" data-color="#000000" aria-label="Black" aria-pressed="false"></button></div></section>
+<section class="section"><div class="section-title"><h3>Adjust an object</h3><span class="section-number">02</span></div><label class="field-label" for="objects">Object</label><select id="objects" disabled><option>No objects yet</option></select><div class="transform-grid"><label>X position<input id="x" type="number" step="5" data-transform="x" disabled></label><label>Y position<input id="y" type="number" step="5" data-transform="y" disabled></label><label>Scale<input id="scale" type="number" step="0.1" min="0.01" max="64" data-transform="scale" disabled></label><label>Rotation · degrees<input id="rotate" type="number" step="5" data-transform="rotate" disabled></label></div><div class="object-actions"><span class="hint">Positions use canvas units.</span><button class="quiet" id="remove" disabled>Remove object</button></div></section>
+<section class="section"><div class="section-title"><h3>Scene JSON</h3><span class="json-label" id="json-label">Editable source</span></div><label for="editor" class="field-label">Edit or paste a complete scene</label><textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Scene JSON" placeholder="The scene will appear here."></textarea><div class="render-row"><button id="undo" class="quiet" disabled>↶ Undo</button><button id="render" class="primary" disabled>Render / check</button></div><p class="hint">Each visible mark must use a CMYK ink, 50% opacity, and remain within the size limits.</p></section>
+</aside>
+</main>
+<footer><span>Assemble → render → inspect → revise.</span><span>Local scene state. SVG &amp; PNG output.</span></footer>
+</div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), clone=value=>JSON.parse(JSON.stringify(value));
+let scene=null, examples=[], history=[], selected=0, color='#00ffff', dirty=false, busy=false, svg='', png='', previewURL='';
+const transforms=[...document.querySelectorAll('[data-transform]')];
+function status(message,kind='pending'){$('status').textContent=message;$('status').className='status '+kind;}
+function showError(message){$('error').textContent=message;$('error').hidden=!message;}
+function nodes(){return Array.isArray(scene?.nodes)?scene.nodes:[];}
+function syncButtons(){
+  const editable=!!scene&&!busy&&!dirty;
+  document.querySelectorAll('[data-add]').forEach(button=>button.disabled=!editable);
+  $('objects').disabled=!editable||!nodes().length;
+  transforms.forEach(input=>input.disabled=!editable||!nodes()[selected]);
+  $('remove').disabled=!editable||!nodes()[selected];
+  $('examples').disabled=busy||!examples.length;
+  $('editor').disabled=busy;$('render').disabled=busy||!$('editor').value.trim();
+  $('undo').disabled=busy||(!history.length&&!dirty);
+  $('save-svg').disabled=busy||dirty||!svg;$('save-png').disabled=busy||dirty||!png;
+  $('save-json').disabled=busy||dirty||!scene;
+  $('json-label').textContent=dirty?'Unrendered changes':'Editable source';
+  $('json-label').className='json-label'+(dirty?' dirty-note':'');
+  $('artboard').classList.toggle('busy',busy);$('artboard').setAttribute('aria-busy',String(busy));
+  $('render').textContent=busy?'Checking…':'Render / check';
+}
+function center(node){
+  if(node.type==='ellipse')return {x:Number(node.cx)||0,y:Number(node.cy)||0};
+  const points=(node.points||[]).filter(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite));
+  if(!points.length)return {x:0,y:0};
+  const xs=points.map(p=>p[0]),ys=points.map(p=>p[1]);
+  return {x:(Math.min(...xs)+Math.max(...xs))/2,y:(Math.min(...ys)+Math.max(...ys))/2};
+}
+function frame(node){return node.type==='group'||node.type==='use'?{x:0,y:0,scale:1,rotate:0,...node.transform}:{...center(node),scale:1,rotate:0};}
+function grouped(node){
+  if(node.type==='group'||node.type==='use')return node;
+  const origin=center(node), local=clone(node);
+  if(node.type==='ellipse'){local.cx-=origin.x;local.cy-=origin.y;}
+  else if(Array.isArray(local.points))local.points=local.points.map(([x,y])=>[x-origin.x,y-origin.y]);
+  return {type:'group',transform:{...origin,scale:1,rotate:0},children:[local]};
+}
+function objectName(node,index){
+  const name=node.type==='use'?'Motif · '+node.motif:node.type==='group'?'Group · '+(node.children?.length||0)+' items':node.type==='ellipse'?'Ellipse':node.type==='path'?'Stroke':node.type==='polygon'?'Polygon':String(node.type||'Object');
+  return String(index+1).padStart(2,'0')+' · '+name;
+}
+function updateObjects(){
+  $('objects').replaceChildren();
+  nodes().forEach((node,index)=>{const option=document.createElement('option');option.value=index;option.textContent=objectName(node,index);$('objects').append(option);});
+  if(!nodes().length){const option=document.createElement('option');option.textContent='No objects yet';$('objects').append(option);}
+  selected=Math.max(0,Math.min(selected,nodes().length-1));$('objects').value=String(selected);updateTransform();
+}
+function updateTransform(){
+  const current=nodes()[selected], values=current?frame(current):{};
+  transforms.forEach(input=>input.value=values[input.dataset.transform]??'');syncButtons();
+}
+function safeSVG(source){
+  const doc=new DOMParser().parseFromString(source,'image/svg+xml');
+  if(doc.querySelector('parsererror')||doc.documentElement.localName!=='svg')throw new Error('The renderer returned an invalid SVG.');
+  const tags=new Set(['svg','g','path','ellipse','circle','rect','polygon','polyline','line']);
+  const attrs=new Set(['xmlns','width','height','viewBox','overflow','fill','stroke','stroke-width','opacity','stroke-linecap','stroke-linejoin','transform','d','cx','cy','rx','ry','r','x','y','x1','x2','y1','y2','points']);
+  [...doc.querySelectorAll('*')].forEach(el=>{if(!tags.has(el.localName)){el.remove();return;}[...el.attributes].forEach(attr=>{if(!attrs.has(attr.name)||/url\s*\(/i.test(attr.value))el.removeAttribute(attr.name);});});
+  return new XMLSerializer().serializeToString(doc.documentElement);
+}
+function clearDrawing(message){
+  svg='';png='';$('drawing').hidden=true;$('drawing').removeAttribute('src');$('empty').hidden=false;$('empty-text').textContent=message;
+  if(previewURL){URL.revokeObjectURL(previewURL);previewURL='';}
+}
+async function api(path,body){
+  const response=await fetch(path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{});
+  const data=await response.json();if(!response.ok)throw new Error(data.error||'The drawing server could not complete the request.');return data;
+}
+async function renderScene(candidate,{remember=true,title}={}){
+  busy=true;$('editor').value=JSON.stringify(candidate,null,2);showError('');status('Checking the drawing');syncButtons();
+  try{
+    const result=await api('/api/render',{scene:candidate});
+    if(!result.checks?.valid){
+      dirty=true;clearDrawing('The scene needs a correction before it can render.');
+      status('Invalid drawing','invalid');showError((result.checks?.violations||['The scene did not pass validation.']).join('\n'));return false;
+    }
+    const checkedSVG=safeSVG(result.svg);
+    if(remember&&scene&&JSON.stringify(candidate)!==JSON.stringify(scene)){history.push(clone(scene));if(history.length>50)history.shift();}
+    scene=clone(candidate);dirty=false;svg=checkedSVG;png=/^data:image\/png;base64,/.test(result.png_data_url||'')?result.png_data_url:'';
+    if(previewURL)URL.revokeObjectURL(previewURL);previewURL=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));
+    $('drawing').src=previewURL;$('drawing').hidden=false;$('empty').hidden=true;
+    $('editor').value=JSON.stringify(scene,null,2);$('canvas-size').textContent=scene.canvas.width+' × '+scene.canvas.height;
+    if(title)$('drawing-title').textContent=title;
+    const count=result.checks.metrics?.expanded_shapes??result.checks.metrics?.shape_count;
+    status('Valid drawing'+(Number.isFinite(count)?' · '+count+' shape'+(count===1?'':'s'):''),'valid');updateObjects();return true;
+  }catch(error){dirty=true;clearDrawing('The drawing could not be rendered.');status('Could not render','invalid');showError(error.message);return false;}
+  finally{busy=false;syncButtons();}
+}
+async function mutate(change){if(!scene||busy||dirty)return;const next=clone(scene);change(next);await renderScene(next);}
+function addShape(kind){
+  mutate(next=>{
+    const size=Math.min(next.canvas.width,next.canvas.height), radius=Math.round(size*.07);
+    const shape=kind==='circle'?{type:'ellipse',cx:0,cy:0,rx:radius,ry:radius,fill:color,stroke:'none',width:0,opacity:.5}:kind==='triangle'?{type:'polygon',points:[[0,-radius],[radius,radius],[-radius,radius]],fill:color,stroke:'none',width:0,opacity:.5}:{type:'path',points:[[-radius,0],[-radius/2,-radius/2],[radius/2,radius/2],[radius,0]],smooth:true,fill:'none',stroke:color,width:5,opacity:.5};
+    next.nodes.push({type:'group',transform:{x:Math.round(next.canvas.width/2),y:Math.round(next.canvas.height/2),scale:1,rotate:0},children:[shape]});selected=next.nodes.length-1;
+  });
+}
+function download(name,contents,type){const link=document.createElement('a'),url=URL.createObjectURL(new Blob([contents],{type}));link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('examples').addEventListener('change',()=>{const example=examples.find(item=>item.id===$('examples').value);if(example){selected=0;renderScene(example.scene,{title:example.title});}});
+document.querySelectorAll('[data-add]').forEach(button=>button.addEventListener('click',()=>addShape(button.dataset.add)));
+document.querySelectorAll('[data-color]').forEach(button=>button.addEventListener('click',()=>{color=button.dataset.color;document.querySelectorAll('[data-color]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));}));
+$('objects').addEventListener('change',()=>{selected=Number($('objects').value);updateTransform();});
+transforms.forEach(input=>input.addEventListener('change',()=>{
+  const value=Number(input.value),key=input.dataset.transform;
+  if(!input.value||!Number.isFinite(value)||(key==='scale'&&(Math.abs(value)<.0001||Math.abs(value)>64))){showError('Enter a finite value. Scale must be between 0.0001 and 64 in magnitude.');updateTransform();return;}
+  mutate(next=>{const node=grouped(next.nodes[selected]);node.transform={...frame(node),[key]:value};next.nodes[selected]=node;});
+}));
+$('remove').addEventListener('click',()=>mutate(next=>next.nodes.splice(selected,1)));
+$('editor').addEventListener('input',()=>{dirty=true;status('JSON changed · render to apply');syncButtons();});
+$('editor').addEventListener('keydown',event=>{if((event.metaKey||event.ctrlKey)&&event.key==='Enter'){event.preventDefault();$('render').click();}});
+$('render').addEventListener('click',()=>{
+  let candidate;try{candidate=JSON.parse($('editor').value);}catch(error){dirty=true;status('Invalid JSON','invalid');showError(error.message);syncButtons();return;}
+  renderScene(candidate);
+});
+$('undo').addEventListener('click',async()=>{
+  if(dirty&&scene){await renderScene(scene,{remember:false});return;}
+  if(history.length){const previous=history[history.length-1];if(await renderScene(previous,{remember:false}))history.pop();syncButtons();}
+});
+$('save-svg').addEventListener('click',()=>download('drawing.svg',svg,'image/svg+xml'));
+$('save-json').addEventListener('click',()=>download('scene.json',JSON.stringify(scene,null,2)+'\n','application/json'));
+$('save-png').addEventListener('click',()=>{const link=document.createElement('a');link.href=png;link.download='drawing.png';document.body.append(link);link.click();link.remove();});
+async function start(){
+  try{
+    const result=await api('/api/examples');examples=Array.isArray(result.examples)?result.examples:[];
+    $('examples').replaceChildren();examples.forEach(item=>{const option=document.createElement('option');option.value=item.id;option.textContent=item.title;$('examples').append(option);});
+    if(!examples.length)throw new Error('No examples are available. Paste a scene JSON to begin.');
+    const requested=new URLSearchParams(location.search).get('example');
+    const initial=examples.find(item=>item.id===requested)||examples[0];$('examples').value=initial.id;
+    await renderScene(initial.scene,{remember:false,title:initial.title});
+  }catch(error){clearDrawing('The drawing server is unavailable.');status('Could not load examples','invalid');showError(error.message);syncButtons();}
+}
+start();
+</script>
+</body>
+</html>
