@@ -114,6 +114,7 @@ python -m drawing_sandbox examples --out examples
 python -m drawing_sandbox render examples/cmyk-overprint/scene.json --out output
 python -m drawing_sandbox check examples/cmyk-overprint/scene.json
 python -m unittest discover -s tests -v
+python -m drawing_sandbox.evals suite evals/smoke.json   # provisional evals, see EVALS.md
 ```
 
 SVG, PNG, and JSON starter files are included under `examples/`. They are authored illustrations, ready to edit. The reusable motifs in them are predefined drawing parts.
