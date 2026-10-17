@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Initialize and apply typed Luna picture-agent handoffs."""
+"""Initialize and apply typed picture-agent handoffs."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import re
 
-from drawing_sandbox.luna_context import (
+from drawing_sandbox.iteration_context import (
     apply_and_record,
     create_context,
     initialize_recorded_context,

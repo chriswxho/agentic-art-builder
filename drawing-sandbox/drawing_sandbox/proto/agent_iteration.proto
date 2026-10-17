@@ -4,9 +4,9 @@ package drawing_sandbox.iteration.v1;
 
 import "google/protobuf/struct.proto";
 
-// JSON encoding of this message is the handoff format between Luna agents.
-message LunaContext {
-  string protocol_version = 1;  // "drawing-sandbox.iteration.v1"
+// JSON encoding of this message is the model-independent picture-agent handoff.
+message PictureContext {
+  string protocol_version = 1;  // "drawing-sandbox.iteration.v2"
   string run_id = 2;
   uint64 revision = 3;
   string state_sha256 = 4;
@@ -20,6 +20,13 @@ message LunaContext {
   repeated ReferenceAsset references = 12;
   HandoffSummary last_handoff = 13;
   repeated AcceptedMutation history = 14;
+  InferenceRuntime agent_runtime = 15;
+}
+
+message InferenceRuntime {
+  string provider = 1; // "crusoe_managed_inference"
+  string model = 2;    // Nemotron 3 Nano Omni model identifier.
+  string endpoint = 3; // OpenAI-compatible Chat Completions endpoint.
 }
 
 message Layer {

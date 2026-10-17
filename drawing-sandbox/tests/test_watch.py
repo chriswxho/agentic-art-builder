@@ -30,7 +30,7 @@ class WatchViewerTests(unittest.TestCase):
                 "png": "steps/000-drawing.png",
                 "final": True,
                 "metrics": {"expanded_shapes": 4},
-                "provenance": {"context_revision": 0, "agent_id": "luna", "skill": "add_objects"},
+                "provenance": {"context_revision": 0, "agent_id": "nemotron", "skill": "add_objects"},
             }],
         }))
         self.server = ThreadingHTTPServer(("127.0.0.1", 0), server_module.Handler)

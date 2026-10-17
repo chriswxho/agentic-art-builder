@@ -1,0 +1,24 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v2",
+  "agent_id": "nemotron-remove-objects-r003",
+  "mutation_id": "tahoe-nemotron-chain-01-remove_objects-r003",
+  "base_revision": 2,
+  "critique": "visual diagnosis of the current render",
+  "rationale": "removing twelve extraneous black ellipses from the foreground granite layer reduces visual clutter and aligns the stylized drawing more closely with the realistic reference composition",
+  "remove_objects": {
+    "object_ids": [
+      "obj-0404",
+      "obj-0406",
+      "obj-0408",
+      "obj-0410",
+      "obj-0412",
+      "obj-0414",
+      "obj-0416",
+      "obj-0418",
+      "obj-0420",
+      "obj-0422",
+      "obj-0424",
+      "obj-0426"
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a labeled MP4/GIF replay from a recorded Luna iteration chain."""
+"""Create a labeled MP4/GIF replay from a recorded picture-agent chain."""
 
 from __future__ import annotations
 
@@ -48,7 +48,7 @@ def step_label(run_dir: Path, step: dict) -> tuple[str, str]:
         return f"Revision {revision} · Initial handoff", "Base CMYK Tahoe composition"
     proposal = json.loads((run_dir / provenance["proposal"]).read_text())
     skill = provenance.get("skill", "mutation")
-    agent = provenance.get("agent_id", "Luna")
+    agent = provenance.get("agent_id", "Picture agent")
     critique = " ".join(proposal.get("critique", "").split())
     if len(critique) > 112:
         critique = critique[:109].rstrip() + "…"
@@ -77,7 +77,7 @@ def main() -> int:
         image = Image.open(run_dir / step["png"]).convert("RGB")
         labeled.append(label_frame(image, step["index"], total, title, detail))
 
-    with tempfile.TemporaryDirectory(prefix="drawing-sandbox-luna-") as folder:
+    with tempfile.TemporaryDirectory(prefix="drawing-sandbox-agent-") as folder:
         frames = Path(folder)
         frame_number = 0
 

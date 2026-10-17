@@ -1,0 +1,16 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v2",
+  "agent_id": "nemotron-combine-layers-r004",
+  "mutation_id": "tahoe-nemotron-chain-01-combine_layers-r004",
+  "base_revision": 3,
+  "critique": "visual diagnosis of the current render",
+  "rationale": "merging the shoreline pines layer with the shore and granite clusters layer creates a unified shoreline representation, improving compositional clarity and alignment with the realistic reference",
+  "combine_layers": {
+    "source_layer_ids": [
+      "shore-and-granite-clusters",
+      "shoreline-pines"
+    ],
+    "output_layer_id": "layer-shoreline-granite-001",
+    "output_label": "Shoreline and Granite"
+  }
+}

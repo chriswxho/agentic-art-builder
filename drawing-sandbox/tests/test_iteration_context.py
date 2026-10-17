@@ -4,8 +4,8 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from drawing_sandbox.luna_context import (
-    LunaContextError,
+from drawing_sandbox.iteration_context import (
+    PictureContextError,
     PROTOCOL_VERSION,
     apply_and_record,
     apply_proposal,
@@ -24,7 +24,7 @@ def mark(x, color="#00ffff"):
     }
 
 
-def base_context(run_id="luna-test"):
+def base_context(run_id="agent-test"):
     scene = {
         "version": 1,
         "canvas": {"width": 128, "height": 128, "background": "#ffffff"},
@@ -46,7 +46,7 @@ def base_context(run_id="luna-test"):
 def proposal(revision, skill, payload, suffix):
     return {
         "protocol_version": PROTOCOL_VERSION,
-        "agent_id": f"luna-{suffix}",
+        "agent_id": f"agent-{suffix}",
         "mutation_id": f"mutation-{suffix}",
         "base_revision": revision,
         "critique": "The composition can be made easier to refine.",
@@ -55,7 +55,7 @@ def proposal(revision, skill, payload, suffix):
     }
 
 
-class LunaContextTests(unittest.TestCase):
+class PictureContextTests(unittest.TestCase):
     def test_four_skills_form_a_revision_checked_chain(self):
         context = base_context()
         self.assertEqual(context["state_sha256"], state_sha256(context))
@@ -71,7 +71,7 @@ class LunaContextTests(unittest.TestCase):
                          ["left-cyan", "left-magenta", "right"])
 
         added = {
-            "object_id": "luna-dot",
+            "object_id": "agent-dot",
             "renderer_node": mark(58, "#00ffff"),
             "intent": "Bridge the two halves",
             "tags": ["type:ellipse", "fill:#00ffff"],
@@ -79,7 +79,7 @@ class LunaContextTests(unittest.TestCase):
         context, _ = apply_proposal(context, proposal(1, "add_objects", {
             "layer_id": "left-magenta", "before_object_id": "", "objects": [added],
         }, "add"))
-        self.assertIn("luna-dot", [item["object_id"] for layer in context["layers"] for item in layer["objects"]])
+        self.assertIn("agent-dot", [item["object_id"] for layer in context["layers"] for item in layer["objects"]])
 
         context, _ = apply_proposal(context, proposal(2, "remove_objects", {
             "object_ids": ["obj-0000"],
@@ -100,11 +100,11 @@ class LunaContextTests(unittest.TestCase):
     def test_invalid_proposals_are_atomic(self):
         context = base_context()
         before = deepcopy(context)
-        with self.assertRaises(LunaContextError):
+        with self.assertRaises(PictureContextError):
             apply_proposal(context, proposal(1, "remove_objects", {"object_ids": ["obj-0000"]}, "stale"))
         self.assertEqual(context, before)
 
-        with self.assertRaises(LunaContextError):
+        with self.assertRaises(PictureContextError):
             apply_proposal(context, proposal(0, "split_layers", {
                 "source_layer_id": "left",
                 "parts": [
@@ -120,14 +120,14 @@ class LunaContextTests(unittest.TestCase):
             "intent": "Invalid color",
             "tags": [],
         }
-        with self.assertRaises(LunaContextError):
+        with self.assertRaises(PictureContextError):
             apply_proposal(context, proposal(0, "add_objects", {
                 "layer_id": "left", "before_object_id": "", "objects": [bad],
             }, "bad-color"))
         self.assertEqual(context, before)
 
     def test_recorded_handoffs_include_context_and_proposal_provenance(self):
-        context = base_context("recorded-luna-test")
+        context = base_context("recorded-agent-test")
         with tempfile.TemporaryDirectory() as folder:
             initial_path = initialize_recorded_context(context, root=folder)
             loaded = read_context(initial_path)
@@ -135,7 +135,7 @@ class LunaContextTests(unittest.TestCase):
             next_context, next_path = apply_and_record(loaded, change, root=folder, final=True)
             self.assertEqual(next_context["revision"], 1)
             self.assertTrue(next_path.is_file())
-            run = Path(folder) / "recorded-luna-test"
+            run = Path(folder) / "recorded-agent-test"
             self.assertTrue((run / "handoffs/proposal-001.json").is_file())
             manifest = json.loads((run / "manifest.json").read_text())
             self.assertEqual(manifest["final_step"], 1)
