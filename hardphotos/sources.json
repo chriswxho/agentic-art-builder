@@ -1,0 +1,62 @@
+[
+  {
+    "file": "01-grand-canyon.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Hopi_Point_with_rainbow_2013.jpg",
+    "author": "Tuxyso",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "file": "02-mount-fuji.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Mount_Fuji_at_sunset,_March_2025.jpg",
+    "author": "Romain Guy from San Francisco, USA",
+    "license": "CC0"
+  },
+  {
+    "file": "03-yosemite-valley.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Tunnel_View,_Yosemite_Valley,_Yosemite_NP_-_Diliff.jpg",
+    "author": "Diliff",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "file": "04-matterhorn.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Matterhorn,_March_2019_(01).jpg",
+    "author": "Liridon",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "05-ha-long-bay.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:View_of_sea_from_Titov_Island,_Ha_Long_Bay,_Vietnam,_20240128_1337_3732.jpg",
+    "author": "Jakub Ha\u0142un",
+    "license": "CC BY 4.0"
+  },
+  {
+    "file": "06-uluru.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Petermann_Ranges_(AU),_Uluru-Kata_Tjuta_National_Park,_Uluru_--_2019_--_3688.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "07-torres-del-paine.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Cuernos_del_Paine_in_Torres_del_Paine_National_Park.jpg",
+    "author": "Pedro Szekely from Los Angeles, USA",
+    "license": "CC BY-SA 2.0"
+  },
+  {
+    "file": "08-moraine-lake.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Moraine_Lake_17092005.jpg",
+    "author": "Gorgo",
+    "license": "Public domain"
+  },
+  {
+    "file": "09-kirkjufell.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Kirkjufell,_Iceland_(Unsplash_LoKG7kKx7Zc).jpg",
+    "author": "Steven Diaz stevendiazphoto",
+    "license": "CC0"
+  },
+  {
+    "file": "10-monument-valley.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Forrest_Gump_Point_Monument_Valley_November_2018_001.jpg",
+    "author": "King of Hearts",
+    "license": "CC BY-SA 4.0"
+  }
+]
