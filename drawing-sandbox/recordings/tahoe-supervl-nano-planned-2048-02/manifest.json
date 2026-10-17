@@ -1,0 +1,588 @@
+{
+  "format_version": 1,
+  "run_id": "tahoe-supervl-nano-planned-2048-02",
+  "created_at": "2026-10-17T19:26:32.573394+00:00",
+  "instruction_set": {
+    "version": 1,
+    "canvas": {
+      "background": "#ffffff",
+      "size_range": [
+        64,
+        1024
+      ]
+    },
+    "marks": {
+      "primitive_types": [
+        "path",
+        "polygon",
+        "ellipse"
+      ],
+      "assembly_types": [
+        "group",
+        "use"
+      ],
+      "inks": {
+        "cyan": "#00ffff",
+        "magenta": "#ff00ff",
+        "yellow": "#ffff00",
+        "black": "#000000"
+      },
+      "opacity": 0.5,
+      "max_transformed_stroke_width": 12,
+      "max_transformed_span": 96
+    },
+    "composition": {
+      "paint_order": "nodes are composited in array order",
+      "blend_model": "source-over",
+      "max_expanded_shapes": 2048
+    },
+    "recording": {
+      "required_metadata": [
+        "run_id",
+        "prompt_set",
+        "composition"
+      ],
+      "saved_progress": [
+        "scene_json",
+        "svg",
+        "png",
+        "checks"
+      ],
+      "saved_final": [
+        "scene_json",
+        "svg",
+        "png"
+      ]
+    }
+  },
+  "prompt_set": [
+    "Remake the supplied Lake Tahoe photograph as a layered vector print.",
+    "Use only small cyan, magenta, yellow, and black marks at 50% opacity on white; create color and form through overprinting.",
+    "Preserve the wide blue sky, snowy ridge, turquoise water, central granite cluster, right-shore pines, and large foreground boulder."
+  ],
+  "composition": {
+    "title": "Tahoe CMYK overprint study",
+    "source_image": "examples/26-tahoe-day/reference.jpg",
+    "canvas": [
+      960,
+      540
+    ],
+    "strategy": "short hatching, overlapping ellipses, small polygons, and preserved white paper",
+    "layers": [
+      {
+        "label": "Layered sky",
+        "cumulative_node_count": 116
+      },
+      {
+        "label": "Snowy mountain ridge",
+        "cumulative_node_count": 184
+      },
+      {
+        "label": "Turquoise water currents",
+        "cumulative_node_count": 324
+      },
+      {
+        "label": "Shore and granite clusters",
+        "cumulative_node_count": 381
+      },
+      {
+        "label": "Shoreline pines",
+        "cumulative_node_count": 404
+      },
+      {
+        "label": "Foreground granite and final accents",
+        "cumulative_node_count": 447
+      }
+    ]
+  },
+  "steps": [
+    {
+      "index": 0,
+      "label": "Initial picture-agent handoff",
+      "recorded_at": "2026-10-17T19:26:32.576004+00:00",
+      "scene": "steps/000-scene.json",
+      "svg": "steps/000-drawing.svg",
+      "png": "steps/000-drawing.png",
+      "checks": "steps/000-checks.json",
+      "metrics": {
+        "raw_nodes": 447,
+        "expanded_nodes": 447,
+        "expanded_shapes": 447,
+        "primitive_count": 447,
+        "motif_count": 0,
+        "path_points": 813,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "context_revision": 0,
+        "provider": "crusoe_managed_inference",
+        "generator_model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "evaluator_model": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+        "context": "handoffs/context-000.json"
+      }
+    },
+    {
+      "index": 1,
+      "label": "Picture-agent revision 1: add_objects",
+      "recorded_at": "2026-10-17T19:28:21.267200+00:00",
+      "scene": "steps/001-scene.json",
+      "svg": "steps/001-drawing.svg",
+      "png": "steps/001-drawing.png",
+      "checks": "steps/001-checks.json",
+      "metrics": {
+        "raw_nodes": 463,
+        "expanded_nodes": 463,
+        "expanded_shapes": 463,
+        "primitive_count": 463,
+        "motif_count": 0,
+        "path_points": 845,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 1,
+        "agent_id": "nemotron-sky-deepen-r001",
+        "mutation_id": "tahoe-supervl-nano-planned-2-sky-deepen-r001",
+        "skill": "add_objects",
+        "context": "handoffs/context-001.json",
+        "proposal": "handoffs/proposal-001.json",
+        "inference": "handoffs/inference-001.json",
+        "response_id": "chatcmpl-a45865f8fa5fed92",
+        "usage": {
+          "prompt_tokens": 51392,
+          "total_tokens": 60305,
+          "completion_tokens": 8913,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 2,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "sky-deepen",
+        "part_label": "wide blue sky",
+        "region": {
+          "x": 0.0,
+          "y": 0.0,
+          "width": 960.0,
+          "height": 240.0
+        },
+        "shape_budget": 32
+      }
+    },
+    {
+      "index": 2,
+      "label": "Picture-agent revision 2: add_objects",
+      "recorded_at": "2026-10-17T19:36:29.266703+00:00",
+      "scene": "steps/002-scene.json",
+      "svg": "steps/002-drawing.svg",
+      "png": "steps/002-drawing.png",
+      "checks": "steps/002-checks.json",
+      "metrics": {
+        "raw_nodes": 471,
+        "expanded_nodes": 471,
+        "expanded_shapes": 471,
+        "primitive_count": 471,
+        "motif_count": 0,
+        "path_points": 861,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 2,
+        "agent_id": "nemotron-ridge-sharpen-b01-r002",
+        "mutation_id": "tahoe-supervl-nano-planned-2-ridge-sharpen-b01-r002",
+        "skill": "add_objects",
+        "context": "handoffs/context-002.json",
+        "proposal": "handoffs/proposal-002.json",
+        "inference": "handoffs/inference-002.json",
+        "response_id": "chatcmpl-a8f5ab4960053d45",
+        "usage": {
+          "prompt_tokens": 55284,
+          "total_tokens": 59757,
+          "completion_tokens": 4473,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 4,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "ridge-sharpen-b01",
+        "parent_assignment_id": "ridge-sharpen",
+        "part_label": "snowy mountain ridge \u00b7 batch 1/2",
+        "region": {
+          "x": 0.0,
+          "y": 240.0,
+          "width": 960.0,
+          "height": 70.0
+        },
+        "shape_budget": 8
+      }
+    },
+    {
+      "index": 3,
+      "label": "Picture-agent revision 3: add_objects",
+      "recorded_at": "2026-10-17T19:38:05.796282+00:00",
+      "scene": "steps/003-scene.json",
+      "svg": "steps/003-drawing.svg",
+      "png": "steps/003-drawing.png",
+      "checks": "steps/003-checks.json",
+      "metrics": {
+        "raw_nodes": 479,
+        "expanded_nodes": 479,
+        "expanded_shapes": 479,
+        "primitive_count": 479,
+        "motif_count": 0,
+        "path_points": 877,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 3,
+        "agent_id": "nemotron-ridge-sharpen-b02-r003",
+        "mutation_id": "tahoe-supervl-nano-planned-2-ridge-sharpen-b02-r003",
+        "skill": "add_objects",
+        "context": "handoffs/context-003.json",
+        "proposal": "handoffs/proposal-003.json",
+        "inference": "handoffs/inference-003.json",
+        "response_id": "chatcmpl-bfe009138ece6fa8",
+        "usage": {
+          "prompt_tokens": 57419,
+          "total_tokens": 60946,
+          "completion_tokens": 3527,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 4,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "ridge-sharpen-b02",
+        "parent_assignment_id": "ridge-sharpen",
+        "part_label": "snowy mountain ridge \u00b7 batch 2/2",
+        "region": {
+          "x": 0.0,
+          "y": 240.0,
+          "width": 960.0,
+          "height": 70.0
+        },
+        "shape_budget": 8
+      }
+    },
+    {
+      "index": 4,
+      "label": "Picture-agent revision 4: add_objects",
+      "recorded_at": "2026-10-17T19:38:51.509656+00:00",
+      "scene": "steps/004-scene.json",
+      "svg": "steps/004-drawing.svg",
+      "png": "steps/004-drawing.png",
+      "checks": "steps/004-checks.json",
+      "metrics": {
+        "raw_nodes": 487,
+        "expanded_nodes": 487,
+        "expanded_shapes": 487,
+        "primitive_count": 487,
+        "motif_count": 0,
+        "path_points": 893,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 4,
+        "agent_id": "nemotron-water-enrich-b01-r004",
+        "mutation_id": "tahoe-supervl-nano-planned-2-water-enrich-b01-r004",
+        "skill": "add_objects",
+        "context": "handoffs/context-004.json",
+        "proposal": "handoffs/proposal-004.json",
+        "inference": "handoffs/inference-004.json",
+        "response_id": "chatcmpl-86aa2670a7abc827",
+        "usage": {
+          "prompt_tokens": 59499,
+          "total_tokens": 65578,
+          "completion_tokens": 6079,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 2,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "water-enrich-b01",
+        "parent_assignment_id": "water-enrich",
+        "part_label": "turquoise water currents \u00b7 batch 1/2",
+        "region": {
+          "x": 0.0,
+          "y": 310.0,
+          "width": 960.0,
+          "height": 190.0
+        },
+        "shape_budget": 8
+      }
+    },
+    {
+      "index": 5,
+      "label": "Picture-agent revision 5: add_objects",
+      "recorded_at": "2026-10-17T19:41:11.300976+00:00",
+      "scene": "steps/005-scene.json",
+      "svg": "steps/005-drawing.svg",
+      "png": "steps/005-drawing.png",
+      "checks": "steps/005-checks.json",
+      "metrics": {
+        "raw_nodes": 495,
+        "expanded_nodes": 495,
+        "expanded_shapes": 495,
+        "primitive_count": 495,
+        "motif_count": 0,
+        "path_points": 909,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 5,
+        "agent_id": "nemotron-water-enrich-b02-r005",
+        "mutation_id": "tahoe-supervl-nano-planned-2-water-enrich-b02-r005",
+        "skill": "add_objects",
+        "context": "handoffs/context-005.json",
+        "proposal": "handoffs/proposal-005.json",
+        "inference": "handoffs/inference-005.json",
+        "response_id": "chatcmpl-9db2d7dc07df52f8",
+        "usage": {
+          "prompt_tokens": 61459,
+          "total_tokens": 65109,
+          "completion_tokens": 3650,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 1,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "water-enrich-b02",
+        "parent_assignment_id": "water-enrich",
+        "part_label": "turquoise water currents \u00b7 batch 2/2",
+        "region": {
+          "x": 0.0,
+          "y": 310.0,
+          "width": 960.0,
+          "height": 190.0
+        },
+        "shape_budget": 8
+      }
+    },
+    {
+      "index": 6,
+      "label": "Picture-agent revision 6: add_objects",
+      "recorded_at": "2026-10-17T19:41:50.776586+00:00",
+      "scene": "steps/006-scene.json",
+      "svg": "steps/006-drawing.svg",
+      "png": "steps/006-drawing.png",
+      "checks": "steps/006-checks.json",
+      "metrics": {
+        "raw_nodes": 502,
+        "expanded_nodes": 502,
+        "expanded_shapes": 502,
+        "primitive_count": 502,
+        "motif_count": 0,
+        "path_points": 915,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 6,
+        "agent_id": "nemotron-granite-cluster-b01-r006",
+        "mutation_id": "tahoe-supervl-nano-planned-2-granite-cluster-b01-r006",
+        "skill": "add_objects",
+        "context": "handoffs/context-006.json",
+        "proposal": "handoffs/proposal-006.json",
+        "inference": "handoffs/inference-006.json",
+        "response_id": "chatcmpl-8bab8a3b6afa1eb6",
+        "usage": {
+          "prompt_tokens": 63516,
+          "total_tokens": 68167,
+          "completion_tokens": 4651,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 2,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "granite-cluster-b01",
+        "parent_assignment_id": "granite-cluster",
+        "part_label": "central and right-shore granite \u00b7 batch 1/2",
+        "region": {
+          "x": 400.0,
+          "y": 280.0,
+          "width": 560.0,
+          "height": 100.0
+        },
+        "shape_budget": 7
+      }
+    },
+    {
+      "index": 7,
+      "label": "Picture-agent revision 7: add_objects",
+      "recorded_at": "2026-10-17T19:42:11.880430+00:00",
+      "scene": "steps/007-scene.json",
+      "svg": "steps/007-drawing.svg",
+      "png": "steps/007-drawing.png",
+      "checks": "steps/007-checks.json",
+      "metrics": {
+        "raw_nodes": 509,
+        "expanded_nodes": 509,
+        "expanded_shapes": 509,
+        "primitive_count": 509,
+        "motif_count": 0,
+        "path_points": 921,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 7,
+        "agent_id": "nemotron-granite-cluster-b02-r007",
+        "mutation_id": "tahoe-supervl-nano-planned-2-granite-cluster-b02-r007",
+        "skill": "add_objects",
+        "context": "handoffs/context-007.json",
+        "proposal": "handoffs/proposal-007.json",
+        "inference": "handoffs/inference-007.json",
+        "response_id": "chatcmpl-ab26e8c525226a79",
+        "usage": {
+          "prompt_tokens": 65114,
+          "total_tokens": 69644,
+          "completion_tokens": 4530,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 1,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "granite-cluster-b02",
+        "parent_assignment_id": "granite-cluster",
+        "part_label": "central and right-shore granite \u00b7 batch 2/2",
+        "region": {
+          "x": 400.0,
+          "y": 280.0,
+          "width": 560.0,
+          "height": 100.0
+        },
+        "shape_budget": 7
+      }
+    },
+    {
+      "index": 8,
+      "label": "Picture-agent revision 8: add_objects",
+      "recorded_at": "2026-10-17T19:42:46.102022+00:00",
+      "scene": "steps/008-scene.json",
+      "svg": "steps/008-drawing.svg",
+      "png": "steps/008-drawing.png",
+      "checks": "steps/008-checks.json",
+      "metrics": {
+        "raw_nodes": 515,
+        "expanded_nodes": 515,
+        "expanded_shapes": 515,
+        "primitive_count": 515,
+        "motif_count": 0,
+        "path_points": 936,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v3",
+        "provider": "crusoe_managed_inference",
+        "model": "nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B",
+        "context_revision": 8,
+        "agent_id": "nemotron-pine-forms-b01-r008",
+        "mutation_id": "tahoe-supervl-nano-planned-2-pine-forms-b01-r008",
+        "skill": "add_objects",
+        "context": "handoffs/context-008.json",
+        "proposal": "handoffs/proposal-008.json",
+        "inference": "handoffs/inference-008.json",
+        "response_id": "chatcmpl-879b091c790b0c03",
+        "usage": {
+          "prompt_tokens": 66750,
+          "total_tokens": 70292,
+          "completion_tokens": 3542,
+          "prompt_tokens_details": null
+        },
+        "accepted_attempt": 2,
+        "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+        "assignment_id": "pine-forms-b01",
+        "parent_assignment_id": "pine-forms",
+        "part_label": "right-shore pines \u00b7 batch 1/2",
+        "region": {
+          "x": 800.0,
+          "y": 220.0,
+          "width": 160.0,
+          "height": 100.0
+        },
+        "shape_budget": 6
+      }
+    }
+  ],
+  "final_step": null,
+  "updated_at": "2026-10-17T19:42:46.102022+00:00",
+  "planner": {
+    "plan": "handoffs/plan.json",
+    "planner_inference": "handoffs/planner-inference.json",
+    "planner_id": "nemotron-planner-r000",
+    "plan_id": "tahoe-supervl-nano-planned-2048-02-plan-r000",
+    "model": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+    "response_id": "chatcmpl-a7a05684fbf0d7cc",
+    "usage": {
+      "prompt_tokens": 47994,
+      "total_tokens": 52076,
+      "completion_tokens": 4082,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 46784,
+        "multimodal_tokens": {
+          "image": 522
+        }
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3027
+      }
+    },
+    "accepted_attempt": 1
+  }
+}

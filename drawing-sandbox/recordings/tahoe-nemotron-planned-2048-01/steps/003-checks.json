@@ -1,0 +1,29 @@
+{
+  "valid": true,
+  "hard_checks": {
+    "scene_structure": true,
+    "finite_geometry": true,
+    "bounded_expansion": true,
+    "motif_references": true,
+    "canvas_size": true,
+    "shape_palette": true,
+    "background": true,
+    "required_opacity": true,
+    "max_stroke_width": true,
+    "max_shape_span": true
+  },
+  "metrics": {
+    "raw_nodes": 471,
+    "expanded_nodes": 471,
+    "expanded_shapes": 471,
+    "primitive_count": 471,
+    "motif_count": 0,
+    "path_points": 837,
+    "canvas_width": 960,
+    "canvas_height": 540,
+    "shape_palette_color_count": 4,
+    "max_transformed_stroke_width": 10.0,
+    "max_shape_span": 93.0
+  },
+  "violations": []
+}

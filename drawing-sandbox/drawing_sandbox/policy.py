@@ -45,7 +45,7 @@ def current_instruction_set() -> dict:
         "composition": {
             "paint_order": "nodes are composited in array order",
             "blend_model": "source-over",
-            "max_expanded_shapes": 512,
+            "max_expanded_shapes": 2048,
         },
         "recording": {
             "required_metadata": ["run_id", "prompt_set", "composition"],

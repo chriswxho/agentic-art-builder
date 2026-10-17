@@ -1,0 +1,262 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v2",
+  "agent_id": "nemotron-mountain-ridge-r001",
+  "mutation_id": "tahoe-nemotron-planned-2048--mountain-ridge-r001",
+  "base_revision": 0,
+  "critique": "Current ridge silhouette lacks fine detail and subtle layering; adding small black path segments will enhance definition and better match the reference photograph's snowy ridge appearance.",
+  "rationale": "Adding small black path segments introduces additional ridge texture and depth, improving alignment with the reference photograph's snowy ridge appearance.",
+  "add_objects": {
+    "layer_id": "snowy-mountain-ridge",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "plan-mountain-ridge-r001-01",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              250
+            ],
+            [
+              165,
+              255
+            ],
+            [
+              180,
+              250
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-02",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              180,
+              260
+            ],
+            [
+              195,
+              265
+            ],
+            [
+              210,
+              260
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-03",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              210,
+              255
+            ],
+            [
+              225,
+              260
+            ],
+            [
+              240,
+              255
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-04",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              240,
+              265
+            ],
+            [
+              255,
+              270
+            ],
+            [
+              270,
+              265
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-05",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              270,
+              250
+            ],
+            [
+              285,
+              255
+            ],
+            [
+              300,
+              250
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-06",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              300,
+              260
+            ],
+            [
+              315,
+              265
+            ],
+            [
+              330,
+              260
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-07",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              330,
+              255
+            ],
+            [
+              345,
+              260
+            ],
+            [
+              360,
+              255
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-mountain-ridge-r001-08",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              360,
+              245
+            ],
+            [
+              375,
+              250
+            ],
+            [
+              390,
+              245
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "Add small black ridge detail",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      }
+    ]
+  }
+}

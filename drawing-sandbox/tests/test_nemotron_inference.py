@@ -4,14 +4,24 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from drawing_sandbox.iteration_context import INFERENCE_MODEL, PROTOCOL_VERSION, create_context
+from PIL import Image
+
+from drawing_sandbox.iteration_context import (
+    EVALUATOR_MODEL,
+    GENERATOR_MODEL,
+    INFERENCE_MODEL,
+    PROTOCOL_VERSION,
+    create_context,
+)
 from drawing_sandbox.nemotron_inference import (
+    infer_plan,
     infer_proposal,
     inference_provenance,
     load_crusoe_api_key,
     parse_proposal,
     write_inference_log,
 )
+from drawing_sandbox.planning import PLAN_PROTOCOL_VERSION
 
 
 def context():
@@ -76,7 +86,7 @@ class NemotronInferenceTests(unittest.TestCase):
         }
         with tempfile.TemporaryDirectory() as folder:
             image = Path(folder) / "current.png"
-            image.write_bytes(b"\x89PNG\r\n\x1a\n")
+            Image.new("RGB", (64, 64), "white").save(image)
             with patch("drawing_sandbox.nemotron_inference._call_crusoe", return_value=response) as call:
                 accepted, log = infer_proposal(
                     context(), "remove_objects", api_key="must-not-be-recorded",
@@ -85,12 +95,58 @@ class NemotronInferenceTests(unittest.TestCase):
             self.assertEqual(accepted, proposal)
             body = call.call_args.args[1]
             self.assertEqual(body["model"], INFERENCE_MODEL)
+            self.assertEqual(body["model"], GENERATOR_MODEL)
             self.assertEqual(body["messages"][1]["content"][1]["type"], "image_url")
             serialized = json.dumps(log)
             self.assertNotIn("must-not-be-recorded", serialized)
             path = write_inference_log(log, root=folder)
             self.assertTrue(path.is_file())
             self.assertEqual(inference_provenance(log)["response_id"], "completion-test")
+
+    def test_planner_forward_inference_returns_regional_assignments(self):
+        source = context()
+        plan = {
+            "protocol_version": PLAN_PROTOCOL_VERSION,
+            "planner_id": "nemotron-planner-r000",
+            "plan_id": "nemotron-test-plan-r000",
+            "base_revision": 0,
+            "base_state_sha256": source["state_sha256"],
+            "critique": "Both halves need more deliberate local texture.",
+            "strategy": "Assign one bounded detail pass to each half.",
+            "assignments": [
+                {
+                    "assignment_id": "left-detail", "part_label": "Left detail",
+                    "brief": "Add cyan ellipses in the left half.",
+                    "region": {"x": 0, "y": 0, "width": 32, "height": 64},
+                    "layer_id": "marks", "shape_types": ["ellipse"],
+                    "colors": ["#00ffff"], "minimum_shapes": 1, "shape_budget": 2,
+                },
+                {
+                    "assignment_id": "right-detail", "part_label": "Right detail",
+                    "brief": "Add black ellipses in the right half.",
+                    "region": {"x": 32, "y": 0, "width": 32, "height": 64},
+                    "layer_id": "marks", "shape_types": ["ellipse"],
+                    "colors": ["#000000"], "minimum_shapes": 1, "shape_budget": 2,
+                },
+            ],
+        }
+        response = {
+            "id": "planner-completion-test", "created": 1, "model": EVALUATOR_MODEL,
+            "choices": [{"finish_reason": "stop", "message": {"content": json.dumps(plan)}}],
+            "usage": {"prompt_tokens": 120, "completion_tokens": 80, "total_tokens": 200},
+        }
+        with tempfile.TemporaryDirectory() as folder:
+            image = Path(folder) / "current.png"
+            Image.new("RGB", (64, 64), "white").save(image)
+            with patch("drawing_sandbox.nemotron_inference._call_crusoe", return_value=response) as call:
+                accepted, log = infer_plan(
+                    source, api_key="must-not-be-recorded", current_image=image, max_attempts=1,
+                    minimum_total_shapes=2,
+                )
+            self.assertEqual(len(accepted["assignments"]), 2)
+            self.assertEqual(call.call_args.args[1]["model"], EVALUATOR_MODEL)
+            self.assertEqual(log["plan_id"], "nemotron-test-plan-r000")
+            self.assertNotIn("must-not-be-recorded", json.dumps(log))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,230 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v2",
+  "agent_id": "nemotron-shoreline-pines-r004",
+  "mutation_id": "tahoe-nemotron-planned-2048--shoreline-pines-r004",
+  "base_revision": 3,
+  "critique": "Current shoreline-pines layer lacks fine detail in pine silhouettes; adding small primitives improves realism.",
+  "rationale": "Adding eight small black and cyan primitives creates realistic pine silhouettes and foliage detail in the shoreline region, improving alignment with the reference photograph while respecting layer constraints.",
+  "add_objects": {
+    "layer_id": "shoreline-pines",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "plan-shoreline-pines-r004-01",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              850,
+              350
+            ],
+            [
+              850,
+              380
+            ]
+          ],
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 3,
+          "opacity": 0.5
+        },
+        "intent": "Add small black trunk segment",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-02",
+        "renderer_node": {
+          "type": "polygon",
+          "points": [
+            [
+              850,
+              340
+            ],
+            [
+              860,
+              350
+            ],
+            [
+              855,
+              360
+            ]
+          ],
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        "intent": "Add small cyan foliage cluster",
+        "tags": [
+          "type:polygon",
+          "fill:#00ffff"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-03",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              840,
+              360
+            ],
+            [
+              860,
+              360
+            ]
+          ],
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 3,
+          "opacity": 0.5
+        },
+        "intent": "Add small black horizontal line",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-04",
+        "renderer_node": {
+          "type": "polygon",
+          "points": [
+            [
+              845,
+              355
+            ],
+            [
+              855,
+              365
+            ],
+            [
+              840,
+              365
+            ]
+          ],
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        "intent": "Add small cyan foliage cluster",
+        "tags": [
+          "type:polygon",
+          "fill:#00ffff"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-05",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              860,
+              350
+            ],
+            [
+              870,
+              360
+            ]
+          ],
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 3,
+          "opacity": 0.5
+        },
+        "intent": "Add small black diagonal line",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-06",
+        "renderer_node": {
+          "type": "polygon",
+          "points": [
+            [
+              865,
+              355
+            ],
+            [
+              875,
+              365
+            ],
+            [
+              860,
+              365
+            ]
+          ],
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        "intent": "Add small cyan foliage cluster",
+        "tags": [
+          "type:polygon",
+          "fill:#00ffff"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-07",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              880,
+              350
+            ],
+            [
+              880,
+              355
+            ]
+          ],
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 3,
+          "opacity": 0.5
+        },
+        "intent": "Add small black vertical line",
+        "tags": [
+          "type:path",
+          "stroke:#000000"
+        ]
+      },
+      {
+        "object_id": "plan-shoreline-pines-r004-08",
+        "renderer_node": {
+          "type": "polygon",
+          "points": [
+            [
+              880,
+              350
+            ],
+            [
+              890,
+              360
+            ],
+            [
+              875,
+              360
+            ]
+          ],
+          "fill": "#00ffff",
+          "stroke": "none",
+          "width": 0,
+          "opacity": 0.5
+        },
+        "intent": "Add small cyan foliage cluster",
+        "tags": [
+          "type:polygon",
+          "fill:#00ffff"
+        ]
+      }
+    ]
+  }
+}

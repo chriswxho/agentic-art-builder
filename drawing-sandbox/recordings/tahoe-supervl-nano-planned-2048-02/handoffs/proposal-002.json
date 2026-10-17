@@ -1,0 +1,246 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v3",
+  "agent_id": "nemotron-ridge-sharpen-b01-r002",
+  "mutation_id": "tahoe-supervl-nano-planned-2-ridge-sharpen-b01-r002",
+  "base_revision": 1,
+  "critique": "visual diagnosis of the current render",
+  "rationale": "adding short black, cyan, and magenta path strokes along the ridgeline sharpens peaks and adds texture, improving contrast against the sky and enhancing the snowy appearance.",
+  "add_objects": {
+    "layer_id": "snowy-mountain-ridge",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-01",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              100,
+              280
+            ],
+            [
+              150,
+              270
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "black path stroke along ridgeline segment 1",
+        "tags": [
+          "type:path",
+          "stroke:#000000",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-02",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              150,
+              270
+            ],
+            [
+              200,
+              280
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path stroke along ridgeline segment 2",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-03",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              200,
+              280
+            ],
+            [
+              250,
+              270
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta path stroke along ridgeline segment 3",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-04",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              250,
+              270
+            ],
+            [
+              300,
+              280
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "black path stroke along ridgeline segment 4",
+        "tags": [
+          "type:path",
+          "stroke:#000000",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-05",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              300,
+              280
+            ],
+            [
+              350,
+              270
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path stroke along ridgeline segment 5",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-06",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              350,
+              270
+            ],
+            [
+              400,
+              280
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "magenta path stroke along ridgeline segment 6",
+        "tags": [
+          "type:path",
+          "stroke:#ff00ff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-07",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              400,
+              280
+            ],
+            [
+              450,
+              270
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#000000",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "black path stroke along ridgeline segment 7",
+        "tags": [
+          "type:path",
+          "stroke:#000000",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      },
+      {
+        "object_id": "plan-ridge-sharpen-b01-r002-08",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              450,
+              270
+            ],
+            [
+              500,
+              280
+            ]
+          ],
+          "smooth": false,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 6,
+          "opacity": 0.5
+        },
+        "intent": "cyan path stroke along ridgeline segment 8",
+        "tags": [
+          "type:path",
+          "stroke:#00ffff",
+          "fill:none",
+          "opacity:0.5"
+        ]
+      }
+    ]
+  }
+}

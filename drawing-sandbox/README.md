@@ -56,7 +56,7 @@ Agent-facing renders enforce these rules:
 - Every visible primitive has `opacity: 0.5`.
 - A transformed primitive may span at most 96 canvas units.
 - A transformed stroke may be at most 12 canvas units wide.
-- Expanded scenes remain capped at 512 primitive shapes.
+- Expanded scenes remain capped at 2,048 primitive shapes.
 
 This makes color mixing, density, and form emerge through repeated small marks and source-over layering. Low-level structural utilities remain useful for inspecting older artifacts, while the HTTP API, `render_drawing`, and command-line render/check commands enforce the current policy.
 
@@ -109,7 +109,7 @@ Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, S
 
 ## Consecutive Nemotron-agent iteration
 
-`drawing_sandbox/proto/agent_iteration.proto` defines the model-independent JSON/protobuf handoff between picture agents. The active runtime is Crusoe Managed Inference with `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B`. The context carries that runtime identity, immutable prompts and composition intent, the current policy, stable layer/object IDs, artifact and reference paths, revision/hash guards, and accepted mutation history. Each Nemotron forward-inference call returns exactly one typed proposal:
+`drawing_sandbox/proto/agent_iteration.proto` defines the model-independent JSON/protobuf handoff between picture agents. The active runtime uses Crusoe Managed Inference with `nvidia/NVIDIA-Nemotron-3.5-Super-VL` for visual planning/evaluation and `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` for shape generation. The context carries both runtime identities, immutable prompts and composition intent, the current policy, stable layer/object IDs, artifact and reference paths, revision/hash guards, and accepted mutation history. Each generator forward-inference call returns exactly one typed proposal:
 
 - `split_layers`: replace one layer with an exhaustive, order-preserving partition.
 - `combine_layers`: merge adjacent layers without changing their paint order.
@@ -132,10 +132,43 @@ python scripts/nemotron_iteration.py run \
 
 The default agent order is `split_layers`, `add_objects`, `remove_objects`, then `combine_layers`. Repeat `--skill <name>` to choose another sequence. `scripts/agent_iteration.py` remains available for offline initialization and manual application of already-produced typed proposals.
 
+For planned regional refinement, run:
+
+```bash
+python scripts/nemotron_iteration.py planned-run \
+  --scene examples/26-tahoe-cmyk/scene.json \
+  --source-manifest recordings/tahoe-cmyk-remake/manifest.json \
+  --reference examples/26-tahoe-day/reference.jpg \
+  --run-id tahoe-nemotron-planned-2048-01
+```
+
+Super VL first returns a typed `PicturePlan`. Each ordered assignment specifies one picture part, an in-canvas rectangle, an existing target layer, allowed primitive types and CMYK colors, and minimum/maximum shape counts. The executor turns each assignment into one or more compact Nano Omni specialist batches. The orchestrator rejects marks outside the delegated region, disallowed shape/color choices, under- or over-budget work, and any result that fails the global drawing policy. Super VL finally compares the baseline, final render, and photographic reference and emits a typed `PictureEvaluation`. `handoffs/plan.json`, `execution-plan.json`, `planner-inference.json`, `evaluation.json`, and `evaluator-inference.json` preserve the supervisory calls, delegated batches, and complete provenance.
+
+## Experiment recap — 2026-10-17 12:47:51 PDT
+
+- The enforced expanded-shape ceiling is now 2,048, with an 8,192-node structural ceiling so groups and motif expansion do not mask the primitive limit.
+- The supervisory runtime is split by role: `nvidia/NVIDIA-Nemotron-3.5-Super-VL` performs visual planning and final evaluation, while `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` generates renderer primitives.
+- Super VL receives a single labeled comparison sheet because its Crusoe endpoint accepts at most one image per prompt. Nano Omni receives the current render and photographic reference directly.
+- The completed all-Nano comparison at `recordings/tahoe-nemotron-planned-2048-01/` added 40 regional marks (447 → 487), so it did not cross the former 512-shape ceiling.
+- The active mixed-model run at `recordings/tahoe-supervl-nano-planned-2048-02/` has a six-region Super VL plan with a 188-shape budget and a 90-shape required minimum. The executor divides that minimum into twelve deterministic 6–8-shape Nano Omni batches for more reliable typed JSON.
+- At the time of this recap, eight generator revisions are accepted and the scene has 515 valid CMYK primitives—three beyond the former ceiling—with no policy violations. The run is paused before `pine-forms-b02`; it is not marked final and the Super VL before/after evaluation has not run yet.
+- Accepted inference logs and rejected retry batches are both retained under the run's `handoffs/` directory. The current nine-frame replay is available as `agent-by-agent-timelapse.mp4` and `.gif`.
+
+Resume the paused execution and final evaluation with:
+
+```bash
+python scripts/nemotron_iteration.py resume-plan \
+  --run-id tahoe-supervl-nano-planned-2048-02 \
+  --reference examples/26-tahoe-day/reference.jpg \
+  --env-file ../.env \
+  --max-attempts 5 \
+  --max-tokens 12000
+```
+
 For a live read-only view of a recorded chain, open:
 
 ```text
-http://127.0.0.1:8766/watch?run=tahoe-nemotron-chain-01
+http://127.0.0.1:8766/watch?run=tahoe-supervl-nano-planned-2048-02
 ```
 
 The viewer auto-plays recorded revisions, polls locally for newly accepted frames, and exposes only playback controls. `GET /api/watch?run=<run-id>` supplies revision metadata and `GET /api/watch/frame?run=<run-id>&step=<index>` supplies immutable PNG frames. `scripts/make_agent_timelapse.py` exports the same history as a labeled MP4 and GIF.

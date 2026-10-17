@@ -1,0 +1,120 @@
+{
+  "protocol_version": "drawing-sandbox.plan.v1",
+  "planner_id": "nemotron-planner-r000",
+  "plan_id": "tahoe-nemotron-planned-2048-01-plan-r000",
+  "base_revision": 0,
+  "base_state_sha256": "ffa6cfec34c1a02e31409762a795c1fcdfb67522ea8c52a111434ad46d3f89f1",
+  "critique": "visual diagnosis of the current render",
+  "strategy": "ordered regional refinement strategy",
+  "assignments": [
+    {
+      "assignment_id": "mountain-ridge",
+      "part_label": "Snowy mountain ridge",
+      "brief": "Define ridge silhouette with layered cyan and black paths",
+      "region": {
+        "x": 0.0,
+        "y": 200.0,
+        "width": 960.0,
+        "height": 150.0
+      },
+      "layer_id": "snowy-mountain-ridge",
+      "shape_types": [
+        "path"
+      ],
+      "colors": [
+        "#00ffff",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 16
+    },
+    {
+      "assignment_id": "water-currents",
+      "part_label": "Turquoise water currents",
+      "brief": "Create water texture using overlapping cyan ellipses",
+      "region": {
+        "x": 0.0,
+        "y": 350.0,
+        "width": 960.0,
+        "height": 150.0
+      },
+      "layer_id": "turquoise-water-currents",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#00ffff",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 16
+    },
+    {
+      "assignment_id": "granite-clusters",
+      "part_label": "Shore and granite clusters",
+      "brief": "Add granite shapes with black and cyan ellipses",
+      "region": {
+        "x": 0.0,
+        "y": 400.0,
+        "width": 960.0,
+        "height": 100.0
+      },
+      "layer_id": "shore-and-granite-clusters",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#00ffff",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 16
+    },
+    {
+      "assignment_id": "shoreline-pines",
+      "part_label": "Shoreline pines",
+      "brief": "Outline pine silhouettes using black paths and cyan polygons",
+      "region": {
+        "x": 800.0,
+        "y": 300.0,
+        "width": 160.0,
+        "height": 120.0
+      },
+      "layer_id": "shoreline-pines",
+      "shape_types": [
+        "path",
+        "polygon"
+      ],
+      "colors": [
+        "#000000",
+        "#00ffff"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 16
+    },
+    {
+      "assignment_id": "foreground-boulder",
+      "part_label": "Foreground granite and final accents",
+      "brief": "Detail foreground boulder with layered black and cyan ellipses",
+      "region": {
+        "x": 500.0,
+        "y": 450.0,
+        "width": 460.0,
+        "height": 80.0
+      },
+      "layer_id": "foreground-granite-and-final-accents",
+      "shape_types": [
+        "ellipse",
+        "path"
+      ],
+      "colors": [
+        "#00ffff",
+        "#000000"
+      ],
+      "minimum_shapes": 8,
+      "shape_budget": 16
+    }
+  ]
+}
