@@ -118,7 +118,7 @@ Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, S
 
 Agents never return a rewritten scene. `drawing_sandbox.iteration_context` applies one proposal atomically, materializes ordinary renderer JSON, checks the mandatory CMYK policy, records the render and provenance, and emits the next revision only on success. Stale revisions, duplicate IDs, illegal colors/opacities, oversized marks, invalid partitions, and non-adjacent combines are rejected without changing the prior context.
 
-The inference CLI accepts `CRUSOE_API_KEY`/`API_TOKEN` or the repository's gitignored `.env` file. A bare token in `.env` is supported. It records the exact text prompts, image asset paths, raw model response, response ID, token usage, parsed proposal, and validation attempts without recording the API key or base64 image payloads.
+The inference CLI prefers `CRUSOE_API_TOKEN` and also accepts `CRUSOE_API_KEY` or `API_TOKEN`, either from the process environment or the repository's gitignored `.env` file. A bare token in `.env` is supported for compatibility. It records the exact text prompts, image asset paths, raw model response, response ID, token usage, parsed proposal, and validation attempts without recording the API key or base64 image payloads.
 
 Run the standard four-agent Tahoe chain:
 

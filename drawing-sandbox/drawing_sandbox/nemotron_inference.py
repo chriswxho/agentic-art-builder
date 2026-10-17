@@ -68,7 +68,7 @@ def load_crusoe_api_key(env_file: str | Path | None = None) -> str:
     The repository's historical .env is a single bare token; normal KEY=value files are
     accepted too. The key is returned only in memory and is never placed in inference logs.
     """
-    for name in ("CRUSOE_API_KEY", "API_TOKEN"):
+    for name in ("CRUSOE_API_TOKEN", "CRUSOE_API_KEY", "API_TOKEN"):
         value = os.environ.get(name, "").strip()
         if value:
             return value
@@ -97,13 +97,13 @@ def load_crusoe_api_key(env_file: str | Path | None = None) -> str:
                 continue
             name, value = line.split("=", 1)
             assignments[name.strip()] = value.strip().strip("'\"")
-        for name in ("CRUSOE_API_KEY", "API_TOKEN"):
+        for name in ("CRUSOE_API_TOKEN", "CRUSOE_API_KEY", "API_TOKEN"):
             if assignments.get(name):
                 return assignments[name]
         if len(bare_values) == 1 and bare_values[0]:
             return bare_values[0]
     raise NemotronInferenceError(
-        "Crusoe API key not found; set CRUSOE_API_KEY or provide a .env file"
+        "Crusoe API key not found; set CRUSOE_API_TOKEN or provide a .env file"
     )
 
 

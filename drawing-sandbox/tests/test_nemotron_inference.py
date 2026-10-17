@@ -43,6 +43,12 @@ class NemotronInferenceTests(unittest.TestCase):
             env.write_text("secret-token-value\n")
             self.assertEqual(load_crusoe_api_key(env), "secret-token-value")
 
+    def test_loads_crusoe_api_token_assignment(self):
+        with tempfile.TemporaryDirectory() as folder:
+            env = Path(folder) / ".env"
+            env.write_text('CRUSOE_API_TOKEN="preferred-token-value"\n')
+            self.assertEqual(load_crusoe_api_key(env), "preferred-token-value")
+
     def test_parses_json_from_reasoning_wrapper(self):
         proposal = {"protocol_version": PROTOCOL_VERSION, "base_revision": 0}
         text = "analysis first\n```json\n" + json.dumps(proposal) + "\n```"
