@@ -1,0 +1,14 @@
+{
+  "cases": [
+    {
+      "case_id": "tahoe-remake",
+      "run": "../recordings/tahoe-cmyk-remake",
+      "target_image": "../examples/26-tahoe-day/reference.jpg"
+    },
+    {
+      "case_id": "overprint-demo",
+      "run": "../recordings/cmyk-overprint-demo",
+      "preferred_step_count": 3
+    }
+  ]
+}

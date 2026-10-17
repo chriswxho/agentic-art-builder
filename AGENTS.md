@@ -12,6 +12,15 @@ These rules apply to any agent or subagent creating pictures in `drawing-sandbox
 
 The machine-readable policy lives in `drawing-sandbox/drawing_sandbox/policy.py`. The recording API is `POST /api/record`.
 
+## Nemotron iteration handoffs
+
+- Consecutive Nemotron picture agents receive a `PictureContext` JSON sidecar conforming to `drawing-sandbox/drawing_sandbox/proto/agent_iteration.proto`.
+- Each agent is one forward-inference call to Crusoe Managed Inference using `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` and must return exactly one typed `AgentProposal` skill: `split_layers`, `combine_layers`, `add_objects`, or `remove_objects`.
+- Agents must not edit renderer scenes or context files directly. The orchestrator validates the context hash and revision, applies the proposal atomically, renders it through the enforced policy, records it, and only then publishes the next context.
+- Preserve stable layer and object IDs from the context. New object and layer IDs must be unique and descriptive.
+- Use the current rendered PNG and reference assets listed in the context when critiquing a revision.
+- Record the exact text prompts, model identifier, response identifier, token usage, raw response, and accepted proposal for every inference. Never record the API key or image data URLs.
+
 # Repository rules
 
 - Keep the root `README.md` describing how the app works as of the current commit. Any commit that changes behavior, interfaces, or data must update the "How it works right now" section and add a line to its changelog in the same commit.

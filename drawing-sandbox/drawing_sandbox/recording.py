@@ -55,6 +55,7 @@ def record_composition_step(
     step_label: str | None = None,
     final: bool = False,
     model_output: str | None = None,
+    provenance: dict | None = None,
     root: str | Path = "recordings",
 ) -> dict:
     """Append one valid render and its provenance to a composition run.
@@ -64,6 +65,10 @@ def record_composition_step(
     verbatim and shown in the run's human-readable ``report.md``.
     """
     _validate_metadata(run_id, prompt_set, composition, step_label, final, model_output)
+    if provenance is not None:
+        if not isinstance(provenance, dict):
+            raise ValueError("provenance must be a JSON object")
+        _json_size(provenance, "provenance")
     if not rendered.get("checks", {}).get("valid"):
         raise ValueError("only valid constrained renders can be recorded")
     if "svg" not in rendered or "png_data_url" not in rendered:
@@ -127,6 +132,8 @@ def record_composition_step(
     if model_output is not None:
         step["model_output"] = f"steps/{stem}-model-output.txt"
         (run_dir / step["model_output"]).write_text(model_output)
+    if provenance is not None:
+        step["provenance"] = provenance
     manifest["steps"].append(step)
     if final:
         (run_dir / "final-scene.json").write_text(_json_size(scene, "scene") + "\n")

@@ -1,0 +1,240 @@
+{
+  "format_version": 1,
+  "run_id": "tahoe-cmyk-remake",
+  "created_at": "2026-10-17T18:45:30.429564+00:00",
+  "instruction_set": {
+    "version": 1,
+    "canvas": {
+      "background": "#ffffff",
+      "size_range": [
+        64,
+        1024
+      ]
+    },
+    "marks": {
+      "primitive_types": [
+        "path",
+        "polygon",
+        "ellipse"
+      ],
+      "assembly_types": [
+        "group",
+        "use"
+      ],
+      "inks": {
+        "cyan": "#00ffff",
+        "magenta": "#ff00ff",
+        "yellow": "#ffff00",
+        "black": "#000000"
+      },
+      "opacity": 0.5,
+      "max_transformed_stroke_width": 12,
+      "max_transformed_span": 96
+    },
+    "composition": {
+      "paint_order": "nodes are composited in array order",
+      "blend_model": "source-over",
+      "max_expanded_shapes": 512
+    },
+    "recording": {
+      "required_metadata": [
+        "run_id",
+        "prompt_set",
+        "composition"
+      ],
+      "saved_progress": [
+        "scene_json",
+        "svg",
+        "png",
+        "checks"
+      ],
+      "saved_final": [
+        "scene_json",
+        "svg",
+        "png"
+      ]
+    }
+  },
+  "prompt_set": [
+    "Remake the supplied Lake Tahoe photograph as a layered vector print.",
+    "Use only small cyan, magenta, yellow, and black marks at 50% opacity on white; create color and form through overprinting.",
+    "Preserve the wide blue sky, snowy ridge, turquoise water, central granite cluster, right-shore pines, and large foreground boulder."
+  ],
+  "composition": {
+    "title": "Tahoe CMYK overprint study",
+    "source_image": "examples/26-tahoe-day/reference.jpg",
+    "canvas": [
+      960,
+      540
+    ],
+    "strategy": "short hatching, overlapping ellipses, small polygons, and preserved white paper",
+    "layers": [
+      {
+        "label": "Layered sky",
+        "cumulative_node_count": 116
+      },
+      {
+        "label": "Snowy mountain ridge",
+        "cumulative_node_count": 184
+      },
+      {
+        "label": "Turquoise water currents",
+        "cumulative_node_count": 324
+      },
+      {
+        "label": "Shore and granite clusters",
+        "cumulative_node_count": 381
+      },
+      {
+        "label": "Shoreline pines",
+        "cumulative_node_count": 404
+      },
+      {
+        "label": "Foreground granite and final accents",
+        "cumulative_node_count": 447
+      }
+    ]
+  },
+  "steps": [
+    {
+      "index": 0,
+      "label": "Layered sky",
+      "recorded_at": "2026-10-17T18:45:30.430636+00:00",
+      "scene": "steps/000-scene.json",
+      "svg": "steps/000-drawing.svg",
+      "png": "steps/000-drawing.png",
+      "checks": "steps/000-checks.json",
+      "metrics": {
+        "raw_nodes": 116,
+        "expanded_nodes": 116,
+        "expanded_shapes": 116,
+        "primitive_count": 116,
+        "motif_count": 0,
+        "path_points": 232,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 2,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 88.0
+      },
+      "final": false
+    },
+    {
+      "index": 1,
+      "label": "Snowy mountain ridge",
+      "recorded_at": "2026-10-17T18:45:30.566030+00:00",
+      "scene": "steps/001-scene.json",
+      "svg": "steps/001-drawing.svg",
+      "png": "steps/001-drawing.png",
+      "checks": "steps/001-checks.json",
+      "metrics": {
+        "raw_nodes": 184,
+        "expanded_nodes": 184,
+        "expanded_shapes": 184,
+        "primitive_count": 184,
+        "motif_count": 0,
+        "path_points": 368,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 3,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 88.0
+      },
+      "final": false
+    },
+    {
+      "index": 2,
+      "label": "Turquoise water currents",
+      "recorded_at": "2026-10-17T18:45:30.839770+00:00",
+      "scene": "steps/002-scene.json",
+      "svg": "steps/002-drawing.svg",
+      "png": "steps/002-drawing.png",
+      "checks": "steps/002-checks.json",
+      "metrics": {
+        "raw_nodes": 324,
+        "expanded_nodes": 324,
+        "expanded_shapes": 324,
+        "primitive_count": 324,
+        "motif_count": 0,
+        "path_points": 744,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 88.0
+      },
+      "final": false
+    },
+    {
+      "index": 3,
+      "label": "Shore and granite clusters",
+      "recorded_at": "2026-10-17T18:45:31.126584+00:00",
+      "scene": "steps/003-scene.json",
+      "svg": "steps/003-drawing.svg",
+      "png": "steps/003-drawing.png",
+      "checks": "steps/003-checks.json",
+      "metrics": {
+        "raw_nodes": 381,
+        "expanded_nodes": 381,
+        "expanded_shapes": 381,
+        "primitive_count": 381,
+        "motif_count": 0,
+        "path_points": 747,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 90.0
+      },
+      "final": false
+    },
+    {
+      "index": 4,
+      "label": "Shoreline pines",
+      "recorded_at": "2026-10-17T18:45:31.415692+00:00",
+      "scene": "steps/004-scene.json",
+      "svg": "steps/004-drawing.svg",
+      "png": "steps/004-drawing.png",
+      "checks": "steps/004-checks.json",
+      "metrics": {
+        "raw_nodes": 404,
+        "expanded_nodes": 404,
+        "expanded_shapes": 404,
+        "primitive_count": 404,
+        "motif_count": 0,
+        "path_points": 807,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 90.0
+      },
+      "final": false
+    },
+    {
+      "index": 5,
+      "label": "Foreground granite and final accents",
+      "recorded_at": "2026-10-17T18:45:31.716305+00:00",
+      "scene": "steps/005-scene.json",
+      "svg": "steps/005-drawing.svg",
+      "png": "steps/005-drawing.png",
+      "checks": "steps/005-checks.json",
+      "metrics": {
+        "raw_nodes": 447,
+        "expanded_nodes": 447,
+        "expanded_shapes": 447,
+        "primitive_count": 447,
+        "motif_count": 0,
+        "path_points": 813,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": true
+    }
+  ],
+  "final_step": 5,
+  "updated_at": "2026-10-17T18:45:31.716305+00:00"
+}

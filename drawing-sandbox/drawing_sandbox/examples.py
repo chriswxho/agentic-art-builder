@@ -1,5 +1,8 @@
 """Authored drawings assembled from constrained CMYK marks."""
 
+import json
+from pathlib import Path
+
 PAPER = "#FFFFFF"
 INK = "#000000"
 CORAL = "#FF00FF"
@@ -84,4 +87,12 @@ def _cmyk_currents():
 
 def examples():
     """Return independent, editable CMYK small-mark compositions."""
-    return [_cmyk_overprint(), _cmyk_bloom(), _cmyk_currents()]
+    result = [_cmyk_overprint(), _cmyk_bloom(), _cmyk_currents()]
+    tahoe_path = Path(__file__).parent.parent / "examples" / "26-tahoe-cmyk" / "scene.json"
+    if tahoe_path.is_file():
+        result.append({
+            "id": "26-tahoe-cmyk",
+            "title": "Tahoe CMYK overprint",
+            "scene": json.loads(tahoe_path.read_text()),
+        })
+    return result

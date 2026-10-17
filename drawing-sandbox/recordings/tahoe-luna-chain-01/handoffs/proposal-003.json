@@ -1,0 +1,15 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v1",
+  "agent_id": "luna-tahoe-foreground-clarity",
+  "mutation_id": "tahoe-luna-chain-01-foreground-ellipse-prune-003",
+  "base_revision": 2,
+  "critique": "The foreground boulder now has a clear rising cyan rim, but three overlapping black ellipses above it still create a scalloped, nearly horizontal edge that competes with the diagonal silhouette.",
+  "rationale": "Remove the three black ellipses directly crossing the new rim's middle section. Their removal opens the contour so the preserved cyan highlight reads as the boulder's rising granite edge, while the remaining dark marks keep the foreground mass intact.",
+  "remove_objects": {
+    "object_ids": [
+      "obj-0420",
+      "obj-0421",
+      "obj-0422"
+    ]
+  }
+}

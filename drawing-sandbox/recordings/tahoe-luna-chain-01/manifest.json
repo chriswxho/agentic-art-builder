@@ -1,0 +1,258 @@
+{
+  "format_version": 1,
+  "run_id": "tahoe-luna-chain-01",
+  "created_at": "2026-10-17T18:54:53.701754+00:00",
+  "instruction_set": {
+    "version": 1,
+    "canvas": {
+      "background": "#ffffff",
+      "size_range": [
+        64,
+        1024
+      ]
+    },
+    "marks": {
+      "primitive_types": [
+        "path",
+        "polygon",
+        "ellipse"
+      ],
+      "assembly_types": [
+        "group",
+        "use"
+      ],
+      "inks": {
+        "cyan": "#00ffff",
+        "magenta": "#ff00ff",
+        "yellow": "#ffff00",
+        "black": "#000000"
+      },
+      "opacity": 0.5,
+      "max_transformed_stroke_width": 12,
+      "max_transformed_span": 96
+    },
+    "composition": {
+      "paint_order": "nodes are composited in array order",
+      "blend_model": "source-over",
+      "max_expanded_shapes": 512
+    },
+    "recording": {
+      "required_metadata": [
+        "run_id",
+        "prompt_set",
+        "composition"
+      ],
+      "saved_progress": [
+        "scene_json",
+        "svg",
+        "png",
+        "checks"
+      ],
+      "saved_final": [
+        "scene_json",
+        "svg",
+        "png"
+      ]
+    }
+  },
+  "prompt_set": [
+    "Remake the supplied Lake Tahoe photograph as a layered vector print.",
+    "Use only small cyan, magenta, yellow, and black marks at 50% opacity on white; create color and form through overprinting.",
+    "Preserve the wide blue sky, snowy ridge, turquoise water, central granite cluster, right-shore pines, and large foreground boulder."
+  ],
+  "composition": {
+    "title": "Tahoe CMYK overprint study",
+    "source_image": "examples/26-tahoe-day/reference.jpg",
+    "canvas": [
+      960,
+      540
+    ],
+    "strategy": "short hatching, overlapping ellipses, small polygons, and preserved white paper",
+    "layers": [
+      {
+        "label": "Layered sky",
+        "cumulative_node_count": 116
+      },
+      {
+        "label": "Snowy mountain ridge",
+        "cumulative_node_count": 184
+      },
+      {
+        "label": "Turquoise water currents",
+        "cumulative_node_count": 324
+      },
+      {
+        "label": "Shore and granite clusters",
+        "cumulative_node_count": 381
+      },
+      {
+        "label": "Shoreline pines",
+        "cumulative_node_count": 404
+      },
+      {
+        "label": "Foreground granite and final accents",
+        "cumulative_node_count": 447
+      }
+    ]
+  },
+  "steps": [
+    {
+      "index": 0,
+      "label": "Initial Luna handoff",
+      "recorded_at": "2026-10-17T18:54:53.704579+00:00",
+      "scene": "steps/000-scene.json",
+      "svg": "steps/000-drawing.svg",
+      "png": "steps/000-drawing.png",
+      "checks": "steps/000-checks.json",
+      "metrics": {
+        "raw_nodes": 447,
+        "expanded_nodes": 447,
+        "expanded_shapes": 447,
+        "primitive_count": 447,
+        "motif_count": 0,
+        "path_points": 813,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v1",
+        "context_revision": 0,
+        "context": "handoffs/context-000.json"
+      }
+    },
+    {
+      "index": 1,
+      "label": "Luna revision 1: split_layers",
+      "recorded_at": "2026-10-17T18:55:32.331406+00:00",
+      "scene": "steps/001-scene.json",
+      "svg": "steps/001-drawing.svg",
+      "png": "steps/001-drawing.png",
+      "checks": "steps/001-checks.json",
+      "metrics": {
+        "raw_nodes": 447,
+        "expanded_nodes": 447,
+        "expanded_shapes": 447,
+        "primitive_count": 447,
+        "motif_count": 0,
+        "path_points": 813,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v1",
+        "context_revision": 1,
+        "agent_id": "luna-tahoe-split",
+        "mutation_id": "tahoe-luna-chain-01-split-shoreline-pines-001",
+        "skill": "split_layers",
+        "context": "handoffs/context-001.json",
+        "proposal": "handoffs/proposal-001.json"
+      }
+    },
+    {
+      "index": 2,
+      "label": "Luna revision 2: add_objects",
+      "recorded_at": "2026-10-17T18:56:23.887175+00:00",
+      "scene": "steps/002-scene.json",
+      "svg": "steps/002-drawing.svg",
+      "png": "steps/002-drawing.png",
+      "checks": "steps/002-checks.json",
+      "metrics": {
+        "raw_nodes": 455,
+        "expanded_nodes": 455,
+        "expanded_shapes": 455,
+        "primitive_count": 455,
+        "motif_count": 0,
+        "path_points": 837,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v1",
+        "context_revision": 2,
+        "agent_id": "luna-tahoe-granite-refinement",
+        "mutation_id": "tahoe-luna-chain-01-foreground-granite-rim-002",
+        "skill": "add_objects",
+        "context": "handoffs/context-002.json",
+        "proposal": "handoffs/proposal-002.json"
+      }
+    },
+    {
+      "index": 3,
+      "label": "Luna revision 3: remove_objects",
+      "recorded_at": "2026-10-17T18:57:01.452154+00:00",
+      "scene": "steps/003-scene.json",
+      "svg": "steps/003-drawing.svg",
+      "png": "steps/003-drawing.png",
+      "checks": "steps/003-checks.json",
+      "metrics": {
+        "raw_nodes": 452,
+        "expanded_nodes": 452,
+        "expanded_shapes": 452,
+        "primitive_count": 452,
+        "motif_count": 0,
+        "path_points": 837,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": false,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v1",
+        "context_revision": 3,
+        "agent_id": "luna-tahoe-foreground-clarity",
+        "mutation_id": "tahoe-luna-chain-01-foreground-ellipse-prune-003",
+        "skill": "remove_objects",
+        "context": "handoffs/context-003.json",
+        "proposal": "handoffs/proposal-003.json"
+      }
+    },
+    {
+      "index": 4,
+      "label": "Luna revision 4: combine_layers",
+      "recorded_at": "2026-10-17T18:57:36.949385+00:00",
+      "scene": "steps/004-scene.json",
+      "svg": "steps/004-drawing.svg",
+      "png": "steps/004-drawing.png",
+      "checks": "steps/004-checks.json",
+      "metrics": {
+        "raw_nodes": 452,
+        "expanded_nodes": 452,
+        "expanded_shapes": 452,
+        "primitive_count": 452,
+        "motif_count": 0,
+        "path_points": 837,
+        "canvas_width": 960,
+        "canvas_height": 540,
+        "shape_palette_color_count": 4,
+        "max_transformed_stroke_width": 10.0,
+        "max_shape_span": 93.0
+      },
+      "final": true,
+      "provenance": {
+        "protocol_version": "drawing-sandbox.iteration.v1",
+        "context_revision": 4,
+        "agent_id": "luna-tahoe-pine-consolidation",
+        "mutation_id": "tahoe-luna-chain-01-combine-shoreline-pine-pair-004",
+        "skill": "combine_layers",
+        "context": "handoffs/context-004.json",
+        "proposal": "handoffs/proposal-004.json"
+      }
+    }
+  ],
+  "final_step": 4,
+  "updated_at": "2026-10-17T18:57:36.949385+00:00"
+}

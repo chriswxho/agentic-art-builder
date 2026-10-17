@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shared Canvas · Drawing Sandbox</title>
+<style>
+:root{color-scheme:dark;--bg:#07151b;--panel:#0d232c;--line:#24424b;--cyan:#62f4ee;--text:#edf8f7;--muted:#8eafb4}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{background:radial-gradient(circle at 50% 15%,#17343e 0,var(--bg) 58%);color:var(--text);font:14px/1.4 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}
+.shell{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:14px;padding:18px 22px 16px}.top,.bottom{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px}.mark{width:28px;height:28px;border:2px solid var(--cyan);border-radius:50%;box-shadow:inset 8px 0 #ff00ff80,inset -8px 0 #ffff0080}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}h1{font-size:18px;margin:1px 0 0;font-weight:650}.live{display:flex;align-items:center;gap:8px;color:var(--cyan);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.live::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor;animation:pulse 1.8s ease-in-out infinite}@keyframes pulse{50%{opacity:.35}}
+.stage{min-height:0;display:grid;place-items:center;position:relative;border:1px solid var(--line);border-radius:16px;background:#061016;overflow:hidden;box-shadow:0 24px 70px #0008}.frame{position:absolute;inset:0;display:grid;place-items:center;padding:18px}.frame img{position:absolute;max-width:calc(100% - 36px);max-height:calc(100% - 36px);object-fit:contain;border-radius:4px;box-shadow:0 12px 50px #0009;opacity:0;transition:opacity .5s ease}.frame img.active{opacity:1}.empty{color:var(--muted)}
+.hud{position:absolute;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;align-items:end;gap:20px;pointer-events:none}.card{max-width:min(650px,75%);padding:12px 15px;border:1px solid #ffffff24;border-radius:10px;background:#07151bd9;backdrop-filter:blur(12px)}.revision{font-size:17px;font-weight:650}.detail{margin-top:3px;color:var(--muted);font-size:12px}.metric{padding:9px 12px;border-radius:999px;background:#07151bd9;border:1px solid #ffffff24;color:var(--muted);font-variant-numeric:tabular-nums}
+.controls{display:flex;align-items:center;gap:8px}button{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);padding:8px 12px;cursor:pointer}button:hover{border-color:#4f7780}button.primary{background:var(--cyan);border-color:var(--cyan);color:#062028;font-weight:650}.timeline{display:flex;align-items:center;justify-content:center;gap:8px;flex:1}.dot{width:9px;height:9px;border-radius:50%;padding:0;border:1px solid #5d7a80;background:#19343c}.dot.active{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 9px #62f4ee88}.status{min-width:175px;text-align:right;color:var(--muted);font-size:11px}
+@media(max-width:700px){.shell{padding:12px}.top{align-items:flex-start}.hud{left:10px;right:10px;bottom:10px}.card{max-width:100%}.metric{display:none}.bottom{flex-wrap:wrap}.timeline{order:3;width:100%}.status{min-width:0}.controls button{padding:7px 9px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="top">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><div><div class="eyebrow">Drawing Sandbox</div><h1 id="title">Shared canvas</h1></div></div>
+    <div class="live" id="live">Connecting</div>
+  </header>
+  <section class="stage" aria-label="Read-only shared canvas">
+    <div class="frame"><div class="empty" id="empty">Waiting for a recorded frame…</div><img id="image-a" alt="Shared canvas frame"><img id="image-b" alt="Shared canvas frame"></div>
+    <div class="hud"><div class="card"><div class="revision" id="revision">No revision yet</div><div class="detail" id="detail">The viewer is read-only.</div></div><div class="metric" id="metric">0 marks</div></div>
+  </section>
+  <footer class="bottom">
+    <div class="controls"><button id="previous" aria-label="Previous revision">←</button><button class="primary" id="replay">Replay agents</button><button id="next" aria-label="Next revision">→</button><button id="go-live">Go live</button></div>
+    <div class="timeline" id="timeline" aria-label="Revision timeline"></div>
+    <div class="status" id="status">Read-only · polling locally</div>
+  </footer>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), params=new URLSearchParams(location.search);
+let run=params.get('run')||'', data=null, cursor=-1, active='a', playing=false, live=true, playToken=0;
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function frameURL(index){return `/api/watch/frame?run=${encodeURIComponent(run)}&step=${index}&v=${encodeURIComponent(data?.updated_at||'')}`;}
+async function chooseRun(){if(run)return true;const response=await fetch('/api/watch');const body=await response.json();run=body.runs?.at(-1)||'';if(run){const url=new URL(location);url.searchParams.set('run',run);history.replaceState(null,'',url);}return !!run;}
+function rebuildTimeline(){const timeline=$('timeline');timeline.replaceChildren();(data?.steps||[]).forEach((step,index)=>{const button=document.createElement('button');button.className='dot'+(index===cursor?' active':'');button.title=`Revision ${step.context_revision}`;button.addEventListener('click',()=>{playToken++;playing=false;live=false;show(index);});timeline.append(button);});}
+async function show(index){if(!data?.steps?.[index])return;cursor=index;const target=active==='a'?$('image-b'):$('image-a');await new Promise((resolve,reject)=>{target.onload=resolve;target.onerror=reject;target.src=frameURL(index);});$('empty').hidden=true;$('image-a').classList.toggle('active',active!=='a');$('image-b').classList.toggle('active',active==='a');active=active==='a'?'b':'a';const step=data.steps[index], rev=step.context_revision??step.index, skill=step.skill||'initial_handoff', agent=step.agent_id||'Base composition';$('revision').textContent=`Revision ${rev} · ${skill}`;$('detail').textContent=`${agent} · ${step.label}`;$('metric').textContent=`${step.metrics?.expanded_shapes??0} marks`;rebuildTimeline();}
+async function replay(){if(!data?.steps?.length)return;const token=++playToken;playing=true;live=false;for(let index=0;index<data.steps.length;index++){if(token!==playToken)return;await show(index);await wait(index===data.steps.length-1?1800:1300);}if(token===playToken){playing=false;live=true;$('status').textContent='Live · waiting for accepted revisions';}}
+async function refresh(){try{if(!await chooseRun()){$('live').textContent='No runs';return;}const response=await fetch(`/api/watch?run=${encodeURIComponent(run)}`,{cache:'no-store'});if(!response.ok)throw new Error((await response.json()).error||'Viewer unavailable');const next=await response.json(),oldCount=data?.step_count||0;data=next;$('title').textContent=data.title||run;$('live').textContent=data.final_step==null?'Live':'Final recorded';if(cursor<0){rebuildTimeline();replay();}else if(live&&!playing&&data.step_count!==oldCount){show(data.step_count-1);}$('status').textContent=`${data.step_count} recorded frame${data.step_count===1?'':'s'} · read-only`;rebuildTimeline();}catch(error){$('live').textContent='Offline';$('status').textContent=error.message;}}
+$('previous').addEventListener('click',()=>{playToken++;playing=false;live=false;show(Math.max(0,cursor-1));});
+$('next').addEventListener('click',()=>{playToken++;playing=false;live=false;show(Math.min((data?.step_count||1)-1,cursor+1));});
+$('replay').addEventListener('click',replay);
+$('go-live').addEventListener('click',()=>{playToken++;playing=false;live=true;if(data?.step_count)show(data.step_count-1);});
+refresh();setInterval(refresh,1200);
+</script>
+</body>
+</html>

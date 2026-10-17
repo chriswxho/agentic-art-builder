@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+package drawing_sandbox.iteration.v1;
+
+import "google/protobuf/struct.proto";
+
+// JSON encoding of this message is the model-independent picture-agent handoff.
+message PictureContext {
+  string protocol_version = 1;  // "drawing-sandbox.iteration.v2"
+  string run_id = 2;
+  uint64 revision = 3;
+  string state_sha256 = 4;
+  repeated string prompt_set = 5;
+  google.protobuf.Struct composition = 6;
+  google.protobuf.Struct instruction_set = 7;
+  google.protobuf.Struct scene_template = 8; // Renderer scene with an empty nodes list.
+  repeated Layer layers = 9;                // Paint order is layer then object order.
+  repeated string allowed_skills = 10;
+  ArtifactRefs artifacts = 11;
+  repeated ReferenceAsset references = 12;
+  HandoffSummary last_handoff = 13;
+  repeated AcceptedMutation history = 14;
+  InferenceRuntime agent_runtime = 15;
+}
+
+message InferenceRuntime {
+  string provider = 1; // "crusoe_managed_inference"
+  string model = 2;    // Nemotron 3 Nano Omni model identifier.
+  string endpoint = 3; // OpenAI-compatible Chat Completions endpoint.
+}
+
+message Layer {
+  string layer_id = 1;
+  string label = 2;
+  bool locked = 3;
+  repeated PictureObject objects = 4;
+}
+
+message PictureObject {
+  string object_id = 1;
+  google.protobuf.Struct renderer_node = 2;
+  string intent = 3;
+  repeated string tags = 4;
+}
+
+message ArtifactRefs {
+  string scene_json = 1;
+  string svg = 2;
+  string png = 3;
+  string checks = 4;
+  string manifest = 5;
+}
+
+message ReferenceAsset {
+  string asset_id = 1;
+  string path = 2;
+  string sha256 = 3;
+  string role = 4;
+}
+
+message HandoffSummary {
+  string agent_id = 1;
+  string mutation_id = 2;
+  string skill = 3;
+  string critique = 4;
+  string rationale = 5;
+}
+
+message AcceptedMutation {
+  uint64 revision = 1;
+  string agent_id = 2;
+  string mutation_id = 3;
+  string skill = 4;
+  string critique = 5;
+  string rationale = 6;
+  google.protobuf.Struct operation = 7;
+  google.protobuf.Struct metrics = 8;
+}
+
+message AgentProposal {
+  string protocol_version = 1;
+  string agent_id = 2;
+  string mutation_id = 3;
+  uint64 base_revision = 4;
+  string critique = 5;
+  string rationale = 6;
+  oneof skill {
+    SplitLayers split_layers = 10;
+    CombineLayers combine_layers = 11;
+    AddObjects add_objects = 12;
+    RemoveObjects remove_objects = 13;
+  }
+}
+
+// Parts must be non-empty, disjoint, exhaustive, and preserve source order.
+message SplitLayers {
+  string source_layer_id = 1;
+  repeated LayerPart parts = 2;
+}
+
+message LayerPart {
+  string layer_id = 1;
+  string label = 2;
+  repeated string object_ids = 3;
+}
+
+// Source layers must be distinct, adjacent, and listed in paint order.
+message CombineLayers {
+  repeated string source_layer_ids = 1;
+  string output_layer_id = 2;
+  string output_label = 3;
+}
+
+message AddObjects {
+  string layer_id = 1;
+  string before_object_id = 2; // Empty means append.
+  repeated PictureObject objects = 3;
+}
+
+message RemoveObjects {
+  repeated string object_ids = 1;
+}

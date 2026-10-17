@@ -15,7 +15,7 @@ python -m pip install -e .
 python -m drawing_sandbox
 ```
 
-Open **http://127.0.0.1:8766** if the browser does not open automatically. The only runtime dependencies are **NumPy and Pillow**. Rendering runs on the CPU; model weights and GPU setup are unnecessary.
+Open **http://127.0.0.1:8766** if the browser does not open automatically. Rendering uses **NumPy and Pillow**; **Certifi** supplies the CA bundle for optional Crusoe inference calls. Rendering runs on the CPU, and model weights or local GPU setup are unnecessary.
 
 Choose a starter drawing, add shapes, change object transforms, or edit its JSON. The editor offers undo and SVG, PNG, and JSON exports. Work stays in the current browser page; use the JSON download to keep a drawing before closing or reloading it.
 
@@ -23,7 +23,7 @@ Choose a starter drawing, add shapes, change object transforms, or edit its JSON
 
 **Prompt → compose → render → record → revise.**
 
-An agent such as Nemotron can produce the same scene JSON that the editor uses. One tool call returns an SVG, a PNG, and structured checks:
+An agent such as Nemotron can propose typed changes to the same scene JSON that the editor uses. One renderer call returns an SVG, a PNG, and structured checks:
 
 ```python
 from drawing_sandbox.server import render_drawing
@@ -50,7 +50,7 @@ Top-level nodes (9), in paint order:
     ...
 ```
 
-Pass the returned PNG to the VLM, ask it to revise the scene, and render again. Your agent controls that loop. This package makes no model/API calls and does not run an optimizer.
+The local renderer itself makes no model calls. `scripts/nemotron_iteration.py` is the explicit orchestration path: it sends the current PNG, reference image, and typed context to Crusoe Managed Inference, validates the returned proposal locally, and records the accepted revision.
 
 The same operation is available over HTTP:
 
@@ -61,7 +61,7 @@ Content-Type: application/json
 {"scene": {...}}
 ```
 
-The server binds only to localhost. `GET /api/examples` returns three compliant starter scenes. Optional request constraints can make a task stricter, but cannot relax the base instruction set.
+The server binds only to localhost. `GET /api/examples` returns the compliant starter scenes and the local Tahoe CMYK study. Optional request constraints can make a task stricter, but cannot relax the base instruction set.
 `GET /api/instruction-set` returns the exact machine-readable policy agents should follow.
 
 ## Constrained instruction set
@@ -140,6 +140,39 @@ After every step the run also gets a readable `report.md`: prompts, plan as bull
 
 Each task folder has `task.json` (prompt, skills, extra constraints, success criteria) and `reference/` (a passing scene with its SVG, PNG, checks and readable summary). `tasks.jsonl` lists the cards one per line for batch runs, and `GET /api/dataset` serves them without reference answers. Pass a task's `constraints` to `render_drawing(scene, constraints)` to enforce its extra limits. Tasks are defined in [`drawing_sandbox/dataset.py`](drawing_sandbox/dataset.py); regenerate the folder with `python -m drawing_sandbox dataset --out dataset`.
 
+## Consecutive Nemotron-agent iteration
+
+`drawing_sandbox/proto/agent_iteration.proto` defines the model-independent JSON/protobuf handoff between picture agents. The active runtime is Crusoe Managed Inference with `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B`. The context carries that runtime identity, immutable prompts and composition intent, the current policy, stable layer/object IDs, artifact and reference paths, revision/hash guards, and accepted mutation history. Each Nemotron forward-inference call returns exactly one typed proposal:
+
+- `split_layers`: replace one layer with an exhaustive, order-preserving partition.
+- `combine_layers`: merge adjacent layers without changing their paint order.
+- `add_objects`: insert uniquely identified renderer primitives into one layer.
+- `remove_objects`: remove existing stable object IDs.
+
+Agents never return a rewritten scene. `drawing_sandbox.iteration_context` applies one proposal atomically, materializes ordinary renderer JSON, checks the mandatory CMYK policy, records the render and provenance, and emits the next revision only on success. Stale revisions, duplicate IDs, illegal colors/opacities, oversized marks, invalid partitions, and non-adjacent combines are rejected without changing the prior context.
+
+The inference CLI prefers `CRUSOE_API_TOKEN` and also accepts `CRUSOE_API_KEY` or `API_TOKEN`, either from the process environment or the repository's gitignored `.env` file. A bare token in `.env` is supported for compatibility. It records the exact text prompts, image asset paths, raw model response, response ID, token usage, parsed proposal, and validation attempts without recording the API key or base64 image payloads.
+
+Run the standard four-agent Tahoe chain:
+
+```bash
+python scripts/nemotron_iteration.py run \
+  --scene examples/26-tahoe-cmyk/scene.json \
+  --source-manifest recordings/tahoe-cmyk-remake/manifest.json \
+  --reference examples/26-tahoe-day/reference.jpg \
+  --run-id tahoe-nemotron-chain-01
+```
+
+The default agent order is `split_layers`, `add_objects`, `remove_objects`, then `combine_layers`. Repeat `--skill <name>` to choose another sequence. `scripts/agent_iteration.py` remains available for offline initialization and manual application of already-produced typed proposals.
+
+For a live read-only view of a recorded chain, open:
+
+```text
+http://127.0.0.1:8766/watch?run=tahoe-nemotron-chain-01
+```
+
+The viewer auto-plays recorded revisions, polls locally for newly accepted frames, and exposes only playback controls. `GET /api/watch?run=<run-id>` supplies revision metadata and `GET /api/watch/frame?run=<run-id>&step=<index>` supplies immutable PNG frames. `scripts/make_agent_timelapse.py` exports the same history as a labeled MP4 and GIF.
+
 ## Terminal use
 
 ```bash
@@ -150,11 +183,16 @@ python -m drawing_sandbox check examples/cmyk-overprint/scene.json --json   # ra
 python -m drawing_sandbox report recordings/cmyk-overprint-demo
 python -m drawing_sandbox dataset --out dataset
 python -m unittest discover -s tests -v
+python -m drawing_sandbox.evals suite evals/smoke.json   # provisional evals, see EVALS.md
 ```
 
 SVG, PNG, and JSON starter files are included under `examples/`. They are authored illustrations, ready to edit. The reusable motifs in them are predefined drawing parts.
 
 The earlier Tahoe study is preserved under `examples/26-tahoe-day/` with its source `reference.jpg`, vector scene, rendered PNG/SVG, and construction timelapse. It predates the CMYK policy, so it is reference material rather than an accepted input to the current agent-facing renderer.
+
+The constrained remake lives under `examples/26-tahoe-cmyk/`. It uses 447 legal CMYK marks and includes its final scene, PNG/SVG, and construction timelapse. Its complete prompt set, composition plan, six accepted progress frames, checks, and final artifacts are recorded under `recordings/tahoe-cmyk-remake/`.
+
+The live Managed Inference exercise is recorded under `recordings/tahoe-nemotron-chain-01/`. Four consecutive Nemotron Omni Nano calls performed `split_layers`, `add_objects`, `remove_objects`, and `combine_layers`; every call has a prompt/response/usage log under `handoffs/inference-*.json`, and the accepted five-frame replay is exported as MP4 and GIF. The earlier `tahoe-luna-chain-01` directory is retained only as historical output from the pre-Managed-Inference prototype.
 
 ## Later domains
 
