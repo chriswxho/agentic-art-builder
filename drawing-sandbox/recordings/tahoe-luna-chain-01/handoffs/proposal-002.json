@@ -1,0 +1,278 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v1",
+  "agent_id": "luna-tahoe-granite-refinement",
+  "mutation_id": "tahoe-luna-chain-01-foreground-granite-rim-002",
+  "base_revision": 1,
+  "critique": "The photograph's foreground boulder has a long rising diagonal rim and angular granite facets. In the current print, the right foreground mass reads mainly as a row of dark round forms, so its sloping silhouette is not yet clear.",
+  "rationale": "Add a broken cyan rim that follows the existing boulder's upper slope, with sparse yellow light facets and magenta shadow seams. The short overprinted strokes reinforce the broad diagonal granite plane while preserving the CMYK print treatment.",
+  "add_objects": {
+    "layer_id": "foreground-granite-and-final-accents",
+    "before_object_id": "",
+    "objects": [
+      {
+        "object_id": "obj-luna002-granite-rim-cyan-a",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              566,
+              531
+            ],
+            [
+              591,
+              520
+            ],
+            [
+              619,
+              505
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 7,
+          "opacity": 0.5
+        },
+        "intent": "Broken cyan highlight tracing the rising foreground granite rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#00ffff",
+          "intent:granite-rim"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-rim-cyan-b",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              619,
+              505
+            ],
+            [
+              646,
+              490
+            ],
+            [
+              674,
+              478
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 7,
+          "opacity": 0.5
+        },
+        "intent": "Broken cyan highlight tracing the rising foreground granite rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#00ffff",
+          "intent:granite-rim"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-rim-cyan-c",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              674,
+              478
+            ],
+            [
+              702,
+              466
+            ],
+            [
+              730,
+              455
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 7,
+          "opacity": 0.5
+        },
+        "intent": "Broken cyan highlight tracing the rising foreground granite rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#00ffff",
+          "intent:granite-rim"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-rim-cyan-d",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              730,
+              455
+            ],
+            [
+              758,
+              446
+            ],
+            [
+              786,
+              440
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#00ffff",
+          "width": 7,
+          "opacity": 0.5
+        },
+        "intent": "Broken cyan highlight tracing the rising foreground granite rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#00ffff",
+          "intent:granite-rim"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-facet-yellow-a",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              594,
+              526
+            ],
+            [
+              612,
+              519
+            ],
+            [
+              630,
+              511
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ffff00",
+          "width": 5,
+          "opacity": 0.5
+        },
+        "intent": "Short yellow overprint defining a lit granite facet below the rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#ffff00",
+          "intent:granite-facet"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-facet-yellow-b",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              702,
+              483
+            ],
+            [
+              720,
+              476
+            ],
+            [
+              739,
+              469
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ffff00",
+          "width": 5,
+          "opacity": 0.5
+        },
+        "intent": "Short yellow overprint defining a lit granite facet below the rim",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#ffff00",
+          "intent:granite-facet"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-shadow-magenta",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              649,
+              520
+            ],
+            [
+              669,
+              511
+            ],
+            [
+              688,
+              502
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 5,
+          "opacity": 0.5
+        },
+        "intent": "Short magenta seam separating overlapping granite planes",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#ff00ff",
+          "intent:granite-seam"
+        ]
+      },
+      {
+        "object_id": "obj-luna002-granite-shadow-magenta-b",
+        "renderer_node": {
+          "type": "path",
+          "points": [
+            [
+              770,
+              483
+            ],
+            [
+              791,
+              476
+            ],
+            [
+              812,
+              470
+            ]
+          ],
+          "smooth": true,
+          "closed": false,
+          "fill": "none",
+          "stroke": "#ff00ff",
+          "width": 5,
+          "opacity": 0.5
+        },
+        "intent": "Short magenta seam separating overlapping granite planes",
+        "tags": [
+          "layer:foreground-granite-and-final-accents",
+          "type:path",
+          "stroke:#ff00ff",
+          "intent:granite-seam"
+        ]
+      }
+    ]
+  }
+}

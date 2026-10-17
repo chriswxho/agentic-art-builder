@@ -1,0 +1,16 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v1",
+  "agent_id": "luna-tahoe-pine-consolidation",
+  "mutation_id": "tahoe-luna-chain-01-combine-shoreline-pine-pair-004",
+  "base_revision": 3,
+  "critique": "The two pines now read together as a paired landmark on the right shore. Their separate layers no longer serve a distinct refinement need in the current composition.",
+  "rationale": "Consolidate the already-refined left and right shoreline pines into one semantic pair layer. Keeping the source layers in left-to-right paint order preserves every object's relative paint order and stable object identity while making the shared right-shore grouping easier to manage.",
+  "combine_layers": {
+    "source_layer_ids": [
+      "shoreline-pine-left",
+      "shoreline-pine-right"
+    ],
+    "output_layer_id": "right-shoreline-pine-pair",
+    "output_label": "Right shoreline pine pair"
+  }
+}

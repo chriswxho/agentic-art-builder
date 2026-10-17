@@ -11,3 +11,11 @@ These rules apply to any agent or subagent creating pictures in `drawing-sandbox
 - Record each meaningful progress state with a stable run ID, the complete prompt set, the composition/layer plan, and a step label. Mark the accepted output as final so its PNG, SVG, and scene JSON are preserved alongside the progress frames.
 
 The machine-readable policy lives in `drawing-sandbox/drawing_sandbox/policy.py`. The recording API is `POST /api/record`.
+
+## Luna iteration handoffs
+
+- Consecutive Luna picture agents receive a `LunaContext` JSON sidecar conforming to `drawing-sandbox/drawing_sandbox/proto/luna_iteration.proto`.
+- A Luna agent must return exactly one typed `AgentProposal` skill: `split_layers`, `combine_layers`, `add_objects`, or `remove_objects`.
+- Agents must not edit renderer scenes or context files directly. The orchestrator validates the context hash and revision, applies the proposal atomically, renders it through the enforced policy, records it, and only then publishes the next context.
+- Preserve stable layer and object IDs from the context. New object and layer IDs must be unique and descriptive.
+- Use the current rendered PNG and reference assets listed in the context when critiquing a revision.

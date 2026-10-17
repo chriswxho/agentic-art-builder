@@ -1,0 +1,48 @@
+{
+  "protocol_version": "drawing-sandbox.iteration.v1",
+  "agent_id": "luna-tahoe-split",
+  "mutation_id": "tahoe-luna-chain-01-split-shoreline-pines-001",
+  "base_revision": 0,
+  "critique": "The print shows two distinct pines on the right shore, but their marks share one layer and cannot be refined independently.",
+  "rationale": "Split at the existing boundary between the two pines: the first 13 source-ordered marks form the left pine and the remaining 10 form the right pine. This keeps each tree's marks together and preserves paint order.",
+  "split_layers": {
+    "source_layer_id": "shoreline-pines",
+    "parts": [
+      {
+        "layer_id": "shoreline-pine-left",
+        "label": "Left shoreline pine",
+        "object_ids": [
+          "obj-0381",
+          "obj-0382",
+          "obj-0383",
+          "obj-0384",
+          "obj-0385",
+          "obj-0386",
+          "obj-0387",
+          "obj-0388",
+          "obj-0389",
+          "obj-0390",
+          "obj-0391",
+          "obj-0392",
+          "obj-0393"
+        ]
+      },
+      {
+        "layer_id": "shoreline-pine-right",
+        "label": "Right shoreline pine",
+        "object_ids": [
+          "obj-0394",
+          "obj-0395",
+          "obj-0396",
+          "obj-0397",
+          "obj-0398",
+          "obj-0399",
+          "obj-0400",
+          "obj-0401",
+          "obj-0402",
+          "obj-0403"
+        ]
+      }
+    ]
+  }
+}

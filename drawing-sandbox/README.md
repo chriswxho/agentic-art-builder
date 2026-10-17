@@ -107,6 +107,39 @@ Use `POST /api/record` for every meaningful composition state. It accepts the sa
 
 Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, SVG, PNG, and checks. Send the accepted scene with `"final": true` to also save `final-scene.json`, `final-drawing.svg`, and `final-drawing.png`. `manifest.json` preserves the instruction set, prompts, composition plan, step labels, metrics, timestamps, and final-step pointer.
 
+## Consecutive Luna-agent iteration
+
+`drawing_sandbox/proto/luna_iteration.proto` defines the JSON/protobuf handoff between picture agents. The context carries immutable prompts and composition intent, the current policy, stable layer/object IDs, artifact and reference paths, revision/hash guards, and accepted mutation history. Each Luna returns exactly one typed proposal:
+
+- `split_layers`: replace one layer with an exhaustive, order-preserving partition.
+- `combine_layers`: merge adjacent layers without changing their paint order.
+- `add_objects`: insert uniquely identified renderer primitives into one layer.
+- `remove_objects`: remove existing stable object IDs.
+
+Agents never return a rewritten scene. `drawing_sandbox.luna_context` applies one proposal atomically, materializes ordinary renderer JSON, checks the mandatory CMYK policy, records the render and provenance, and emits the next revision only on success. Stale revisions, duplicate IDs, illegal colors/opacities, oversized marks, invalid partitions, and non-adjacent combines are rejected without changing the prior context.
+
+The helper CLI initializes and advances a chain:
+
+```bash
+python scripts/luna_iteration.py init \
+  --scene examples/26-tahoe-cmyk/scene.json \
+  --source-manifest recordings/tahoe-cmyk-remake/manifest.json \
+  --reference examples/26-tahoe-day/reference.jpg \
+  --run-id tahoe-luna-chain-01
+
+python scripts/luna_iteration.py apply \
+  --context recordings/tahoe-luna-chain-01/handoffs/context-000.json \
+  --proposal proposal-001.json
+```
+
+For a live read-only view of a recorded chain, open:
+
+```text
+http://127.0.0.1:8766/watch?run=tahoe-luna-chain-01
+```
+
+The viewer auto-plays recorded revisions, polls locally for newly accepted frames, and exposes only playback controls. `GET /api/watch?run=<run-id>` supplies revision metadata and `GET /api/watch/frame?run=<run-id>&step=<index>` supplies immutable PNG frames. `scripts/make_agent_timelapse.py` exports the same history as a labeled MP4 and GIF.
+
 ## Terminal use
 
 ```bash

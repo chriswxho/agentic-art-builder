@@ -17,4 +17,4 @@ where = ["."]
 include = ["drawing_sandbox*"]
 
 [tool.setuptools.package-data]
-drawing_sandbox = ["web/*.html"]
+drawing_sandbox = ["web/*.html", "proto/*.proto"]
