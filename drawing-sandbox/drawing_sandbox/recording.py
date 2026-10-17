@@ -10,6 +10,7 @@ import re
 from typing import Any
 
 from .policy import current_instruction_set
+from .report import write_run_report
 
 
 _RUN_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}\Z")
@@ -25,7 +26,7 @@ def _json_size(value: Any, label: str, limit: int = 256_000) -> str:
     return encoded
 
 
-def _validate_metadata(run_id: Any, prompt_set: Any, composition: Any, label: Any, final: Any) -> None:
+def _validate_metadata(run_id: Any, prompt_set: Any, composition: Any, label: Any, final: Any, model_output: Any = None) -> None:
     if not isinstance(run_id, str) or not _RUN_ID.fullmatch(run_id):
         raise ValueError("run_id must use 1-64 letters, numbers, underscores, or hyphens")
     if not isinstance(prompt_set, list) or not 1 <= len(prompt_set) <= 32:
@@ -38,6 +39,8 @@ def _validate_metadata(run_id: Any, prompt_set: Any, composition: Any, label: An
         raise ValueError("step_label must be a string of at most 200 characters")
     if not isinstance(final, bool):
         raise ValueError("final must be a boolean")
+    if model_output is not None and (not isinstance(model_output, str) or len(model_output) > 200_000):
+        raise ValueError("model_output must be a string of at most 200,000 characters")
     _json_size(prompt_set, "prompt_set")
     _json_size(composition, "composition")
 
@@ -51,10 +54,16 @@ def record_composition_step(
     composition: dict,
     step_label: str | None = None,
     final: bool = False,
+    model_output: str | None = None,
     root: str | Path = "recordings",
 ) -> dict:
-    """Append one valid render and its provenance to a composition run."""
-    _validate_metadata(run_id, prompt_set, composition, step_label, final)
+    """Append one valid render and its provenance to a composition run.
+
+    ``model_output`` is the raw text the model returned for this step (its
+    reasoning, notes, or the reply that contained the scene).  It is saved
+    verbatim and shown in the run's human-readable ``report.md``.
+    """
+    _validate_metadata(run_id, prompt_set, composition, step_label, final, model_output)
     if not rendered.get("checks", {}).get("valid"):
         raise ValueError("only valid constrained renders can be recorded")
     if "svg" not in rendered or "png_data_url" not in rendered:
@@ -115,6 +124,9 @@ def record_composition_step(
         "metrics": rendered["checks"].get("metrics", {}),
         "final": final,
     }
+    if model_output is not None:
+        step["model_output"] = f"steps/{stem}-model-output.txt"
+        (run_dir / step["model_output"]).write_text(model_output)
     manifest["steps"].append(step)
     if final:
         (run_dir / "final-scene.json").write_text(_json_size(scene, "scene") + "\n")
@@ -123,12 +135,14 @@ def record_composition_step(
         manifest["final_step"] = index
     manifest["updated_at"] = step["recorded_at"]
     manifest_path.write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n")
+    report_path = write_run_report(run_dir)
     return {
         "run_id": run_id,
         "step": index,
         "final": final,
         "directory": str(run_dir.resolve()),
         "manifest": str(manifest_path.resolve()),
+        "report": str(report_path.resolve()),
     }
 
 

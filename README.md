@@ -15,7 +15,8 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
    - each mark at most 96 units across, strokes at most 12 wide, at most 512 marks in total
 3. **If it passes, it's rendered** to SVG and PNG. If it fails, the agent gets a list of what broke.
 4. **The agent looks at the PNG and revises.** The agent (not this package) runs that loop.
-5. **Each step is recorded** under `drawing-sandbox/recordings/<run_id>/`: the scene, SVG, PNG, checks, the prompts used, and the plan.
+5. **Each step is recorded** under `drawing-sandbox/recordings/<run_id>/`: the scene, SVG, PNG, checks, the prompts used, the plan, and (optionally) the model's raw text output for that step.
+6. **Everything has a readable version.** Every render result carries a plain-text `summary` (pass/fail, broken rules, and a line-by-line outline of what the model drew), and every recorded run gets a `report.md` showing prompts, plan, and each step's image, checks, model output and outline.
 
 ### Ways to use it
 
@@ -23,16 +24,17 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
 | --- | --- |
 | `python -m drawing_sandbox` | Opens a local web editor at http://127.0.0.1:8766 |
 | `POST /api/render` | Renders a scene and returns checks, SVG and PNG |
-| `POST /api/record` | Renders and saves one step of a run |
+| `POST /api/record` | Renders and saves one step of a run (accepts `model_output` text); rewrites the run's `report.md` |
 | `GET /api/examples`, `GET /api/instruction-set` | Starter scenes and the rules |
-| `python -m drawing_sandbox render / check / examples` | Same things from the terminal |
+| `python -m drawing_sandbox render / check / examples` | Same things from the terminal; `check` prints a readable summary (`--json` for raw) |
+| `python -m drawing_sandbox report <run_dir>` | Regenerates a run's `report.md` |
 | `render_drawing(scene)` in Python | Same as `/api/render` |
 
 ### What's in the repo
 
 - [drawing-sandbox/drawing_sandbox/](drawing-sandbox/drawing_sandbox/): renderer, rules, recording, local server and web editor
 - [drawing-sandbox/examples/](drawing-sandbox/examples/): finished example drawings
-- [drawing-sandbox/recordings/](drawing-sandbox/recordings/): a sample recorded run
+- [drawing-sandbox/recordings/](drawing-sandbox/recordings/): a sample recorded run, with its [report.md](drawing-sandbox/recordings/cmyk-overprint-demo/report.md)
 - [drawing-sandbox/tests/](drawing-sandbox/tests/): unit tests
 - [AGENTS.md](AGENTS.md): rules for any agent that draws or edits code here
 
@@ -49,5 +51,6 @@ Run the tests with `python -m unittest discover -s tests -v`. More detail is in 
 
 ## Changelog
 
+- **Human-readable output**: render results gain a text `summary`; recordings save the model's raw output and a `report.md`; CLI `check` is readable by default; new `report` command.
 - **Build constrained CMYK drawing sandbox**: renderer, rules, recording, editor, examples.
 - **Initial commit**: hello world.

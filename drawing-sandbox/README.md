@@ -31,6 +31,23 @@ from drawing_sandbox.server import render_drawing
 result = render_drawing(scene)
 # result["checks"]: valid, hard_checks, metrics, violations
 # result["svg"] and result["png_data_url"] exist when the drawing is valid
+# result["summary"]: the same checks plus an outline of the scene, as plain text
+print(result["summary"])
+```
+
+The summary looks like:
+
+```text
+PASS: 10 of 10 rules passed
+Stats: marks 9, inks used 3, widest mark 62, thickest stroke 0
+
+Canvas: 512×512, background white
+Marks: 9 total (9 ellipse)
+Ink use: magenta 4, cyan 3, yellow 2
+Top-level nodes (9), in paint order:
+    1. ellipse at (106, 118), radius 31, cyan fill
+    2. ellipse at (137, 118), radius 31, magenta fill
+    ...
 ```
 
 Pass the returned PNG to the VLM, ask it to revise the scene, and render again. Your agent controls that loop. This package makes no model/API calls and does not run an optimizer.
@@ -101,18 +118,23 @@ Use `POST /api/record` for every meaningful composition state. It accepts the sa
   },
   "step_label": "Water and distant ridge",
   "final": false,
+  "model_output": "Optional: the model's raw reply for this step.",
   "scene": {}
 }
 ```
 
-Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, SVG, PNG, and checks. Send the accepted scene with `"final": true` to also save `final-scene.json`, `final-drawing.svg`, and `final-drawing.png`. `manifest.json` preserves the instruction set, prompts, composition plan, step labels, metrics, timestamps, and final-step pointer.
+Accepted states are appended under `recordings/<run_id>/steps/` as scene JSON, SVG, PNG, and checks. Send the accepted scene with `"final": true` to also save `final-scene.json`, `final-drawing.svg`, and `final-drawing.png`. `manifest.json` preserves the instruction set, prompts, composition plan, step labels, metrics, timestamps, and final-step pointer. If a step includes `model_output`, it is saved verbatim as `steps/NNN-model-output.txt`.
+
+After every step the run also gets a readable `report.md`: prompts, plan as bullets, and for each step its image, pass/fail summary, model output, and an outline of what was drawn. See [the sample report](recordings/cmyk-overprint-demo/report.md). Regenerate it with `python -m drawing_sandbox report recordings/<run_id>`.
 
 ## Terminal use
 
 ```bash
 python -m drawing_sandbox examples --out examples
 python -m drawing_sandbox render examples/cmyk-overprint/scene.json --out output
-python -m drawing_sandbox check examples/cmyk-overprint/scene.json
+python -m drawing_sandbox check examples/cmyk-overprint/scene.json          # readable summary
+python -m drawing_sandbox check examples/cmyk-overprint/scene.json --json   # raw checks
+python -m drawing_sandbox report recordings/cmyk-overprint-demo
 python -m unittest discover -s tests -v
 ```
 

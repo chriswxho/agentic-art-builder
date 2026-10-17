@@ -19,6 +19,7 @@ def export(scene,folder):
     (folder/"drawing.svg").write_text(to_svg(scene))
     render(scene).save(folder/"drawing.png")
     (folder/"checks.json").write_text(json.dumps(asdict(checks),indent=2))
+    return checks
 
 
 def main(argv=None):
@@ -34,14 +35,20 @@ def main(argv=None):
     presets.add_argument("--out",default="examples")
     checker=sub.add_parser("check",help="Check a drawing without rendering it")
     checker.add_argument("scene")
+    checker.add_argument("--json",action="store_true",help="Print raw JSON instead of a readable summary")
+    reporter=sub.add_parser("report",help="Write a readable report.md for a recorded run")
+    reporter.add_argument("run_dir")
     args=parser.parse_args(argv)
     try:
         if args.command in (None,"serve"):
             from .server import serve
             serve(getattr(args,"port",8766),not getattr(args,"no_browser",False))
         elif args.command=="render":
-            export(json.loads(Path(args.scene).read_text()),args.out)
-            print(str(Path(args.out).resolve()))
+            from .report import summarize_render
+            scene=json.loads(Path(args.scene).read_text())
+            checks=export(scene,args.out)
+            print(summarize_render(scene,asdict(checks)))
+            print("\nSaved to "+str(Path(args.out).resolve()))
         elif args.command=="examples":
             from .examples import examples
             for example in examples():
@@ -50,9 +57,14 @@ def main(argv=None):
         elif args.command=="check":
             from .policy import composition_constraints
             from .renderer import check_scene
-            checks=check_scene(json.loads(Path(args.scene).read_text()),composition_constraints())
-            print(json.dumps(asdict(checks),indent=2))
+            from .report import summarize_render
+            scene=json.loads(Path(args.scene).read_text())
+            checks=check_scene(scene,composition_constraints())
+            print(json.dumps(asdict(checks),indent=2) if args.json else summarize_render(scene,asdict(checks)))
             return 0 if checks.valid else 1
+        elif args.command=="report":
+            from .report import write_run_report
+            print(str(write_run_report(args.run_dir).resolve()))
     except (ValueError,OSError) as error:
         print(str(error),file=sys.stderr)
         return 1

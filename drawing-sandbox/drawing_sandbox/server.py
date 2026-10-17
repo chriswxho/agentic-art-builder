@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
 
 from .policy import composition_constraints, current_instruction_set
 from .recording import record_composition_step
+from .report import summarize_render
 from .renderer import check_scene, render, to_svg
 
 
@@ -24,6 +25,7 @@ def render_drawing(scene, constraints=None):
         checks.violations.extend(requested.violations)
         checks.valid = checks.valid and requested.valid
     result = {"checks":asdict(checks)}
+    result["summary"]=summarize_render(scene,result["checks"])
     if checks.valid:
         image=render(scene)
         buffer=io.BytesIO()
@@ -96,6 +98,7 @@ class Handler(BaseHTTPRequestHandler):
                     composition=body.get("composition"),
                     step_label=body.get("step_label"),
                     final=body.get("final",False),
+                    model_output=body.get("model_output"),
                 )
             return self.reply(200,result)
         except (ValueError,TypeError) as error:
