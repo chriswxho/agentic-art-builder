@@ -44,7 +44,7 @@ Content-Type: application/json
 {"scene": {...}}
 ```
 
-The server binds only to localhost. `GET /api/examples` returns three compliant starter scenes. Optional request constraints can make a task stricter, but cannot relax the base instruction set.
+The server binds only to localhost. `GET /api/examples` returns the compliant starter scenes and the local Tahoe CMYK study. Optional request constraints can make a task stricter, but cannot relax the base instruction set.
 `GET /api/instruction-set` returns the exact machine-readable policy agents should follow.
 
 ## Constrained instruction set
@@ -119,6 +119,8 @@ python -m unittest discover -s tests -v
 SVG, PNG, and JSON starter files are included under `examples/`. They are authored illustrations, ready to edit. The reusable motifs in them are predefined drawing parts.
 
 The earlier Tahoe study is preserved under `examples/26-tahoe-day/` with its source `reference.jpg`, vector scene, rendered PNG/SVG, and construction timelapse. It predates the CMYK policy, so it is reference material rather than an accepted input to the current agent-facing renderer.
+
+The constrained remake lives under `examples/26-tahoe-cmyk/`. It uses 447 legal CMYK marks and includes its final scene, PNG/SVG, and construction timelapse. Its complete prompt set, composition plan, six accepted progress frames, checks, and final artifacts are recorded under `recordings/tahoe-cmyk-remake/`.
 
 ## Later domains
 
