@@ -18,7 +18,14 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
 5. **Each step is recorded** under `drawing-sandbox/recordings/<run_id>/`: the scene, SVG, PNG, checks, the prompts used, the plan, and (optionally) the model's raw text output for that step.
 6. **There's a graded task dataset** for testing agents: 10 drawing tasks from "one cyan dot" (level 1) to "harbor at sunset" (level 10), each with a prompt, skills, extra limits, success criteria, and a passing reference drawing. See [drawing-sandbox/dataset/](drawing-sandbox/dataset/README.md).
 7. **Runs can be watched and scored.** `/watch?run=<run_id>` replays a run frame by frame in the browser, and `python -m drawing_sandbox.evals` scores recorded runs (step count, image similarity to a target, preferences). The eval metrics are provisional; see [EVALS.md](drawing-sandbox/EVALS.md).
-8. **Everything has a readable version.** Every render result carries a plain-text `summary` (pass/fail, broken rules, and a line-by-line outline of what the model drew), and every recorded run gets a `report.md` showing prompts, plan, and each step's image, checks, model output and outline.
+8. **There's an experimental tree-of-agents harness.** [test_4/](test_4/README.md) recreates a reference image with a tree of Super-VL calls:
+   - a director plans content areas, and the background colors are filled for free
+   - area leads draw patch outlines
+   - painters propose shapes, 2 candidates per patch; a shape is kept only if it measurably improves the canvas
+   - refiners split any patch that's still wrong
+
+   It uses looser, test-local mark rules (opacity 0.1–1.0, large marks). It writes an agent report and a timelapse GIF per run, and `test_4/run_all.py` queues it over all 29 reference images. Best result so far: Lab 0.81 on the easy sea sunset. Run output stays local (gitignored).
+9. **Everything has a readable version.** Every render result carries a plain-text `summary` (pass/fail, broken rules, and a line-by-line outline of what the model drew), and every recorded run gets a `report.md` showing prompts, plan, and each step's image, checks, model output and outline.
 
 ### Ways to use it
 
@@ -50,6 +57,7 @@ Everything lives in [drawing-sandbox/](drawing-sandbox/), a small Python package
   - [hardphotos/](hardphotos/) **hard**: 10 photographs of famous real places (Grand Canyon, Mount Fuji, Yosemite, Matterhorn, …), with author, license and source in [sources.json](hardphotos/sources.json)
 - [AGENTS.md](AGENTS.md): rules for agents that draw pictures here
 - [CONTRIBUTING.md](CONTRIBUTING.md): rules for changing the repo (including keeping this README current)
+- [test_4/](test_4/README.md): the tree-of-agents harness (`run_test_4.py`), queue runner, agent-report and timelapse tools, and its design notes; it imports helpers from [test_3/run_test_3.py](test_3/run_test_3.py). Other `test_*` folders and all run output are gitignored
 
 ## Quick start
 
@@ -64,6 +72,7 @@ Run the tests with `python -m unittest discover -s tests -v`. More detail is in 
 
 ## Changelog
 
+- **Tree-of-agents harness (test_4)**: Super-VL director, then area leads, then painters with a keep-if-better gate, then refiners. Free base fills, timelapse GIFs, agent reports, and a queue runner for all 29 images. Only the code and docs are tracked; run output stays local.
 - **Merged shape-limit raise and planned Nemotron runs**: scenes may now expand to 2,048 shapes (was 512); a Super-VL planner and evaluator wrap the generator agents. Dataset docs updated to match.
 - **Repo rules moved**: the README-every-commit rule now lives in `CONTRIBUTING.md`; `AGENTS.md` only holds picture-agent rules.
 - **Reference landscapes in three levels**: easy `landscape-paintings/`, medium `medphotos/`, hard `hardphotos/` (photos with credits), all resized to 1536×1024. Root README now also covers the Nemotron agent loop, watch view and evals merged from `main`.

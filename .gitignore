@@ -1,3 +1,15 @@
 .env
 .env.*
 .DS_Store
+
+# Local agent test runs (test_1/, test_2/, ...): run output stays local.
+test_*/
+# Except the test_4 harness and docs, plus the test_3 module it imports.
+!test_4/
+test_4/*
+!test_4/*.py
+!test_4/*.md
+!test_3/
+test_3/*
+!test_3/run_test_3.py
+test_4/results.md
